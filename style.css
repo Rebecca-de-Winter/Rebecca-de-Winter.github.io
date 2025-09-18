@@ -1,0 +1,501 @@
+
+ :root {
+   --brand: #addae9; /*sky*/
+   --action: #E08947; /*tail*/
+   --white: #faf7f3; /*unicorn */
+   --base-light: #EBC05B;
+   --base-dark: #84B467;
+   --black: #000008; /*nav-bar */
+  --ocean-height: 32vh;
+  --drop-delay: 2s;
+  --drop-duration: 1.4s;
+  --drop-distance: 32vh;
+  --fade-overlap: .15s;
+}
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playpen Sans Thai";
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Utilities */
+
+.display-none {
+  display: none;
+}
+
+/* Components */
+
+/* btn-primary */
+.btn-primary {
+  padding: 12px 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+  border-radius: 4px;
+  background-color: var(--action);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* header ----------------------------------------------------------------------- */
+#navbar {
+  width:100%;
+  position:fixed;
+  top:0;
+  background-color: #000008;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 5vh;
+  z-index: 1000;
+    box-shadow:
+    -1px -1px 0 rgb(250, 247, 243), 
+    1px -1px 0 rgb(250, 247, 243),  
+    -1px 1px 0 rgb(250, 247, 243),  
+    2px 2px 0 rgb(250, 247, 243); 
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size:1.2rem;
+  color: rgb(250, 247, 243);
+  font-family: "Playpen Sans Thai", cursive;
+  font-weight:250;
+  margin:0.1rem 1.2rem;
+}
+
+.nav-logo {
+  position: absolute;
+  width: 90px;
+  top: 8px;
+  left:15px;
+
+}
+
+header .mobile-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  
+}
+header button {
+  all: unset;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+  }
+
+  header .mobile-header .hamburger-icon {
+    display: none;
+  }
+}
+/* hero ----------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .hero .logo {
+    height: auto;
+    max-width: 30vw;
+    font-weight:400;
+  }
+}
+@media (max-width: 768px) {
+  .hero .logo {
+    height: auto;
+    max-width: 60vw;
+  }
+}
+
+/* .hero */
+.hero {
+ position:relative; 
+ width: 100%;
+background: linear-gradient(
+    180deg,
+    rgba(0,0,0,1) 0%,
+    rgba(2,0,36,1) 8%,
+    rgba(9,9,121,1) 14%,
+    rgba(173,218,233,1) 55%);
+  text-align: center;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  padding-top: 110px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  font-family: 'Playpen Sans Thai';
+  font-weight: 200;
+}
+.hero .stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33%;               
+  background: url("assets/stars.png") repeat top center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 1px 1px;
+  }
+.ocean {
+  width: 100vw;
+  /* height: auto; */
+
+}
+  .hero h1 {
+    font-size: 3.5rem;
+    max-width: 100%;
+    font-family: 'Playpen Sans Thai';
+  }
+}
+.hero .logo,
+.hero h1 {
+  position: relative; /* stack above stars & ocean */
+  z-index: 1;
+}
+/* .mobile-navigation links----------------------------------------------------- */
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  padding: 4px 16px;
+}
+
+/* .desktop-nav */
+.desktop-nav {
+  display: none;
+}
+
+/* bigger screen - desktop navigation links----------------------------------------- */
+@media (min-width: 768px) {
+  .desktop-nav a {
+    text-decoration: none;
+    font-size: larger;
+    color: var(--black);
+  }
+
+  .desktop-nav {
+    display: inline-block;
+  }
+}
+
+/* .hamburger-icon --------------------------------------------------------------- */
+.hamburger-icon {
+  height: 50px;
+}
+
+
+
+
+/* .articles-container ------------------------------------------------------- */
+@media (min-width: 768px) {
+  .articles-container {
+    display: flex;
+  }
+}
+
+/* .article */
+@media (min-width: 768px) {
+  article {
+    padding: 56px;
+  }
+}
+
+article {
+  background-color: var(--base-light);
+  padding: 40px;
+  transition: all 0.3s ease;
+  font-family: "Playpen Sans Thai"
+}
+
+article:hover {
+  filter: contrast(150%);
+}
+
+article .article-heading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+article .article-heading h2 {
+  margin-bottom: 32px;
+  color: var(--base-dark);
+  font-family: "Playpen Sans Thai";
+}
+
+article p {
+  margin-bottom: 16px;
+}
+
+.article .aboutmeimage {
+height: auto;
+padding:16px;
+}
+/* .contact-form ----------------------------------------------------------------------*/
+
+.contact-form {
+  padding: 48px 16px;
+  border-radius: 10px;
+  margin: 5px 10px;
+  background-color: var(--white);
+  font-family: "Playpen Sans Thai";
+}
+
+.contact-form input,
+.contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form h2 {
+  color: var(--base-dark);
+  margin-bottom: 16px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: var(--action);
+  border: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .contact-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .contact-form form {
+    max-width: 60%;
+    margin: 40px auto;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #27296d;
+}
+
+.social-icons {
+  display: flex;
+  background-color: #27296d;
+  align-items:center;
+  color:white;
+  justify-content:center;
+  gap:1rem;
+  width: 100%;
+  padding: 16px;
+
+}
+ 
+.social-icons a {
+  font-size:2rem;
+  align-items:center;
+  color:white;
+  text-decoration: none;
+  justify-content:center;
+  padding:1.1rem;
+  margin-top:1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-bottom:1rem;
+  
+
+}
+.social-icons a:hover {
+  color: #f5c7f7;
+  transform: scale(1.2);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.action-text {
+font-family: 'Figtree';
+font-size:1.2rem;
+background-color: #27296d;
+color: white;
+font-weight:400;
+display:flex;
+ flex-direction:column;
+ justify-content: center;
+ align-items:center;
+ font-style:italic;
+}
+
+@media (min-width: 768px) {
+  footer {
+    justify-content: center;
+  }
+
+  footer .socials-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+} 
+
+
+
+
+/* Correct class name (plural) */
+.projects-container {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(#0c1530, #58aee6);
+}
+
+/* Ocean pinned to bottom */
+.projects-container .ocean {
+  position: absolute;
+  bottom: 0;
+  left:  0;
+  right: 0;
+  height: var(--ocean-height);
+  width: 100vw;
+  object-fit: cover;
+  z-index: 0;
+  background-size: cover;
+  background-position: bottom center; /* <- key line */
+}
+
+/* Centered stack */
+.projects-container .logo-stack {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(42vw, 360px);
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%); /* start centered */
+  z-index: 1;
+  animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
+}
+
+/* Both logos fill the stack EXACTLY and overlap */
+.projects-container .logo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Ensure the circle is on top until it fades */
+.projects-container .logo-circle { z-index: 2; }
+.projects-container .logo-cutout { z-index: 1; }
+
+/* Circle fades as it "hits" water */
+.projects-container .logo-circle {
+  animation: fade-out .35s linear calc(var(--drop-delay) + var(--drop-duration) - var(--fade-overlap)) forwards;
+}
+
+/* Optional bob and float up after landing */
+.projects-container .logo-cutout {
+  animation: bob 3.5s ease-in-out calc(var(--drop-delay) + var(--drop-duration)) infinite;
+}
+
+/* --- keyframes MUST be top level (not nested) --- */
+@keyframes drop {
+  from { transform: translate(-50%, -50%) translateY(0); }
+  to   { transform: translate(-50%, -50%) translateY(var(--drop-distance)); }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-0.8vh); }
+}
+
