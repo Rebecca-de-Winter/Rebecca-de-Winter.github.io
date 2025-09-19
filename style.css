@@ -6,6 +6,11 @@
    --base-light: #EBC05B;
    --base-dark: #84B467;
    --black: #000008; /*nav-bar */
+   --socialbar: #02001d; 
+   --socialicon: #488cb8;
+   --darkblue: #090979; 
+   --accentpurple: #5847b8;
+
   --ocean-height: 32vh;
   --drop-delay: 2s;
   --drop-duration: 1.4s;
@@ -365,14 +370,14 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-  background-color: #27296d;
+  background-color: var(--socialicon);
 }
 
 .social-icons {
   display: flex;
-  background-color: #27296d;
+  background-color: var(--socialicon);
   align-items:center;
-  color:white;
+  color:var(--socialicon);
   justify-content:center;
   gap:1rem;
   width: 100%;
@@ -383,7 +388,7 @@ footer {
 .social-icons a {
   font-size:2rem;
   align-items:center;
-  color:white;
+  color:var(--white);
   text-decoration: none;
   justify-content:center;
   padding:1.1rem;
@@ -394,7 +399,7 @@ footer {
 
 }
 .social-icons a:hover {
-  color: #f5c7f7;
+  color: var(--socialbar);
   transform: scale(1.2);
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -402,8 +407,7 @@ footer {
 .action-text {
 font-family: 'Figtree';
 font-size:1.2rem;
-background-color: #27296d;
-color: white;
+background-color: var(--socialicon);
 font-weight:400;
 display:flex;
  flex-direction:column;
