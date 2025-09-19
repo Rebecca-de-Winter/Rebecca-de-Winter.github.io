@@ -271,14 +271,6 @@ background: linear-gradient(
   }
 }
 
-/* .hamburger-icon ---------------------------------------------------------------
-.hamburger-icon {
-  height: 50px;
-} */
-
-
-
-
 /* .articles-container ------------------------------------------------------- */
 @media (min-width: 768px) {
   .articles-container {
@@ -342,6 +334,12 @@ padding:16px;
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-0.8vh); }
 }
+
+/*----My_Projects--------------------------------*/
+
+
+
+
 /* .contact-form ----------------------------------------------------------------------*/
 
 .contact-form {
@@ -401,7 +399,7 @@ padding:16px;
   }
 }
 
-/* footer --------------------------------------------------------------------------- */
+/*  footer --------------------------------------------------------------------------- */
 footer {
   width: 100%;
   padding: 0px;
@@ -467,7 +465,7 @@ display:flex;
 } 
 
 
-
+/* ---------------------------------------------------HERO_REPLACEMENT---------------------------------------------------->
 
 /* Correct class name (plural) */
 .projects-container {
