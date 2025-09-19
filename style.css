@@ -109,7 +109,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 5vh;
+  height: 50px;
   z-index: 1000;
   border-bottom: 2px solid #faf7f3;
 }
