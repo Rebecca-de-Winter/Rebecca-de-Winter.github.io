@@ -335,8 +335,7 @@ padding:16px;
 
 .contact-form {
   padding: 48px 16px;
-  border-radius: 10px;
-  margin: 5px 10px;
+  margin: 5px 0px;
   background-color: var(--white);
   font-family: "Playpen Sans Thai";
 }
@@ -372,6 +371,12 @@ padding:16px;
   margin-top: 8px;
   cursor: pointer;
 }
+.contact-form input[type="submit"]:hover {
+  color: var(--socialbar);
+  transform: scale(1.1);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
 
 @media (min-width: 768px) {
   .contact-form h2 {
