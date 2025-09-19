@@ -166,10 +166,10 @@ header button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599.98px) {
     .nav-link {
       display: none; }
-    .hamburger.icon {
+    .hamburger-icon {
       display: block;
     }
     #navbar {
