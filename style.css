@@ -291,13 +291,8 @@ article {
   transition: all 0.3s ease;
   font-family: "Playpen Sans Thai";
   line-height: 1.8;
-  
   margin-inline: auto;
 }
-
-/* article:hover {
-  filter: contrast(150%);
-} */
 
 article .article-heading {
   display: flex;
@@ -315,13 +310,27 @@ article p {
   margin-bottom: 16px;
  
 }
+.aboutme-background {
+position: relative;                 /* establish stacking context */
+  background: url("assets/bubblebackground.jpg")
+              center bottom / cover   /* position bottom, scale to fill */
+              no-repeat;
+              
+}
 
-.article .aboutmeimage {
+.aboutmeimage {
+display: inline-block;
 height: auto;
 padding:16px;
 }
 
-
+.aboutmeimage:hover {
+ animation: bob 2.5s ease-in-out infinite;
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-0.8vh); }
+}
 /* .contact-form ----------------------------------------------------------------------*/
 
 .contact-form {
