@@ -25,6 +25,7 @@ html {
   color: var(--black);
   scroll-behavior: smooth;
 }
+
 html { overflow-x: clip; }          
 body { overflow-x: hidden; } 
 
@@ -182,8 +183,8 @@ header button {
 @media (min-width: 768px) {
   .hero .logo {
     height: auto;
-    max-width: 30vw;
-    font-weight:400;
+    max-width: 60vw;
+   
   }
 }
 @media (max-width: 768px) {
@@ -193,7 +194,7 @@ header button {
   }
 }
 
-/* .hero */
+/* .hero ----------------------------- */
 .hero {
  position:relative; 
  width: 100%;
@@ -205,6 +206,7 @@ background: linear-gradient(
     rgba(173,218,233,1) 55%);
   text-align: center;
   overflow: hidden;
+  min-height: 100svh;
 }
 .hero h1 {
   font-size: 2rem;
@@ -245,6 +247,73 @@ background: linear-gradient(
   position: relative; /* stack above stars & ocean */
   z-index: 1;
 }
+
+
+/* Ocean pinned to bottom */
+.hero .ocean {
+  position: absolute;
+  bottom: 0;
+  left:  0;
+  right: 0;
+  height: var(--ocean-height);
+  width: 100vw;
+  object-fit: cover;
+  z-index: 0;
+  background-size: cover;
+  background-position: bottom center; /* <- key line */
+}
+
+/* Centered stack */
+.hero .logo-stack {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(42vw, 360px);
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%); /* start centered */
+  z-index: 1;
+  animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
+}
+
+/* Both logos fill the stack EXACTLY and overlap */
+.hero .logo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Ensure the circle is on top until it fades */
+.hero .logo-circle { z-index: 2; }
+.hero .logo-cutout { z-index: 1; }
+
+/* Circle fades as it "hits" water */
+.hero .logo-circle {
+  animation: fade-out .35s linear calc(var(--drop-delay) + var(--drop-duration) - var(--fade-overlap)) forwards;
+}
+
+/* Optional bob and float up after landing */
+.hero .logo-cutout {
+  animation: bob 3.5s ease-in-out calc(var(--drop-delay) + var(--drop-duration)) infinite;
+}
+
+/* --- keyframes MUST be top level (not nested) --- */
+@keyframes drop {
+  from { transform: translate(-50%, -50%) translateY(0); }
+  to   { transform: translate(-50%, -50%) translateY(var(--drop-distance)); }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-0.8vh); }
+}
+
 /* .mobile-navigation links----------------------------------------------------- */
 .mobile-nav a {
   text-decoration: none;
@@ -465,9 +534,9 @@ display:flex;
 } 
 
 
-/* ---------------------------------------------------HERO_REPLACEMENT---------------------------------------------------->
+/* ---------------------------------------------------HERO_REPLACEMENT----------------------------------------------------> */
 
-/* Correct class name (plural) */
+
 .projects-container {
   position: relative;
   min-height: 100svh;
