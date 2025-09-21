@@ -21,7 +21,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Playpen Sans Thai", sans-serif;
   color: var(--black);
   scroll-behavior: smooth;
 }
@@ -233,7 +233,6 @@ background: linear-gradient(
   
 .ocean {
   width: 100vw;
-  /* height: auto; */
 
 }
   .hero h1 {
@@ -242,9 +241,10 @@ background: linear-gradient(
     font-family: 'Playpen Sans Thai';
   }
 }
+/* This code makes everything z-index 1 so its above the ocean and stars layers (0) and also relative aka is positioned relative to its normal position in the document*/
 .hero .logo,
 .hero h1 {
-  position: relative; /* stack above stars & ocean */
+  position: relative; 
   z-index: 1;
 }
 
@@ -260,22 +260,22 @@ background: linear-gradient(
   object-fit: cover;
   z-index: 0;
   background-size: cover;
-  background-position: bottom center; /* <- key line */
+  background-position: bottom center; 
 }
 
-/* Centered stack */
+/* Centered stack ------------------*/
 .hero .logo-stack {
   position: absolute;
   left: 50%;
   top: 50%;
   width: min(42vw, 360px);
   aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%); /* start centered */
+  transform: translate(-50%, -50%); 
   z-index: 1;
   animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
 }
 
-/* Both logos fill the stack EXACTLY and overlap */
+/* Both logos fill the stack EXACTLY and overlap ----------------------*/
 .hero .logo {
   position: absolute;
   inset: 0;
@@ -285,21 +285,21 @@ background: linear-gradient(
   pointer-events: none;
 }
 
-/* Ensure the circle is on top until it fades */
+/* Super important - this ensures the circle is on top until it fades and LINKS THE PICS TOGETHER!!!!*/
 .hero .logo-circle { z-index: 2; }
 .hero .logo-cutout { z-index: 1; }
 
-/* Circle fades as it "hits" water */
+/* Circle fades as it "hits" water -  adjust values in root to change drop height/delay/fading overlap --------------*/
 .hero .logo-circle {
   animation: fade-out .35s linear calc(var(--drop-delay) + var(--drop-duration) - var(--fade-overlap)) forwards;
 }
 
-/* Optional bob and float up after landing */
+/* Optional bob and float up after landing ----yay for free animations code snippets from animista!! */
 .hero .logo-cutout {
   animation: bob 3.5s ease-in-out calc(var(--drop-delay) + var(--drop-duration)) infinite;
 }
 
-/* --- keyframes MUST be top level (not nested) --- */
+
 @keyframes drop {
   from { transform: translate(-50%, -50%) translateY(0); }
   to   { transform: translate(-50%, -50%) translateY(var(--drop-distance)); }
@@ -383,9 +383,9 @@ article p {
  
 }
 .aboutme-background {
-position: relative;                 /* establish stacking context */
+position: relative;                 /* Do this on every stacked layer image (establishing stacking context) */
   background: url("assets/bubblebackground.jpg")
-              center bottom / cover   /* position bottom, scale to fill */
+              center bottom / cover   /* position bottom, scale to fill ----- tiling also works but aspect ratio still looks off */
               no-repeat;
               
 }
@@ -532,80 +532,4 @@ display:flex;
     margin-right: 20px;
   }
 } 
-
-
-/* ---------------------------------------------------HERO_REPLACEMENT----------------------------------------------------> */
-
-
-.projects-container {
-  position: relative;
-  min-height: 100svh;
-  overflow: hidden;
-  background: linear-gradient(#0c1530, #58aee6);
-}
-
-/* Ocean pinned to bottom */
-.projects-container .ocean {
-  position: absolute;
-  bottom: 0;
-  left:  0;
-  right: 0;
-  height: var(--ocean-height);
-  width: 100vw;
-  object-fit: cover;
-  z-index: 0;
-  background-size: cover;
-  background-position: bottom center; /* <- key line */
-}
-
-/* Centered stack */
-.projects-container .logo-stack {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(42vw, 360px);
-  aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%); /* start centered */
-  z-index: 1;
-  animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
-}
-
-/* Both logos fill the stack EXACTLY and overlap */
-.projects-container .logo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-/* Ensure the circle is on top until it fades */
-.projects-container .logo-circle { z-index: 2; }
-.projects-container .logo-cutout { z-index: 1; }
-
-/* Circle fades as it "hits" water */
-.projects-container .logo-circle {
-  animation: fade-out .35s linear calc(var(--drop-delay) + var(--drop-duration) - var(--fade-overlap)) forwards;
-}
-
-/* Optional bob and float up after landing */
-.projects-container .logo-cutout {
-  animation: bob 3.5s ease-in-out calc(var(--drop-delay) + var(--drop-duration)) infinite;
-}
-
-/* --- keyframes MUST be top level (not nested) --- */
-@keyframes drop {
-  from { transform: translate(-50%, -50%) translateY(0); }
-  to   { transform: translate(-50%, -50%) translateY(var(--drop-distance)); }
-}
-
-@keyframes fade-out {
-  to { opacity: 0; }
-}
-
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-0.8vh); }
-}
 
