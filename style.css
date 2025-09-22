@@ -434,10 +434,22 @@ padding:16px;
 .my-projects-container {
   width: 100%;
   display: flex;
-  justify-content: center;  
+  justify-content: center; 
+  flex-direction: column; 
   padding: 24px;
   background-color: var(--white);
+   text-align: center;  
+   padding-top: 40px;
+  align-items: center;       
+  text-align: center;  
   /* border: 2px solid black; */
+}
+.projects-title {
+  margin-bottom: 24px; 
+  margin: 0 auto 24px auto;  
+  font-size: 3.5em;
+  color: var(--socialbar);
+/
 }
 .cards {
   width: 100%;
@@ -587,7 +599,7 @@ background: linear-gradient(180deg,rgba(255, 251, 245, 1) 0%, rgba(255, 230, 192
 
 .contact-form {
   padding: 48px 16px;
-  margin: 5px 0px;
+  margin: 0px 0px;
   background-color: var(--white);
   font-family: "Playpen Sans Thai";
 }
