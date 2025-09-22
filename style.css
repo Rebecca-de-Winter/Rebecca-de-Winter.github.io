@@ -452,7 +452,7 @@ padding:16px;
 .media-card {
 
   flex: 1 1 320px;           /* grow | shrink | preferred width - Google recommends? */
-  max-width: 360px;          /* optional cap so the cards don’t stretch too wide */
+  max-width: 338px;          /* optional cap so the cards don’t stretch too wide */
   border: 2px solid red;
   border-radius: 20px;
   /* padding: 20px; */
