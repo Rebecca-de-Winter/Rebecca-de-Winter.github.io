@@ -17,7 +17,7 @@
    --fade-overlap: .15s;
 }
 /* CSS Reset */
-
+/* { outline: 1px solid hotpink; } */ 
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -87,11 +87,11 @@ select {
 
 /* btn-primary */
 .btn-primary {
-  padding: 12px 16px;
+  padding: 12px ;
   display: inline-block;
   text-decoration: none;
   color: var(--black);
-  border-radius: 4px;
+  border-radius: 20px;
   background-color: var(--action);
   transition: all 0.3s ease;
 }
@@ -249,7 +249,7 @@ background: linear-gradient(
 }
 
 
-/* Ocean pinned to bottom */
+/* Ocean pinned to bottom so the bloody thing doesn't move when resizing*/
 .hero .ocean {
   position: absolute;
   bottom: 0;
@@ -357,6 +357,7 @@ background: linear-gradient(
   }
 }
 
+
 article {
   background-color: var(--base-light);
   padding: 40px;
@@ -364,19 +365,12 @@ article {
   font-family: "Playpen Sans Thai";
   line-height: 1.8;
   margin-inline: auto;
+  
 }
 
-article .article-heading {
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-article .article-heading h2 {
-  margin-bottom: 36px;
-  color: var(--base-dark);
-  font-family: "Playpen Sans Thai";
-}
+/* .articles-container .about-me-container  p{
+  
+} */
 
 article p {
   margin-bottom: 16px;
@@ -405,6 +399,174 @@ padding:16px;
 }
 
 /*----My_Projects--------------------------------*/
+/* .my-projects-container {
+  width: 100%; 
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding: 40px; 
+  
+
+}  
+
+.cards {
+  max-width: 100%; 
+  border: 2px solid greenyellow;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: stretch; 
+  padding: 34px; 
+  height: auto; 
+  border: 2px solid red;
+  margin: 10px;
+  gap: 20px;
+
+
+
+}  */
+/* .dev-card {
+  width:33%;
+  height: auto;
+  border: 2px solid red;
+  margin: 10px;
+  /* display: flex;
+  justify-content: center; 
+  
+}*/
+
+/* .edu-card {
+   width: 33%;
+  height: auto;
+  border: 2px solid red;
+  margin: 10px;
+  /* display: flex;
+  justify-content: center; 
+
+} */
+
+/* .media-card {
+   width: 33%;
+  height: auto;
+  border: 2px solid red;
+  margin: 10px;
+ display: flex;
+  justify-content: center; 
+}  */
+
+/* .dev-card,   This sets the parameters for all the cards, no need to make 3 separate cards
+.edu-card, 
+.media-card {
+  
+/*  
+  flex: 1 1 300px;            flex-grow | shrink | preferred width 
+  max-width: 280px;           optional cap so they don’t stretch too wide 
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;           you’ll swap these per card for pastels 
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+
+}  */
+
+/* ---- My_Projects -------------------------------- */
+.my-projects-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  padding: 24px;
+  border: 2px solid black;
+}
+.cards {
+  width: 100%;
+  max-width: 1100px;         
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;                  /* gap does spacing between cards not the dev/edu/med cards */
+  padding: 16px;              
+  border: 2px solid greenyellow;
+}
+
+.dev-card,
+.edu-card,
+.media-card {
+
+  flex: 1 1 320px;           /* grow | shrink | preferred width */
+  max-width: 360px;          /* optional cap so they don’t stretch too wide */
+  border: 2px solid red;
+  border-radius: 20px;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  background: #fff;          /* you’ll swap these per card for pastels */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.inner-wrap {
+ border: 2px solid rgb(117, 35, 83);
+ border-radius: 20px;
+
+}
+/* Media tweak: force exactly 3-up on larger screens (optional) */
+@media (min-width: 992px) {
+  .dev-card, .edu-card, .media-card {
+    flex: 0 1 calc(33.333% - 16px); /* minus a little to account for gap */
+  }
+}
+
+/* Image & text niceties */
+.dev-card img,
+.edu-card img,
+.media-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;        
+  margin-bottom: 16px;
+}
+
+.dev-card h4,
+.edu-card h4,
+.media-card h4 {
+  font-size: 1.6rem;
+  margin: 4px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dev-card p,
+.edu-card p,
+.media-card p {
+  padding-bottom: 20px;
+  line-height: 0.4;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
