@@ -468,6 +468,7 @@ padding:16px;
  border-radius: 20px;
  text-align: center;
  padding-bottom: 8px; 
+ margin-top: auto;
 }
 
 
@@ -643,5 +644,4 @@ display:flex;
     margin-left: 20px;
     margin-right: 20px;
   }
-} 
-
+}
