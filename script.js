@@ -1,8 +1,10 @@
-function myFunction() {
-  var x = document.getElementById("navbar");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('navbar');
+  const btn = document.getElementById('menu-toggle');
+
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('responsive');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});

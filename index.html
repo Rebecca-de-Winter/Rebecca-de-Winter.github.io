@@ -13,23 +13,24 @@
     <title>Becky Cole Portfolio</title>
 </head>
 <body>
-  <!----------------------------------------------DESKTOP_NAV_BAR--------------------------------------------->
+  <!----------------------------------------------NAV_BAR--------------------------------------------->
     <header>
-         <nav id="navbar">
-        <a class="nav-link" href="">About</a>
-        <a class="nav-link" href="">Projects</a>
-        <a class="nav-link" href="#">Contact</a>
-        <img src="assets/BeckyUnicorn.png" class ="nav-logo" alt="girl in bubble logo" /> 
-        <img src="assets/hamburger.svg" class="hamburger-icon" alt="three horizontal lines stacked on top of each other" />
-         </nav>
-<!------------------------------------------------MOBILE_NAV_BAR------------------->
+      <nav id="navbar" class="topnav">
+          <img src="assets/BeckyUnicorn.png" class ="nav-logo" alt="girl in bubble logo" /> 
 
-        <nav class = "mobile-header">
-        <img src="assets/hamburger.svg" class="hamburger-icon" alt="three horizontal lines stacked on top of each other" />
-        </nav>
+        <div class="nav-links">
+          <a class="nav-link" href="">About</a>
+          <a class="nav-link" href="">Projects</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
 
-    </header>
+        <button class="hamburger-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/hamburger.svg" class="hamburger-icon" alt="three horizontal lines stacked on top of each other" />
+        </button>  
+      </nav>
+     </header>
 
+  <script src="script.js" defer></script>
     <!-----------------------------------------------HERO---------------------------------------------------->
 
 <section class="hero">
@@ -131,7 +132,6 @@
       </div>
       </section>
     </footer>
-
 </body>
 </html>
 
