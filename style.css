@@ -204,9 +204,27 @@ header .mobile-header {
   #navbar .nav-links .nav-link {
     display: block;
     padding: 8px 0;           /* adjust the height of the mobile drop down menu here */
-    line-height: 1.25;        /* adjsut the line height of the dropdown menu here */
+    line-height: 1.25;        /* adjust the line height of the dropdown menu here */
     transition: background-color .18s ease, color .18s ease, padding-left .18s ease;
   }
+  /* simple grow on hover/focus */
+#navbar .nav-links .nav-link:hover,
+#navbar .nav-links .nav-link:focus-visible {
+  transform: scale(1.04);   /* subtle pop */
+}
+
+/* touch feedback */
+#navbar .nav-links .nav-link:active {
+  transform: scale(1.02);
+}
+
+/* prefers reduced motion for accessibility reasons */
+@media (prefers-reduced-motion: reduce) {
+  #navbar .nav-links .nav-link { transition: none; }
+  #navbar .nav-links .nav-link:hover,
+  #navbar .nav-links .nav-link:focus-visible,
+  #navbar .nav-links .nav-link:active { transform: none; }
+}
 
   #navbar .nav-link {
     display: none;
