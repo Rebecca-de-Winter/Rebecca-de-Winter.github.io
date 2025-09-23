@@ -207,7 +207,7 @@ header .mobile-header {
   /* simple grow on hover/focus */
 #navbar .nav-links .nav-link:hover,
 #navbar .nav-links .nav-link:focus-visible {
-  transform: scale(1.04);   /* subtle pop */
+  transform: scale(1.04);   /* subtle pop/expansion */
 }
 
 /* touch feedback */
@@ -251,7 +251,7 @@ header .mobile-header {
      /* slide container (collapsed by default) */
     #navbar .nav-links {
     position: absolute;
-    top: 52px;          /* below fixed header */
+    top: 52px;          /* below fixed header - use this to adjust variance from top */
     right: 0;
     left: auto;
     background: #000008;
@@ -269,7 +269,7 @@ header .mobile-header {
     padding: 10px 16px 12px;
   }
   #navbar.responsive .nav-link {
-    display: block;            /* <-- THIS turns them back on */
+    display: block;            /* Display block turns the header back on */
  }
 }
 
