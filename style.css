@@ -181,9 +181,6 @@ header .mobile-header {
   justify-content: space-between;
 }
 
-/* header button {
-  all: unset;
-} */
 
 @media (min-width: 600px) {
   header {
@@ -275,23 +272,6 @@ header .mobile-header {
     display: block;            /* <-- THIS turns them back on */
  }
 }
-    /* when menu is open */
-  /* #navbar.responsive { position: relative; }
-  #navbar.responsive .nav-link {
-    display: block;
-    text-align: right;
-    padding: 8px 16px;
-  } */
-    
- 
-
-/* @media (max-width: 599.98px) {
-  #navbar.responsive { position: relative; }
-  #navbar.responsive a.nav-link {
-    display: block;
-    text-align: right;
-    padding: 8px 16px;
-  } */
 
 @media (min-width: 600px) {
    #navbar .nav-links { 
@@ -307,10 +287,9 @@ header .mobile-header {
 
   #navbar .nav-link { display: inline-block; color: var(--white); }
   #navbar .hamburger-btn { display: none; }
-  /* #navbar .hamburger-btn { display: none; }
-  #navbar .nav-link { display: inline-block; } */
 }
-/* Respect reduced motion */
+
+/* Prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
   #navbar .nav-links { transition: none; }
 }
@@ -601,7 +580,7 @@ padding:16px;
   width: 100%;
   height: auto;
   display: block;      
-  margin-bottom: 16px;
+  object-fit: cover;
 }
 
 .dev-card h4,
