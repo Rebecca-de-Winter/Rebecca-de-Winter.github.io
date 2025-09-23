@@ -525,15 +525,19 @@ padding:16px;
 
 }
 .cards {
-  width: 100%;
+  /* width: 100%;
   max-width: 1100px;         
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 24px;                  /* gap does spacing between cards not the dev/edu/media cards */
-  padding: 16px;              
-}
+  gap: 24px;                  gap does spacing between cards not the dev/edu/media cards */
+  /* padding: 16px;               */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+} 
 
 .dev-card {
   background: linear-gradient(180deg,
