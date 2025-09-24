@@ -752,6 +752,11 @@ article h2 {
   }
 }
 
+.contact-page .contact-form {
+  min-height: calc(100vh - 5px);
+  padding-top: 96px;
+  padding-bottom: 24px;
+}
 /*  footer --------------------------------------------------------------------------- */
 footer {
   width: 100%;
@@ -781,9 +786,10 @@ footer {
   text-decoration: none;
   justify-content: center;
   padding: 0.9rem;
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   transition: transform 0.2s ease, color 0.2s ease;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  margin: 0;
 }
 .social-icons a:hover {
   color: var(--socialbar);
@@ -813,6 +819,13 @@ display:flex;
     margin-right: 20px;
   }
 }
+footer {
+  padding: 16px 0;
+}
+
+/* .social-icons a {
+  margin: 0;
+} */
 
 /*--------------------------------------------------------PROJECT-HTML-PAGE---------------------------------------------------*/
 
