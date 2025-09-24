@@ -699,6 +699,7 @@ article h2 {
   margin: 0px 0px;
   background-color: var(--white);
   font-family: "Playpen Sans Thai";
+  /* min-height: calc(100vh - 52px); */
 }
 
 .contact-form input,
@@ -848,11 +849,6 @@ display:flex;
 }
 /*--------------------------------------------------------------ABOUT_ME_PAGE------------------------------------------------------*/
 
-/* article .about-me-background {
- height: 100vh; 
-
-} */
-
 .img-container {
   padding-top: 96px;
 }
@@ -886,6 +882,7 @@ display:flex;
 
 .about-me-background {
   text-align: center;
+  min-height: calc(100vh - 52px - 100px); /* 52 = header height, 120 ≈ footer */
 }
 .becky-pic {
   display: block;
