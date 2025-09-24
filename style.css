@@ -777,14 +777,14 @@ display:flex;
   width: 100%;
   padding: 72px 20px 20px 20px; 
   background-color: var(--white);
-  border: 5px solid rgb(180, 67, 86); 
+  
 }
 
 .my-dev-container, .my-edu-container, .my-media-container {
   width: 100%;
   padding: 52px 20px 20px 20px; 
   background-color: var(--white);
-  border: 5px solid rgb(180, 67, 86); 
+  
 }
 
 .proj-title {
@@ -805,4 +805,4 @@ display:flex;
   justify-content: center;
   gap: 24px;                 
   /* align-items: stretch;  */
-  border: 2px solid pink; }
+   }
