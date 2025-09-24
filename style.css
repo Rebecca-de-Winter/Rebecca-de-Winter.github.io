@@ -460,6 +460,8 @@ background: linear-gradient(
 }
 
 /* ----------------------------------------------------ARTICLE--------------------------------------------*/
+
+
 /* .articles-container ------------------------------------------------------- */
 @media (min-width: 768px) {
   .articles-container {
@@ -469,8 +471,8 @@ background: linear-gradient(
   }
 }
 .articles-container {
-border-top: 5px solid var(--educator-border);
-border-bottom: 5px solid var(--educator-border);
+/* border-top: 5px solid var(--brand); */
+border-bottom: 5px solid var(--educator-text);
 }
 
 
@@ -501,7 +503,8 @@ article p {
 position: relative;                 /* Do this on every stacked layer image (establishing stacking context) */
   background: url("assets/bubblebackground.jpg")
               center bottom / cover   /* position bottom, scale to fill ----- tiling also works but aspect ratio still looks off */
-              no-repeat;             
+              no-repeat;    
+      
 }
 
 .aboutmeimage {
@@ -725,12 +728,13 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-  background-color: var(--socialicon);
+  background-color: var(--educator-text);
+  border-top: 5px solid #d7608e;
 }
 
 .social-icons {
   display: flex;
-  background-color: var(--socialicon);
+  background-color: var(--educator-text);
   align-items:center;
   color:var(--socialicon);
   justify-content:center;
@@ -783,7 +787,7 @@ display:flex;
   }
 }
 
-/*--------------------------------------------------------PROJECT-HTMLPAGE---------------------------------------------------*/
+/*--------------------------------------------------------PROJECT-HTML-PAGE---------------------------------------------------*/
 
 
 .my-dev-container {
@@ -817,5 +821,57 @@ display:flex;
   display: flex;     
   justify-content: center;
   gap: 24px;                 
-  /* align-items: stretch;  */
+
    }
+/*--------------------------------------------------------------ABOUT_ME_PAGE------------------------------------------------------*/
+
+/* article .about-me-background {
+ height: 100vh; 
+
+} */
+.about-me-page-container {
+border: 0;
+}
+
+.about-me-background {
+  padding-top: 96px;  
+}
+
+.about-me-background {
+  background: 
+  linear-gradient(180deg, rgba(255,245,245,1) 0%, rgba(255,208,216,1) 100%);
+  border-top: 2px solid var(--educator-border);
+
+}
+
+.about-me-header {
+  font-size: 2.5rem;
+  color: var(--educator-text);
+  margin-bottom: 8px;
+  margin-top: 24px; 
+  text-align: center;
+}
+
+.about-me-long-text {      
+  margin: 0 auto 20px;         
+} 
+
+.about-me-long-text p {
+  font-size: 1rem;        
+  line-height: 1.85; 
+  text-align: left;
+} 
+
+.about-me-background {
+  text-align: center; 
+}
+.becky-pic {
+display: block;
+height: auto;
+max-width: 240px;
+text-align: center; 
+object-fit: cover; 
+margin: 0 auto;
+border: 6px solid var(--educator-text);
+border-radius: 60px; 
+}
