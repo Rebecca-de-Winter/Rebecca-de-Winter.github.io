@@ -907,3 +907,40 @@ footer {
   border: 6px solid var(--educator-text);
   border-radius: 60px;
 }
+/*---------------------------------------PROJECTS_PAGE_-------------------------------------------*/
+
+.project-cards .dev-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--developer-inner);
+  padding: 0px;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.project-cards .media-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* fit entire image inside */
+  object-position: center;
+  background: #ffe6c0;
+  padding: 0px;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.project-cards .edu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--educator-inner);
+  padding: 0px;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
