@@ -725,9 +725,19 @@ article h2 {
   cursor: pointer;
 }
 .contact-form input[type="submit"]:hover {
-  color: var(--socialbar);
-  transform: scale(1.1);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transform: translate(0, -1px);
+  box-shadow: 0 10px 12px #ffffffa6, inset 2px -4px 2px rgba(0, 0, 0, 0.12),
+    inset 2px 4px 2px rgba(255, 255, 255, 0.28);
+}
+
+.contact-form input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.18),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.16), inset 0 2px 0 rgba(255, 255, 255, 0.22);
+}
+
+.contact-form input[type="submit"]:focus {
+  background: #ff8800c7;
 }
 
 @media (min-width: 768px) {
