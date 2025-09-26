@@ -1,6 +1,6 @@
 #  Rebecca-de-Winter - Portfolio Task
 ​
-[My portfolio site][(https://rebecca-de-winter.github.io/))]
+[My portfolio site](https://rebecca-de-winter.github.io/)
 ​
 ## Project Requirements
 
