@@ -54,7 +54,7 @@ It was version controlled with Git and deployed on GitHub pages. I've spend the 
 I have styles for active, hover and focus states - the primary buttons translate 1 px up and left on hover, and have a glow shadow. On focus, they scale (1.04) and deepen in colour when active with a box shadow. 
 The social media icons transform by scale on hover, scale higher again on active and glow with a text shadow on focus. Javascript was included to maek the hamburger menu.  
 
-The big addition here though was animation. I used the animation function from https://webcode.tools/css-generator/keyframe-animation to insert the animations I wanted. The animations are quite complex - the hero has two logo layes on alpha channels that are stuck together. When the logo "hits" the water the top logo fades out and the cut out of the girl without the bubble now floats in the water. A smaller version of the bobbing animation is in the about me section on the index.html page. 
+The big addition here though was animation. I used the animation function from https://webcode.tools/css-generator/keyframe-animation to insert the animations I wanted. The animations are quite complex - the hero has two logo layes on alpha channels that are stuck together. When the logo "hits" the water the top logo fades out and the cut out of the girl without the bubble now floats in the water. A smaller version of the bobbing animation is in the about me section on the index.html page. The title is also animated! Originally I put the H2 text (developer, creator etc) in Flexbox but I could not get the title aligned with the H1. Grid fixed that. 
 
 ### Screenshots
 > Please include the following:
@@ -65,3 +65,5 @@ The big addition here though was animation. I used the animation function from h
 
 ####  image_title_goes_here 
 ![Put a description of your image here](./relative_path_to_file)
+
+Here are a list of screenshots:
