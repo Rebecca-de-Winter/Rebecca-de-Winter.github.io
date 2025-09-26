@@ -885,7 +885,7 @@ footer {
   transition: transform 0.2s ease, color 0.2s ease;
   margin: 0;
 }
-.social-icons a:focus-visible i {
+.social-icons a:focus i {
   text-shadow: 0 0 4px var(--white);
 }
 
