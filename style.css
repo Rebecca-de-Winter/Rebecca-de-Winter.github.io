@@ -19,7 +19,7 @@
   --ocean-height: 32vh;
   --drop-delay: 0.8s;
   --drop-duration: 1.2s;
-  --drop-distance: 32vh;
+  --drop-distance: 30vh;
   --fade-overlap: 0.15s;
   --menu-max: 220px;
 }
@@ -508,8 +508,6 @@ header .mobile-header {
   }
   to {
     transform: translate(-50%, -50%) translateY(var(--drop-distance));
-    transform: translate(-50%, -50%)
-      translateY(calc(var(--drop-distance) + env(safe-area-inset-bottom)));
   }
 }
 
