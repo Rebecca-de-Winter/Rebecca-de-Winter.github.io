@@ -50,7 +50,7 @@ Ok so this was a journey.
 Initially tried to do a parallax scroll animation for the hero but it got too difficult to make it responsive. I then started from scratch and used the SheCodes template as a base for the second iteration. BIG MISTAKE!!!
 I have spent more time trying to solve bugs that the older code included in the code then I could have keeping the first site and building that up to be responsive.
 
-I simplified the idea and made a drop down animation where the girl in the bubble bobs in the water. This was done entirely using CSS animation, using a drop down animation for the logo drop, an opacity transition once she hits the water and a bob animation that lasts indefinately. The title was also animated, with a slide in left, right and top for "developer, educator and media creator". Getting the calculation right for the positioning of the girl hitting the water was a major mission but now fixed!! I added a delay in the title as I realised in layouts with a narrower height made the logo clash with the titles. They are now spaced out. I have been using the inspect tool to view the project from every perspective for both Chrome and Firefox. There is also an animation for the girl in the bubble in the about me section on index.html.
+I simplified the idea and made a drop down animation where the girl in the bubble bobs in the water. This was done entirely using CSS animation, using a drop down animation for the logo drop, an opacity transition once she hits the water and a bob animation that lasts indefinitely. The title was also animated, with a slide in left, right and top for "developer, educator and media creator". Getting the calculation right for the positioning of the girl hitting the water was a major mission but now fixed!! I added a delay in the title as I realised in layouts with a narrower height made the logo clash with the titles. They are now spaced out. I have been using the inspect tool to view the project from every perspective for both Chrome and Firefox. There is also an animation for the girl in the bubble in the about me section on index.html. Getting the titles to center was tricky too because the letters of media creator are far more than developer. I tried to make a compromise on layout.
 
 Making the cards responsive on the projects page was far easier because I could use Flexbox and wrap the cards. The other pages (about me and contact) had no problems with responsiveness. Next time around I want to have a document viewer for the learner guide and slide deck uploads but am unsure of how they would fit with the design. <br>
 
@@ -152,3 +152,19 @@ Here are a list of screenshots:
 ### Contact page responsive layout
 
 ![Contact page responsive](./assets/screenshots/contact-form-responsive.png)
+
+### Index page tablet layout
+
+![Index page tablet layout](./assets/screenshots/index-page-tablet.png)
+
+### About me page tablet layout
+
+![Index page tablet layout](./assets/screenshots/about-me-page-tablet.png)
+
+### Projects page tablet layout
+
+![Index page tablet layout](./assets/screenshots/projects-page-tablet.png)
+
+### Contact page tablet layout
+
+![Contact page tablet layout](./assets/screenshots/contact-us-tablet.png)
