@@ -17,7 +17,7 @@
   --media-creator-inner: #ffe6c0;
   --media-creator-border: #fdaf69;
   --ocean-height: 32vh;
-  --drop-delay: 0.8s;
+  --drop-delay: 0.2s;
   --drop-duration: 1.2s;
   --drop-distance: 32vh;
   --fade-overlap: 0.15s;
@@ -361,7 +361,7 @@ header .mobile-header {
 }
 
 .role-dev {
-  animation: myAnim-dev 1s ease 0s 1 normal forwards;
+  animation: myAnim-dev 1s ease 1.4s 1 normal both;
 }
 @keyframes myAnim-dev {
   0% {
@@ -376,7 +376,7 @@ header .mobile-header {
 }
 
 .role-edu {
-  animation: myAnim-edu 1s ease 0s 1 normal forwards;
+  animation: myAnim-edu 1s ease 1.4s 1 normal both;
 }
 
 @keyframes myAnim-edu {
@@ -392,7 +392,7 @@ header .mobile-header {
 }
 
 .role-med {
-  animation: myAnim-med 1s ease 0s 1 normal forwards;
+  animation: myAnim-med 1s ease 1.4s 1 normal both;
 }
 @keyframes myAnim-med {
   0% {
