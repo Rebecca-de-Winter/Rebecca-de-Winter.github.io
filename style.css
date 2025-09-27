@@ -16,10 +16,10 @@
   --educator-text: #e07ba2;
   --media-creator-inner: #ffe6c0;
   --media-creator-border: #fdaf69;
-  --ocean-height: 34vh;
+  --ocean-height: 32vh;
   --drop-delay: 0.8s;
   --drop-duration: 1.2s;
-  --drop-distance: 22vh;
+  --drop-distance: 32vh;
   --fade-overlap: 0.15s;
   --menu-max: 220px;
 }
@@ -453,20 +453,28 @@ header .mobile-header {
   right: 0;
   height: var(--ocean-height);
   width: 100vw;
-  object-fit: cover;
+  /* object-fit: cover; */
   z-index: 0;
-  background-size: cover;
-  background-position: bottom center;
+  /* background-size: cover; */
+  /* background-position: bottom center; */
+}
+
+.hero .ocean img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Centered stack so both logos sit on top of each other------------------*/
 .hero .logo-stack {
   position: absolute;
+  bottom: calc(50% - (min(42vw, 360px) / 1.2));
   left: 50%;
-  top: 50%;
+  /* top: 50%; */
   width: min(42vw, 360px);
   aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateY(calc(var(--drop-distance) * -1));
+  /* transform: translateX(-50%); */
   z-index: 1;
   animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
 }
@@ -504,10 +512,10 @@ header .mobile-header {
 
 @keyframes drop {
   from {
-    transform: translate(-50%, -50%) translateY(0);
+    transform: translate(-50%, -50%) translateY(calc(var(--drop-distance) * -1));
   }
   to {
-    transform: translate(-50%, -50%) translateY(var(--drop-distance));
+    transform: translate(-50%, -50%) translateY(0);
   }
 }
 
