@@ -343,15 +343,26 @@ header .mobile-header {
 
 .hero-roles {
   display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content; /* columns shrink to each word */
+  justify-content: center; /* center the trio */
+  align-items: center;
+  column-gap: clamp(14px, 5vw, 56px);
+  white-space: nowrap;
+  padding-top: 24px;
+  color: var(--white);
+  /* border: 2px solid pink; */
+
+  /* display: grid;
   grid-template-columns: 1fr auto 1fr; /* left | middle | right */
-  justify-items: center;
+  /* justify-items: center;
   align-items: center;
   gap: 8px;
   margin: 0 auto;
   text-align: center;
   color: var(--white);
   white-space: nowrap;
-  padding-top: 24px;
+  padding-top: 24px; */
   /* border: 2px solid pink; */
 }
 

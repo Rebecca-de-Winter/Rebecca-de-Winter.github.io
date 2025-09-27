@@ -26,12 +26,12 @@ I have multiple profiles pictures, including an animated version of me in the he
 I have a mini bio on the index.html page and a longer bio on the about me page. I included a girl in bubble animation for the about me section as I wanted to keep the theme light.
 
 The "about me" is in shades of gradient pink which I feel is cute and matches the feel I was looking for.
-Functional contact form - I have a contact form on site and "mailto" link attached to the @ sign in the footer.
+Contact form - I have a contact form on site and "mailto" link attached to the @ sign in the footer.
 
-Projects section: split into 3 sections - develop, educator and media creator.
+Projects section: split into 3 sections - develop, educator and media creator - all colour coded with live links to real projects.
 
-I wanted to showcase how I can bring a lot of skills to the table. I also made a projects page with three example types for each that showcase the depth of my experience. I chose cards because they define different projects easily and are very responsive.
-I figure if each of my skill sets have a different colour, it will be easy to upload and categorise my experience which should make it easier for the user to find the examples that are relevant to them. Links to GitHub, LinkedIn, Codepen and an email link in the footer<br>
+I wanted to showcase how I can bring a lot of skills to a developer role by showcasing that I can teach and create media as well. I also made a projects page with three example types for each that showcase the depth of my experience. I chose cards because they define different projects easily and are very responsive.
+I figure if each of my skill sets have a different colour, it will be easy to upload and categorise my projects which should make it easier for the user to find the examples that are relevant to them. I have links to GitHub, LinkedIn, Codepen and an email link in the footer<br>
 
 ### Technical
 
@@ -45,13 +45,16 @@ Add a short paragraph describing the features below. What strategies or design d
 
 ### Technical Response:
 
-Initially tried to do a parallax scroll animation for the hero but it got too difficult to make it responsive. I then started from scratch and made a drop down animation where the girl in the bubble bobs in the water.  
-Still incredibly difficult to make responsive but I'm hoping what I'll learn in React and JS will help.
-The hero image took a week alone to make.
+Ok so this was a journey.
+
+Initially tried to do a parallax scroll animation for the hero but it got too difficult to make it responsive. I then started from scratch and used the SheCodes template as a base for the second iteration. BIG MISTAKE!!!
+I have spent more time trying to solve bugs that the older code included in the code then I could have keeping the first site and building that up to be responsive.
+
+I simplified the idea and made a drop down animation where the girl in the bubble bobs in the water. This was done entirely using CSS animation, using a drop down animation for the
 
 That being said, I am now mildly proficient and obsessed with CSS animations. I have been using the inspect tool to view the project from every perspective and its very hard to get all of them! Making the cards responsive was far easier because I could use Flexbox and wrap the cards. The other pages had no problems with responsiveness. Next time around I want to have a document viewer for the learner guide and slide deck uploads but am unsure of how they would fit with the design. <br>
 
-It was version controlled with Git and deployed on GitHub pages. I've spend the most amount of time trying to ensure everything was responsive. The second time I built the page I used the SheCodes template as a base. BIG MISTAKE!!! I have spent more time trying to solve bugs that the older code included in the code then I could have keeping the first site and building that up. Semantic HTML was used throughout.
+It was version controlled with Git and deployed on GitHub pages. I've spend the most amount of time trying to ensure everything was responsive. The second time I built the page I used the SheCodes template as a base. Semantic HTML was used throughout.
 
 ### Bonus (optional)
 
@@ -66,7 +69,7 @@ Add a short paragraph describing the features below, if you included any.
 I have styles for active, hover and focus states - the primary buttons translate 1 px up and left on hover, and have a glow shadow. On focus, they scale (1.04) and deepen in colour when active with a box shadow.
 The social media icons transform by scale on hover, scale higher again on active and glow with a text shadow on focus. Javascript was included to make the hamburger menu.
 
-The big addition here though was animation. I used the animation function from https://webcode.tools/css-generator/keyframe-animation to insert the animations I wanted. The animations are quite complex - the hero has two logo layers on alpha channels that are stuck together. When the logo "hits" the water the top logo fades out and the cut out of the girl without the bubble now floats in the water. A smaller version of the bobbing animation is in the about me section on the index.html page. The title is also animated! Originally I put the H2 text (developer, creator etc) in Flexbox but I could not get the title aligned with the H1. Grid fixed that.
+The big addition here though was animation.
 
 ### Screenshots
 
