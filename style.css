@@ -401,6 +401,12 @@ header .mobile-header {
     transform: translateY(0);
   }
 }
+/* optional: shift the middle label 1–2px right */
+@media (min-width: 768px) {
+  .role-edu {
+    transform: translateX(2px);
+  } /* try 1–2px */
+}
 
 .role-med {
   animation: myAnim-med 1s ease 1.4s 1 normal both;
@@ -584,8 +590,6 @@ header .mobile-header {
   /* border-top: 5px solid var(--brand); */
   border-bottom: 5px solid var(--educator-text);
 }
-
-/* .article */
 
 /* careful applying this to all articles... */
 @media (min-width: 768px) {
