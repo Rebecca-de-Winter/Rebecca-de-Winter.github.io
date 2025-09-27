@@ -49,7 +49,7 @@ Initially tried to do a parallax scroll animation for the hero but it got too di
 Still incredibly difficult to make responsive but I'm hoping what I'll learn in React and JS will help.
 The hero image took a week alone to make.
 
-That being said, I am now proficient and now obsessed with CSS animations. I have been using the inspect tool to view the project from every perspective and its very hard to get all of them! Making the cards responsive was far easier because I could use Flexbox and wrap the cards. The other pages had no problems with responsiveness. Next time around I want to have a document viewer for the learner guide and slide deck uploads but am unsure of how they would fit with the design. <br>
+That being said, I am now mildly proficient and obsessed with CSS animations. I have been using the inspect tool to view the project from every perspective and its very hard to get all of them! Making the cards responsive was far easier because I could use Flexbox and wrap the cards. The other pages had no problems with responsiveness. Next time around I want to have a document viewer for the learner guide and slide deck uploads but am unsure of how they would fit with the design. <br>
 
 It was version controlled with Git and deployed on GitHub pages. I've spend the most amount of time trying to ensure everything was responsive. The second time I built the page I used the SheCodes template as a base. BIG MISTAKE!!! I have spent more time trying to solve bugs that the older code included in the code then I could have keeping the first site and building that up. Semantic HTML was used throughout.
 
