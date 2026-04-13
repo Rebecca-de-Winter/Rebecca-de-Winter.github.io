@@ -1047,3 +1047,59 @@ footer {
 .proj-title {
   padding-top: 24px;
 }
+/*---------------------------------------CASE_STUDIES-------------------------------------------*/
+.case-studies-grid {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 1.5rem 3rem;
+}
+
+.case-study-card {
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid #e38ab0;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.case-study-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.case-study-content {
+  padding: 1.5rem;
+}
+
+.case-study-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: #15123d;
+}
+
+.case-study-subtitle {
+  font-weight: 700;
+  color: #d66e9d;
+  margin-bottom: 1rem;
+}
+
+.case-study-points {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.case-study-points li {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+}

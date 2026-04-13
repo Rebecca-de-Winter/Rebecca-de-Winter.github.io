@@ -14,9 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oldenburg&family=Playpen+Sans+Thai:wght@100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Twinkle+Star&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Becky Cole Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=4" />
+    <title>Case Studies | Becky Cole Portfolio</title>
   </head>
+
   <body>
     <!----------------------------------------------NAV_BAR--------------------------------------------->
     <header>
@@ -50,53 +51,99 @@
       </nav>
     </header>
 
-    <!-------------------------------------------HERO------------------------------------------------>
-
+    <!-------------------------------------------CASE STUDIES HERO------------------------------------------------>
     <section>
       <article class="about-me-background">
         <div class="img-container">
           <img
-            src="assets/Becky_Profile_Pic2-removebg-preview.png"
+            src="assets/Developer.png"
             class="becky-pic"
+            alt="Illustration representing development work"
           />
         </div>
-        <h1 class="about-me-header">About Me</h1>
+
+        <h1 class="about-me-header">Case Studies</h1>
+
         <div class="about-me-long-text">
           <p>
-            I’m Becky Cole—a developer in the making with a career full of
-            creative detours that fuel everything I build. Before diving into
-            code, I spent years in vocational education, designing courses and
-            assessment tools that turned tricky subjects into engaging learning
-            experiences.
+            These projects show how I think, build, and solve problems across
+            full stack development, product design, and user experience.
           </p>
           <p>
-            I also ran an award-winning community radio station, where I
-            produced shows, built audiences, and learned how to grab attention
-            and keep it.
-          </p>
-          <p>Now I’m channeling all of that into development!</p>
-          <p>
-            Every project is a chance to blend an educator’s clarity, a media
-            creator’s storytelling, and a coder’s precision to create apps and
-            websites that truly connect with people. I thrive on new ideas,
-            playful design, and clean, functional code—and I can’t wait to bring
-            that mix of skills to a team that values curiosity, creativity, and
-            impact.
+            I’m especially drawn to ideas that combine technical depth with real
+            human needs, whether that means building structured accountability
+            workflows or creating community-focused platforms that feel warm,
+            practical, and memorable.
           </p>
           <p>
-            If you’re looking for a developer who brings fresh technical skills
-            plus a deep understanding of how people learn and engage, let’s
-            talk—I’d love to help make something extraordinary.
+            Here are two of my strongest recent projects.
           </p>
+        </div>
+
+        <div class="case-studies-grid">
+          <article class="case-study-card podflow-card">
+            <img
+              src="assets/Developer.png"
+              class="case-study-image"
+              alt="Illustration for PodFlow case study"
+            />
+            <div class="case-study-content">
+              <h2>PodFlow</h2>
+              <p class="case-study-subtitle">
+                Full Stack Accountability Platform
+              </p>
+              <p>
+                A private accountability platform built with React and Django
+                REST Framework, designed to help people keep goals moving
+                together.
+              </p>
+              <ul class="case-study-points">
+                <li>Private pods and trusted accountability</li>
+                <li>Shared goals, check-ins, and verification workflows</li>
+                <li>Role-based permissions and notifications system</li>
+              </ul>
+              <a href="podflow-case-study.html" class="btn-primary btn-dev"
+                >Read Case Study</a
+              >
+            </div>
+          </article>
+
+          <article class="case-study-card backyard-card">
+            <img
+              src="assets/Educator.png"
+              class="case-study-image"
+              alt="Illustration for Backyard Festival case study"
+            />
+            <div class="case-study-content">
+              <h2>Backyard Festival</h2>
+              <p class="case-study-subtitle">
+                Community-Powered Event Crowdfunding Platform
+              </p>
+              <p>
+                A full stack platform for grassroots events where supporters can
+                pledge money, time, or physical items to help bring community
+                ideas to life.
+              </p>
+              <ul class="case-study-points">
+                <li>Flexible money, time, and item pledges</li>
+                <li>Supporter and organiser dashboard views</li>
+                <li>Strong visual identity and responsive UI design</li>
+              </ul>
+              <a
+                href="backyard-festival-case-study.html"
+                class="btn-primary btn-edu"
+                >Read Case Study</a
+              >
+            </div>
+          </article>
         </div>
       </article>
     </section>
 
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
     <footer>
       <section>
         <div class="social-icons" id="contact">
-          <!-- <a href="https://www.facebook.com/becky.cole.779" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i>
-        </a> -->
           <a
             href="https://github.com/Rebecca-de-Winter"
             target="_blank"
@@ -111,17 +158,9 @@
             ><i class="fa-brands fa-linkedin-in"></i>
           </a>
 
-          <!-- <a
-            href="https://codepen.io/Becky-Cole-the-encoder"
-            title="CodePen"
-            id="profile-link"
-            target="_blank"
-            ><i class="fa-solid fa-code"></i
-          ></a> -->
           <a href="mailto:beckylouise81@gmail.com" title="Email me"
             ><i class="fa-solid fa-at"></i
           ></a>
-          <!-- <a href="tel:+123456789"title="Call me"><i class="fa-solid fa-phone" ></i></a>  -->
         </div>
       </section>
     </footer>
