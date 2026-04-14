@@ -28,7 +28,7 @@
   --menu-max: 220px;
 
   --font-ui: "Nunito", sans-serif;
-  --font-display: "Playpen Sans Thai", cursive;
+  --font-display: "Nunito", sans-serif; /* playpen sans thai is the old one */
 
   /* Optional container system for later pages */
   --page-max-width: 1120px;
@@ -393,9 +393,9 @@ header .mobile-header {
 
 .hero h1,
 .hero-name {
-  font-family: var(--font-display);
-  font-size: clamp(2.8rem, 8vw, 4rem);
-  font-weight: 400; /* lighter so Becky Cole doesn't feel chunky */
+  font-family: var(--font-ui);
+  font-size: clamp(4.6rem, 9vw, 7.2rem);
+  font-weight: 800;
   letter-spacing: 0;
   margin-bottom: 0;
   padding-top: 110px;
@@ -403,15 +403,16 @@ header .mobile-header {
   color: var(--white);
   display: flex;
   justify-content: center;
+  line-height: 0.95;
 }
 
 .hero-roles {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: max-content; /* columns shrink to each word */
-  justify-content: center; /* centre the trio */
+  grid-auto-columns: max-content;
+  justify-content: center;
   align-items: center;
-  column-gap: clamp(18px, 3vw, 40px); /* tighter than before */
+  column-gap: clamp(18px, 3vw, 40px);
   white-space: nowrap;
   padding-top: 18px;
   color: var(--white);
@@ -423,7 +424,7 @@ header .mobile-header {
 .hero-roles .role {
   font-family: var(--font-ui);
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4),
-    0 0 12px rgba(255, 255, 255, 0.2); /* gentle glow */
+    0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 .role-dev {
@@ -483,14 +484,12 @@ header .mobile-header {
   z-index: 0;
 }
 
-/* keeps content above the stars/ocean layers */
 .hero .logo,
 .hero h1 {
   position: relative;
   z-index: 1;
 }
 
-/* ocean pinned to bottom so it doesn't drift on resize */
 .hero .ocean {
   position: absolute;
   bottom: 0;
@@ -507,7 +506,6 @@ header .mobile-header {
   object-fit: cover;
 }
 
-/* centred stack so both logos sit on top of each other */
 .hero .logo-stack {
   position: absolute;
   bottom: calc(50% - (min(42vw, 360px) / 1.2));
@@ -519,7 +517,6 @@ header .mobile-header {
   animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
 }
 
-/* both logos fill the stack exactly and overlap */
 .hero .logo {
   position: absolute;
   inset: 0;
@@ -529,7 +526,6 @@ header .mobile-header {
   pointer-events: none;
 }
 
-/* circle sits on top until it fades */
 .hero .logo-circle {
   z-index: 2;
   animation: fade-out 0.35s linear
@@ -585,13 +581,13 @@ header .mobile-header {
 
   .hero h1,
   .hero-name {
-    font-size: 4rem;
+    font-size: clamp(5rem, 8.2vw, 7rem);
+    font-weight: 800;
     max-width: 100%;
     text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black,
       -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
   }
 
-  /* optional: shift middle label 1–2px right */
   .role-edu {
     transform: translateX(2px);
   }
@@ -770,107 +766,109 @@ header .mobile-header {
   align-items: center;
 }
 
-.projects-title {
+.my-projects-container .projects-title {
   margin: 0 auto 24px;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(3.2rem, 6.2vw, 4.4rem);
   color: var(--socialbar);
-  font-family: var(--ui);
-  font-weight:800;
+  font-family: var(--font-ui);
+  font-weight: 900;
+  line-height: 1.08;
 }
 
-.cards {
+.my-projects-container .cards {
   width: 100%;
   max-width: 1100px;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: 24px; /* spacing between cards */
+  gap: 24px;
   display: flex;
   justify-content: center;
 }
 
-.dev-card,
-.edu-card,
-.media-card {
-  flex: 1 1 320px; /* grow | shrink | preferred width */
-  max-width: 338px; /* stops cards stretching too wide */
+.my-projects-container .dev-card,
+.my-projects-container .edu-card,
+.my-projects-container .media-card {
+  flex: 1 1 320px;
+  max-width: 338px;
   border-radius: 20px;
   box-sizing: border-box;
 }
 
-.dev-card {
+.my-projects-container .dev-card {
   background: linear-gradient(180deg, #b4f3ec 0%, #c7f5ea 40%, #d9f7e6 100%);
   border: 2px solid #7adfdb;
 }
 
-.edu-card {
+.my-projects-container .edu-card {
   background-color: #ffd0d8;
   border: 2px solid #ff879b;
 }
 
-.media-card {
+.my-projects-container .media-card {
   background-color: #ffe6c0;
   border: 2px solid #fdd8aa;
 }
 
-.inner-wrap {
+.my-projects-container .inner-wrap {
   border-radius: 20px;
   text-align: center;
-  padding: 2px 18px 12px; /* controls title/body/button spacing inside cards */
+  padding: 2px 18px 12px;
   margin-top: auto;
 }
 
-.dev-card img,
-.edu-card img,
-.media-card img {
+.my-projects-container .dev-card img,
+.my-projects-container .edu-card img,
+.my-projects-container .media-card img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-.dev-card h4,
-.edu-card h4,
-.media-card h4 {
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  margin: 8px 0 12px; /* pushes title lower so it isn't glued to the top */
-  line-height: 1.1;
+.my-projects-container .dev-card h4,
+.my-projects-container .edu-card h4,
+.my-projects-container .media-card h4 {
+  font-family: var(--font-ui);
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 8px 0 12px;
+  line-height: 1.15;
   display: flex;
   justify-content: center;
 }
 
-.media-card h4 {
-  font-size: 1.45rem; /* keeps Media Creator from feeling too wide */
+.my-projects-container .media-card h4 {
+  font-size: 2rem;
 }
 
-.dev-card h4 {
+.my-projects-container .dev-card h4 {
   color: #3da5a7;
 }
 
-.edu-card h4 {
+.my-projects-container .edu-card h4 {
   color: #e07ba2;
 }
 
-.media-card h4 {
+.my-projects-container .media-card h4 {
   color: #fdaf69;
 }
 
-.dev-card p,
-.edu-card p,
-.media-card p {
+.my-projects-container .dev-card p,
+.my-projects-container .edu-card p,
+.my-projects-container .media-card p {
   font-family: var(--font-ui);
-  line-height: 1.15; /* tighter, closer to your original rhythm */
+  line-height: 1.15;
   padding-bottom: 10px;
   margin: 0;
   display: flex;
   justify-content: center;
 }
 
-.inner-wrap .btn-primary {
+.my-projects-container .inner-wrap .btn-primary {
   margin-top: 8px;
 }
 
-.dev-card .inner-wrap {
+.my-projects-container .dev-card .inner-wrap {
   background: linear-gradient(
     180deg,
     rgba(245, 255, 253, 1) 0%,
@@ -878,7 +876,7 @@ header .mobile-header {
   );
 }
 
-.edu-card .inner-wrap {
+.my-projects-container .edu-card .inner-wrap {
   background: linear-gradient(
     180deg,
     rgba(255, 245, 245, 1) 0%,
@@ -886,7 +884,7 @@ header .mobile-header {
   );
 }
 
-.media-card .inner-wrap {
+.my-projects-container .media-card .inner-wrap {
   background: linear-gradient(
     180deg,
     rgba(255, 251, 245, 1) 0%,
@@ -1048,24 +1046,26 @@ footer {
 .proj-title {
   margin: 24px auto;
   padding-top: 24px;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
   color: var(--socialbar);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  line-height: 1.3;
-  font-family: var(--font-display);
+  line-height: 1.15;
+  font-family: var(--font-ui);
+  font-weight: 800;
 }
 
 .proj-intro {
-  max-width: 760px;
-  margin: 0 auto 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 1.75rem;
   text-align: center;
   font-family: var(--font-ui);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.12rem;
+  line-height: 1.65;
   color: #2f2a49;
+  font-weight: 500;
 }
 
 /* ---------- Shared grid ---------- */
@@ -1130,25 +1130,6 @@ footer {
   height: 240px;
   min-height: 240px;
 }
-
-/* ---------- Educator top image area ---------- */
-
-/* ---------- Educator top image area ---------- */
-
-.project-card-top-edu {
-  background: #f7a9bc;
-  height: 180px;
-  min-height: 180px;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Instructional Design + Slide Deck */
-/* ---------- Educator top image area ---------- */
 
 /* ---------- Educator top image area ---------- */
 
@@ -1277,16 +1258,28 @@ footer {
 }
 
 .dev-card .inner-wrap {
-  background: #ddf8f4;
+  background: linear-gradient(
+    180deg,
+    #e1f7f3 0%,
+    var(--developer-inner) 100%
+  );
   padding: 14px 18px 14px;
 }
 
 .edu-card .inner-wrap {
-  background: #ffe6ec;
+    background: linear-gradient(
+    180deg,
+    #fff4f7 0%,
+    var(--educator-inner) 100%
+  );
 }
 
 .media-card .inner-wrap {
-  background: #fff4e2;
+    background: linear-gradient(
+    180deg,
+    #fff8ef 0%,
+    var(--media-creator-inner) 100%
+  );
 }
 
 .dev-card h4,
@@ -1362,16 +1355,12 @@ footer {
   }
 }
 /* ---------------------------------- About Page ---------------------------------- */
-/* Full page structure with intro panel, strengths cards, and highlights/CTA panel.
-   This version includes the spacing polish so you don't need extra override snippets.
-*/
 
 .about-page-shell {
-  padding-top: 84px; /* clears fixed nav */
+  padding-top: 84px;
   padding-bottom: 56px;
 }
 
-/* Top intro panel */
 .about-intro-panel {
   max-width: 1080px;
   margin: 0 auto 2.4rem;
@@ -1405,6 +1394,8 @@ footer {
   color: var(--educator-text);
   margin: 0 0 0.85rem;
   text-align: center;
+  font-family: var(--font-ui);
+  font-weight: 900;
 }
 
 .about-me-long-text {
@@ -1428,7 +1419,6 @@ footer {
   border-radius: 60px;
 }
 
-/* Lower shared panels */
 .about-strengths-panel,
 .about-highlights-panel {
   max-width: 1080px;
@@ -1441,14 +1431,14 @@ footer {
 }
 
 .about-section-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 4.2vw, 3rem);
   text-align: center;
   color: var(--socialbar);
   margin-bottom: 1.35rem;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
+  font-weight: 900;
 }
 
-/* What I Bring cards */
 .about-strengths-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1465,6 +1455,8 @@ footer {
 .strength-card h3 {
   font-size: 1.7rem;
   margin-bottom: 0.65rem;
+  font-family: var(--font-ui);
+  font-weight: 800;
 }
 
 .strength-card p {
@@ -1513,7 +1505,6 @@ footer {
   color: #fdaf69;
 }
 
-/* Highlights + CTA */
 .about-highlights-panel {
   display: grid;
   grid-template-columns: 1fr;
@@ -1543,12 +1534,16 @@ footer {
 .about-cta-block {
   background: rgba(255, 208, 216, 0.28);
   border: 1.5px solid rgba(224, 123, 162, 0.2);
+  text-align: center;
 }
 
 .about-cta-block h3 {
-  font-size: 1.7rem;
+  font-size: 1.85rem;
+  font-weight: 900;
   margin-bottom: 0.75rem;
   color: var(--educator-text);
+  font-family: var(--font-ui);
+  text-align: center;
 }
 
 .about-cta-block p {
@@ -1556,15 +1551,24 @@ footer {
   font-size: 1.02rem;
   line-height: 1.75;
   margin-bottom: 1.1rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-cta-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Tablet and desktop */
+.about-cta-buttons .btn-primary {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (min-width: 768px) {
   .about-intro-panel {
     grid-template-columns: 250px minmax(0, 1fr);
@@ -1620,7 +1624,6 @@ footer {
   }
 }
 
-/* Mobile refinements */
 @media (max-width: 767.98px) {
   .about-intro-panel {
     padding: 1.5rem 1.15rem 1.8rem;
@@ -1701,3 +1704,805 @@ footer {
   }
 }
 
+/* Homepage Projects: fix title alignment */
+
+.my-projects-container .inner-wrap {
+  border-radius: 20px;
+  text-align: center;
+  padding: 2px 18px 12px;
+  margin-top: auto;
+}
+
+.my-projects-container .dev-card .inner-wrap,
+.my-projects-container .edu-card .inner-wrap,
+.my-projects-container .media-card .inner-wrap {
+  padding: 2px 18px 12px;
+}
+
+.my-projects-container .dev-card h4,
+.my-projects-container .edu-card h4,
+.my-projects-container .media-card h4 {
+  font-family: var(--font-ui);
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 8px 0 12px;
+  line-height: 1.15;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Keep Media Creator the same size too, so all three align better */
+.my-projects-container .media-card h4 {
+  font-size: 2rem;
+}
+
+/* ==========================================
+   COHESION PASS
+   Paste at the very end of your CSS
+   ========================================== */
+
+:root {
+  --content-max-width: 1080px;
+  --section-title-size: clamp(3rem, 5.1vw, 4.1rem);
+  --section-title-line: 1.06;
+  --section-spacing: clamp(2rem, 4vw, 3rem);
+  --card-radius: 22px;
+  --inner-radius: 20px;
+  --card-title-home: clamp(1.9rem, 2.5vw, 2.1rem);
+  --card-title-projects: clamp(1.65rem, 2vw, 1.85rem);
+}
+
+/* ----------------------------------
+   Shared section width + rhythm
+---------------------------------- */
+
+.my-projects-container,
+.my-dev-container,
+.my-edu-container,
+.my-media-container,
+.about-page-shell {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.my-projects-container .cards,
+.project-cards,
+.proj-intro,
+.about-intro-panel,
+.about-strengths-panel,
+.about-highlights-panel {
+  max-width: var(--content-max-width);
+}
+
+/* ----------------------------------
+   Unified heading system
+---------------------------------- */
+
+.my-projects-container .projects-title,
+.proj-title,
+.about-section-title {
+  font-family: var(--font-ui);
+  font-size: var(--section-title-size);
+  line-height: var(--section-title-line);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--socialbar);
+}
+
+.my-projects-container .projects-title {
+  margin: 0 auto 1.6rem;
+}
+
+.proj-title {
+  margin: 0 auto 1rem;
+  padding-top: 0;
+}
+
+.about-section-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-me-header {
+  font-family: var(--font-ui);
+  font-size: clamp(3rem, 4.9vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  color: var(--educator-text);
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .my-projects-container .projects-title,
+  .proj-title,
+  .about-section-title {
+    font-size: clamp(2.6rem, 10vw, 3.15rem);
+  }
+
+  .about-me-header {
+    font-size: clamp(2.6rem, 10vw, 3.2rem);
+    text-align: center;
+  }
+}
+
+/* ----------------------------------
+   Hero tightening
+---------------------------------- */
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 92svh;
+  }
+
+  .hero h1,
+  .hero-name {
+    padding-top: 96px;
+    padding-bottom: 10px;
+    font-size: clamp(5rem, 8vw, 6.8rem);
+  }
+
+  .hero .hero-roles {
+    font-size: 1.65rem;
+    padding-top: 12px;
+    column-gap: clamp(24px, 3.4vw, 40px);
+  }
+
+  .hero .logo-stack {
+    bottom: calc(44% - (min(42vw, 360px) / 1.2));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero h1,
+  .hero-name {
+    padding-top: 96px;
+  }
+
+  .hero-roles {
+    padding-top: 12px;
+  }
+}
+
+/* ----------------------------------
+   Homepage about section polish
+---------------------------------- */
+
+.about-me-container h2 {
+  font-size: clamp(2.45rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.about-me-container p {
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .about-me-container p {
+    max-width: 36ch;
+  }
+}
+
+/* ----------------------------------
+   Homepage projects section
+---------------------------------- */
+
+.my-projects-container {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.my-projects-container .cards {
+  gap: 26px;
+}
+
+.my-projects-container .dev-card,
+.my-projects-container .edu-card,
+.my-projects-container .media-card {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+.my-projects-container .inner-wrap {
+  border-radius: 0 0 var(--inner-radius) var(--inner-radius);
+  padding: 10px 18px 16px;
+  margin-top: 0;
+}
+
+.my-projects-container .dev-card h4,
+.my-projects-container .edu-card h4,
+.my-projects-container .media-card h4 {
+  font-size: var(--card-title-home);
+  line-height: 1.08;
+  font-weight: 900;
+  margin: 8px 0 10px;
+  display: block;
+}
+
+.my-projects-container .dev-card p,
+.my-projects-container .edu-card p,
+.my-projects-container .media-card p {
+  display: block;
+  line-height: 1.4;
+  padding-bottom: 8px;
+}
+
+.my-projects-container .inner-wrap .btn-primary {
+  margin-top: 10px;
+}
+
+/* ----------------------------------
+   Projects page spacing + card harmony
+---------------------------------- */
+
+.my-dev-container,
+.my-edu-container,
+.my-media-container {
+  padding-top: clamp(2.4rem, 4vw, 3rem);
+  padding-bottom: 0;
+}
+
+.my-dev-container {
+  padding-top: 88px;
+}
+
+.proj-intro {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.project-cards {
+  gap: 26px;
+}
+
+.project-cards .dev-card,
+.project-cards .edu-card,
+.project-cards .media-card {
+  border-radius: var(--card-radius);
+}
+
+.project-card-top,
+.project-card-top-dev,
+.project-card-top-edu {
+  border-radius: 0;
+}
+
+.project-card-image-dev,
+.project-card-image-dev--weather,
+.project-card-image-edu,
+.project-card-image-edu--guide,
+.project-cards .media-card img {
+  border-radius: 14px 14px 0 0;
+}
+
+.dev-card .inner-wrap,
+.edu-card .inner-wrap,
+.media-card .inner-wrap {
+  border-radius: 0 0 var(--inner-radius) var(--inner-radius);
+  padding: 14px 18px 16px;
+}
+
+.dev-card h4,
+.edu-card h4,
+.media-card h4 {
+  font-size: var(--card-title-projects);
+  line-height: 1.08;
+  font-weight: 900;
+  margin: 0 0 12px;
+}
+
+.media-card h4 {
+  font-size: var(--card-title-projects);
+}
+
+.dev-card p,
+.edu-card p,
+.media-card p {
+  line-height: 1.42;
+  margin: 0 0 7px;
+}
+
+.inner-wrap .btn-primary {
+  margin-top: 14px;
+}
+
+/* ----------------------------------
+   About page panel consistency
+---------------------------------- */
+
+.about-page-shell {
+  padding-top: 84px;
+  padding-bottom: 44px;
+}
+
+.about-intro-panel,
+.about-strengths-panel,
+.about-highlights-panel {
+  max-width: var(--content-max-width);
+  border-radius: 30px;
+}
+
+.about-intro-panel {
+  margin-bottom: var(--section-spacing);
+  padding: 1.9rem 1.5rem 2.1rem;
+}
+
+.about-strengths-panel,
+.about-highlights-panel {
+  margin-bottom: var(--section-spacing);
+  padding: 2rem 1.5rem 2.15rem;
+}
+
+.strength-card,
+.about-highlights-copy,
+.about-cta-block {
+  border-radius: 22px;
+}
+
+.strength-card h3 {
+  font-size: clamp(1.65rem, 2vw, 1.9rem);
+  font-weight: 800;
+}
+
+.strength-card p,
+.about-highlight-list li,
+.about-cta-block p,
+.about-me-long-text p {
+  line-height: 1.7;
+}
+
+.about-cta-block h3 {
+  font-size: clamp(1.9rem, 2.6vw, 2.25rem);
+  line-height: 1.12;
+}
+
+@media (min-width: 768px) {
+  .about-intro-panel {
+    padding: 2.2rem 2.2rem 2.35rem;
+  }
+
+  .about-strengths-panel,
+  .about-highlights-panel {
+    padding: 2.1rem 1.85rem 2.2rem;
+  }
+}
+
+/* ----------------------------------
+   Footer reduction
+---------------------------------- */
+
+footer {
+  padding: 10px 0;
+  border-top-width: 4px;
+}
+
+.social-icons {
+  gap: 0.6rem;
+  padding: 8px 12px;
+}
+
+.social-icons a {
+  font-size: 1.85rem;
+  padding: 0.45rem 0.6rem;
+  line-height: 1;
+}
+
+@media (max-width: 767.98px) {
+  footer {
+    padding: 8px 0;
+  }
+
+  .social-icons {
+    gap: 0.45rem;
+    padding: 6px 10px;
+  }
+
+  .social-icons a {
+    font-size: 1.7rem;
+    padding: 0.38rem 0.48rem;
+  }
+}
+/* ==========================================
+   SOFTENED HIERARCHY + NAVBAR BREATHING ROOM
+   Paste AFTER the previous patch
+   ========================================== */
+
+:root {
+  --section-title-size: clamp(2.75rem, 4.6vw, 3.65rem);
+  --card-title-home: clamp(1.72rem, 2.15vw, 1.92rem);
+  --card-title-projects: clamp(1.56rem, 1.8vw, 1.72rem);
+}
+
+/* ----------------------------------
+   Main section headings: less chunky
+---------------------------------- */
+
+.my-projects-container .projects-title,
+.proj-title,
+.about-section-title {
+  font-size: var(--section-title-size);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.about-me-header {
+  font-size: clamp(2.7rem, 4.5vw, 3.55rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 767.98px) {
+  .my-projects-container .projects-title,
+  .proj-title,
+  .about-section-title,
+  .about-me-header {
+    font-size: clamp(2.4rem, 9vw, 2.95rem);
+  }
+}
+
+/* ----------------------------------
+   Hero role line: calmer and closer
+   to project card title hierarchy
+---------------------------------- */
+
+.hero-roles {
+  font-weight: 700;
+  padding-top: 14px;
+  column-gap: clamp(16px, 2.5vw, 30px);
+}
+
+.hero-roles .role {
+  line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-roles {
+    font-size: 1.52rem;
+    font-weight: 700;
+    padding-top: 14px;
+    column-gap: clamp(20px, 3vw, 34px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-roles {
+    font-size: 1.18rem;
+    column-gap: 14px;
+    padding-top: 12px;
+  }
+}
+
+/* ----------------------------------
+   Home cards: slightly lighter
+---------------------------------- */
+
+.my-projects-container .dev-card h4,
+.my-projects-container .edu-card h4,
+.my-projects-container .media-card h4 {
+  font-size: var(--card-title-home);
+  font-weight: 800;
+  line-height: 1.08;
+  margin: 10px 0 10px;
+}
+
+.my-projects-container .dev-card p,
+.my-projects-container .edu-card p,
+.my-projects-container .media-card p {
+  line-height: 1.35;
+}
+
+/* ----------------------------------
+   Projects page cards: slightly firmer
+---------------------------------- */
+
+.dev-card h4,
+.edu-card h4,
+.media-card h4 {
+  font-size: var(--card-title-projects);
+  font-weight: 800;
+  line-height: 1.08;
+  margin: 0 0 12px;
+}
+
+.media-card h4 {
+  font-size: clamp(1.5rem, 1.75vw, 1.66rem);
+}
+
+.dev-card p,
+.edu-card p,
+.media-card p {
+  line-height: 1.38;
+}
+
+/* ----------------------------------
+   Navbar: more vertical breathing room
+---------------------------------- */
+
+#navbar {
+  height: 58px;
+  padding: 0 18px;
+  align-items: center;
+}
+
+.nav-link {
+  line-height: 1;
+}
+
+.nav-logo {
+  width: 82px;
+  top: 4px;
+  left: 14px;
+}
+
+@media (max-width: 599.98px) {
+  #navbar {
+    height: 58px;
+    padding: 0 14px;
+  }
+
+  #navbar .nav-links {
+    top: 58px;
+  }
+
+  #navbar .nav-link {
+    padding: 9px 0;
+  }
+}
+
+/* ----------------------------------
+   Footer: keep the trimmer feel
+---------------------------------- */
+
+footer {
+  padding: 9px 0;
+  border-top-width: 4px;
+}
+
+.social-icons {
+  gap: 0.55rem;
+  padding: 7px 10px;
+}
+
+.social-icons a {
+  font-size: 1.78rem;
+  padding: 0.42rem 0.55rem;
+  line-height: 1;
+}
+
+@media (max-width: 767.98px) {
+  footer {
+    padding: 7px 0;
+  }
+
+  .social-icons {
+    gap: 0.42rem;
+    padding: 6px 8px;
+  }
+
+  .social-icons a {
+    font-size: 1.62rem;
+    padding: 0.34rem 0.42rem;
+  }
+}
+.about-me-container h2 {
+  font-weight: 800;
+}
+.about-me-container h2 {
+  font-size: clamp(2.45rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+/* ==========================================
+   PROJECTS PAGE FIXES
+   Media Creator heading alignment
+   + Educator mobile image consistency
+   ========================================== */
+
+/* ----------------------------------
+   MEDIA CREATOR: fix heading size / wrap / alignment
+---------------------------------- */
+
+.my-media-container .media-card h4 {
+  font-size: 1.7rem;
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 0 auto 12px;
+  max-width: 12ch;
+  min-height: 2.2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.my-media-container .media-card p {
+  line-height: 1.38;
+}
+
+@media (max-width: 1024px) {
+  .my-media-container .media-card h4 {
+    font-size: 1.72rem;
+    max-width: 14ch;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .my-media-container .media-card h4 {
+    font-size: 1.68rem;
+    max-width: 14ch;
+    min-height: 0;
+  }
+}
+
+/* ----------------------------------
+   EDUCATOR MOBILE: keep image behaviour
+   closer to desktop
+---------------------------------- */
+
+@media (max-width: 767.98px) {
+  .my-edu-container .project-card-top-edu {
+    height: 220px;
+    min-height: 220px;
+    padding: 8px;
+  }
+
+  /* stop the generic mobile max-height rule
+     from flattening educator images */
+  .my-edu-container .project-card-image-edu,
+  .my-edu-container .project-card-image-edu--guide {
+    max-height: none;
+  }
+
+  /* Instructional Design and Slide Deck keep
+     their desktop-style crop behaviour */
+  .my-edu-container .edu-card:nth-child(1) .project-card-image-edu,
+  .my-edu-container .edu-card:nth-child(3) .project-card-image-edu {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .my-edu-container .edu-card:nth-child(1) .project-card-image-edu {
+    object-position: left top;
+  }
+
+  .my-edu-container .edu-card:nth-child(3) .project-card-image-edu {
+    object-position: center top;
+  }
+
+  /* Learner Guide gets a cleaner contained layout
+     without the weird compressed mobile look */
+  .my-edu-container .edu-card:nth-child(2) .project-card-top-edu {
+    align-items: stretch;
+  }
+
+  .my-edu-container .edu-card:nth-child(2) .project-card-image-edu--guide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    object-position: center top;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff7fb;
+  }
+}
+/* ==========================================
+   LEARNER GUIDE MOBILE FIX
+   make it wider again
+   ========================================== */
+
+@media (max-width: 767.98px) {
+  .my-edu-container .edu-card:nth-child(2) .project-card-top-edu {
+    height: 210px;
+    min-height: 210px;
+    padding: 8px;
+    align-items: stretch;
+  }
+
+  .my-edu-container .edu-card:nth-child(2) .project-card-image-edu--guide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff7fb;
+  }
+}
+/* ==========================================
+   SLIDE DECK MOBILE FIX
+   shift crop left so title isn't cut off
+   ========================================== */
+
+@media (max-width: 767.98px) {
+  .my-edu-container .edu-card:nth-child(3) .project-card-top-edu {
+    height: 210px;
+    min-height: 210px;
+    padding: 8px;
+    align-items: stretch;
+  }
+
+  .my-edu-container .edu-card:nth-child(3) .project-card-image-edu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: 24% top;
+    border-radius: 12px;
+  }
+}
+/* ==========================================
+   LEARNER GUIDE DESKTOP/TABLET FIX
+   make it fill the tile more like the others
+   ========================================== */
+
+@media (min-width: 768px) {
+  .my-edu-container .edu-card:nth-child(2) .project-card-top-edu {
+    align-items: stretch;
+    height: 190px;
+    min-height: 190px;
+    padding: 6px;
+  }
+
+  .my-edu-container .edu-card:nth-child(2) .project-card-image-edu--guide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center 8%;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff7fb;
+    box-sizing: border-box;
+  }
+}
+/* ==========================================
+   PROJECTS PAGE SPACING TWEAKS
+   wider intro line + more air above footer
+   ========================================== */
+
+/* Let the intro sentence breathe a bit more */
+.proj-intro {
+  max-width: 940px;
+  margin: 0 auto 2rem;
+}
+
+/* Give the last projects section more space before the footer */
+.my-media-container {
+  padding-bottom: 44px;
+}
+
+/* Optional: a touch more separation on mobile too */
+@media (max-width: 767.98px) {
+  .proj-intro {
+    max-width: 92%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .my-media-container {
+    padding-bottom: 36px;
+  }
+}
