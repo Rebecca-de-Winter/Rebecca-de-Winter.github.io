@@ -1058,48 +1058,6 @@ footer {
   font-family: var(--font-display);
 }
 
-.project-cards {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.project-cards .dev-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  object-position: center;
-  background: var(--developer-inner);
-  padding: 0;
-  display: block;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.project-cards .edu-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  object-position: center;
-  background: var(--educator-inner);
-  padding: 0;
-  display: block;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.project-cards .media-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain; /* fits whole image inside */
-  object-position: center;
-  background: #ffe6c0;
-  padding: 0;
-  display: block;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
 .proj-intro {
   max-width: 760px;
   margin: 0 auto 1.5rem;
@@ -1110,15 +1068,298 @@ footer {
   color: #2f2a49;
 }
 
-.project-banner-image {
+/* ---------- Shared grid ---------- */
+
+.project-cards {
   width: 100%;
-  height: 200px;
-  object-fit: cover; /* better for wide banners */
-  object-position: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ---------- Shared card sizing ---------- */
+
+.project-cards .dev-card,
+.project-cards .edu-card,
+.project-cards .media-card {
+  width: 100%;
+  min-width: 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Card shells ---------- */
+
+.dev-card {
+  background: #7adfdb;
+  border: 2px solid #7adfdb;
+}
+
+.edu-card {
+  background: #f7a9bc;
+  border: 2px solid #f7a9bc;
+}
+
+.media-card {
+  background: #ffe6c0;
+  border: 2px solid #fdd8aa;
+}
+
+/* ---------- Top image areas ---------- */
+
+.project-card-top {
+  width: 100%;
+  height: 220px;
+  min-height: 220px;
+  padding: 10px 10px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.project-card-top-dev {
+  background: #7adfdb;
+  height: 240px;
+  min-height: 240px;
+}
+
+/* ---------- Educator top image area ---------- */
+
+/* ---------- Educator top image area ---------- */
+
+.project-card-top-edu {
+  background: #f7a9bc;
+  height: 180px;
+  min-height: 180px;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Instructional Design + Slide Deck */
+/* ---------- Educator top image area ---------- */
+
+/* ---------- Educator top image area ---------- */
+
+.project-card-top-edu {
+  background: #f7a9bc;
+  height: 190px;
+  min-height: 190px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ---------- Instructional Design + Slide Deck ---------- */
+
+.my-edu-container .edu-card:nth-child(1) .project-card-top-edu,
+.my-edu-container .edu-card:nth-child(3) .project-card-top-edu {
+  align-items: stretch;
+}
+
+.my-edu-container .edu-card:nth-child(1) .project-card-image-edu,
+.my-edu-container .edu-card:nth-child(3) .project-card-image-edu {
   display: block;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background: #0b0e32;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Keep the left side of Instructional Design visible */
+.my-edu-container .edu-card:nth-child(1) .project-card-image-edu {
+  object-position: left top;
+}
+
+/* Slide Deck can crop more naturally from the middle/top */
+.my-edu-container .edu-card:nth-child(3) .project-card-image-edu {
+  object-position: center top;
+}
+
+/* ---------- Learner Guide ---------- */
+
+.my-edu-container .edu-card:nth-child(2) .project-card-top-edu {
+  align-items: flex-start;
+}
+
+.project-card-image-edu--guide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 12px;
+  background: #fff7fb;
+  box-sizing: border-box;
+}
+/* ---------- Developer screenshots ---------- */
+
+.project-card-image-dev,
+.project-card-image-dev--weather {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px 12px 0 0;
+  box-sizing: border-box;
+}
+
+/* Weather still gets a soft white frame, but uses the same height system */
+.project-card-image-dev--weather {
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* ---------- Educator screenshots ---------- */
+
+.project-card-image-edu {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-card-image-edu--guide {
+  max-height: 188px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* ---------- Media images ---------- */
+
+.project-cards .media-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 14px auto 0;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+}
+
+/* ---------- Shared inner card content ---------- */
+
+.inner-wrap {
+  text-align: center;
+  padding: 10px 18px 14px;
+  margin-top: 0;
+  border-radius: 20px 20px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dev-card .inner-wrap {
+  background: #ddf8f4;
+  padding: 14px 18px 14px;
+}
+
+.edu-card .inner-wrap {
+  background: #ffe6ec;
+}
+
+.media-card .inner-wrap {
+  background: #fff4e2;
+}
+
+.dev-card h4,
+.edu-card h4,
+.media-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.media-card h4 {
+  font-size: 1.45rem;
+}
+
+.dev-card h4 {
+  color: #3da5a7;
+  margin: 0 0 14px;
+}
+
+.edu-card h4 {
+  color: #e07ba2;
+  margin: 6px 0 14px;
+}
+
+.media-card h4 {
+  color: #fdaf69;
+  margin: 6px 0 14px;
+}
+
+.dev-card p,
+.edu-card p,
+.media-card p {
+  font-family: var(--font-ui);
+  line-height: 1.24;
+  margin: 0 0 6px;
+}
+
+.inner-wrap .btn-primary {
+  margin-top: auto;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .proj-intro {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .project-card-top {
+    height: 210px;
+    min-height: 210px;
+  }
+
+  .project-card-image,
+  .project-card-image-edu,
+  .project-cards .media-card img {
+    max-height: 190px;
+  }
 }
 /* ---------------------------------- About Page ---------------------------------- */
 /* Full page structure with intro panel, strengths cards, and highlights/CTA panel.

@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
-<link rel="stylesheet" href="style.css?v=5" />
-    <title>Becky Cole Portfolio</title>
-</head>
-<body>
-  <!----------------------------------------------NAV_BAR--------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css?v=13" />
+    <title>Projects | Becky Cole Portfolio</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------NAV_BAR--------------------------------------------->
     <header>
       <nav id="navbar" class="topnav">
-          <img src="assets/BeckyUnicorn.png" class ="nav-logo" alt="girl in bubble logo" /> 
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
 
         <div class="nav-links">
           <a class="nav-link" href="index.html">Home</a>
@@ -32,15 +37,24 @@
           <a class="nav-link" href="contact.html">Contact</a>
         </div>
 
-        <button class="hamburger-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-          <img src="assets/hamburger.svg" class="hamburger-icon" alt="three horizontal lines stacked on top of each other" />
-        </button>  
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
       </nav>
     </header>
 
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 
-
+<!----------------------------------------------DEVELOPER------------------------------------------------>
 <section class="my-dev-container" id="developer">
   <h1 class="proj-title">Developer</h1>
   <p class="proj-intro">
@@ -50,11 +64,13 @@
 
   <div class="project-cards">
     <div class="dev-card">
-      <img
-        src="assets/podflow-banner.png"
-        alt="PodFlow accountability platform interface"
-        class="project-banner-image"
-      />
+      <div class="project-card-top project-card-top-dev">
+        <img
+          src="assets/podflow-banner.png"
+          alt="PodFlow accountability platform interface"
+          class="project-card-image project-card-image-dev"
+        />
+      </div>
       <div class="inner-wrap">
         <h4><b>PodFlow</b></h4>
         <p>Full Stack App · React + Django REST</p>
@@ -67,13 +83,16 @@
     </div>
 
     <div class="dev-card">
-      <img
-        src="assets/backyard-festival.png"
-        alt="A screenshot of a React and Django event crowdfunding website"
-      />
+      <div class="project-card-top project-card-top-dev">
+        <img
+          src="assets/backyard-festival.png"
+          alt="Backyard Festival community event crowdfunding platform"
+          class="project-card-image project-card-image-dev"
+        />
+      </div>
       <div class="inner-wrap">
         <h4><b>Backyard Festival</b></h4>
-        <p>Full Stack App · React + Django REST</p>
+        <p>Full Stack App · React + Django</p>
         <p>Community event crowdfunding with money, time, and item pledges</p>
         <p>Product design, branding, and role-based supporter flows</p>
         <a href="https://backyard-festival.netlify.app/" class="btn-primary btn-dev"
@@ -83,10 +102,13 @@
     </div>
 
     <div class="dev-card">
-      <img
-        src="assets/weather_app.png"
-        alt="A screenshot of a weather analysing app made in Python and Flask"
-      />
+      <div class="project-card-top project-card-top-dev">
+        <img
+          src="assets/weather_app.png"
+          alt="Weather CSV Analyser Flask application"
+          class="project-card-image project-card-image-dev project-card-image-dev--weather"
+        />
+      </div>
       <div class="inner-wrap">
         <h4><b>Weather CSV Analyser</b></h4>
         <p>Backend-Focused Flask Application</p>
@@ -100,100 +122,145 @@
   </div>
 </section>
 
-
+<!----------------------------------------------EDUCATOR------------------------------------------------>
 <section class="my-edu-container" id="educator">
   <h1 class="proj-title">Educator</h1>
 
   <div class="project-cards">
-    <div class = "edu-card">
-      <img src="assets/develop-techniques_screenshot.png" alt="Articulate course in radio broadcasting" style="width:100%">
+    <div class="edu-card">
+      <div class="project-card-top project-card-top-edu">
+        <img
+          src="assets/develop-techniques_screenshot.png"
+          alt="Articulate course in radio broadcasting"
+          class="project-card-image project-card-image-edu"
+        />
+      </div>
       <div class="inner-wrap">
-      <h4><b>Instructional Design</b></h4>
-      <p>Cert II Radio Broadcasting unit </p>
-      <p>Broadcasting presentation skills training</p>
-      <p> Articulate Rise, Audacity, Padlet, H5P</p>
-      <a href="content/index.html" target="_blank" rel="noopener" class="btn-primary btn-edu">Demo</a>
-    </div></div>
+        <h4><b>Instructional Design</b></h4>
+        <p>Cert II Radio Broadcasting unit</p>
+        <p>Broadcasting presentation skills training</p>
+        <p>Articulate Rise, Audacity, Padlet, H5P</p>
+        <a href="content/index.html" target="_blank" rel="noopener" class="btn-primary btn-edu"
+          >Demo</a
+        >
+      </div>
+    </div>
 
-    <div class = "edu-card">
-      <img src="assets/7-steps-screenshot.png" alt="PowerPoint radio broadcasting slide deck" style="width:100%">
+    <div class="edu-card">
+      <div class="project-card-top project-card-top-edu">
+        <img
+          src="assets/learner-guide-screenshot.png"
+          alt="Opening page of learner guide"
+          class="project-card-image project-card-image-edu project-card-image-edu--guide"
+        />
+      </div>
       <div class="inner-wrap">
-      <h4><b>Slide Deck</b></h4>
-      <p>Seven steps to a perfect talk break</p>    
-      <p>Cert II in Creative Industries tool</p>
-      <p>Radio broadcasting training</p>
-      <a href = "assets/7_steps.pptx" class="btn-primary btn-edu">Read Me</a>
-    </div></div>
+        <h4><b>Learner Guide</b></h4>
+        <p>Cert I Employment Pathways</p>
+        <p>Trauma informed learning</p>
+        <p>Assessment embedded within content</p>
+        <a href="assets/VU22788_Learner_Workbook_v1.1.pdf" class="btn-primary btn-edu"
+          >Read Me</a
+        >
+      </div>
+    </div>
 
-    <div class = "edu-card">
-      <img src="assets/learner-guide-screenshot.png" alt="Screenshot of opening page of learner guide" style="width:100%">
+    <div class="edu-card">
+      <div class="project-card-top project-card-top-edu">
+        <img
+          src="assets/7-steps-screenshot.png"
+          alt="PowerPoint radio broadcasting slide deck"
+          class="project-card-image project-card-image-edu"
+        />
+      </div>
       <div class="inner-wrap">
-      <h4><b>Learner Guide</b></h4>
-      <p>Cert I Employment Pathways</p>    
-      <p>Trauma informed learning</p>
-      <p>Assessment embedded within content</p>
-      <a href = "assets/VU22788_Learner_Workbook_v1.1.pdf" class="btn-primary btn-edu">Read Me</a>
-    </div></div>
-  </div>
-</section>
-
-<section class="my-media-container" id="media-creator">
-  <h1 class="proj-title">Media Creator</h1>
-  <div class="project-cards">
-  <div class = "media-card">
-    <img src="assets/headphones.png" alt="unicorn listening to music" style="width:100%">
-      <div class="inner-wrap">
-      <h4><b>Podcasts</b></h4>
-      <p>"My Voice, My Ability, My Rights"</p>
-      <p>Women with disabilities episode</p>
-      <p>Won CBAA Award</p>
-      <a href = "assets/Women-With-Disabilities-Rights-MASTERED.mp3" class="btn-primary btn-media">Listen</a>
-    </div></div>
-
-  <div class = "media-card">
-      <img src="assets/headphones.png" alt="unicorn listening to music" style="width:100%">
-      <div class="inner-wrap">
-      <h4><b>Podcasts</b></h4>
-      <p>"My Voice, My Ability, My Rights"</p>
-      <p>Public transportation episode</p>
-      <p>Won CBAA Award</p>
-      <a href = "assets/Public-Transport-Disability-Discrimination-MASTERED.mp3" class="btn-primary btn-media">Listen</a>
-  </div></div>
-
-  <div class = "media-card">
-      <img src="assets/radio-screenshot.png" alt="Girl taking photo of unicorn float" style="width:100%">
-      <div class="inner-wrap">
-      <h4><b>Radio Commercial</b></h4>
-      <p>Dolphin Marine Magic</p>
-      <p>Scriptwriting and production</p>
-      <p>Concept to final mix in under 48 hours</p>
-      <a href = "assets/Dolphin_Marine_Magic.mp3" class="btn-primary btn-media">Listen</a>
+        <h4><b>Slide Deck</b></h4>
+        <p>Seven steps to a perfect talk break</p>
+        <p>Cert II in Creative Industries tool</p>
+        <p>Radio broadcasting training</p>
+        <a href="assets/7_steps.pptx" class="btn-primary btn-edu">Read Me</a>
       </div>
     </div>
   </div>
 </section>
 
-  
-  <footer>
-      <section>
-      <div class="social-icons" id="contact">
-        <!-- <a href="https://www.facebook.com/becky.cole.779" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i> -->
-        </a>
-        <a 
-            href="https://github.com/Rebecca-de-Winter" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+<!----------------------------------------------MEDIA CREATOR------------------------------------------------>
+<section class="my-media-container" id="media-creator">
+  <h1 class="proj-title">Media Creator</h1>
+
+  <div class="project-cards project-cards--media">
+    <div class="media-card">
+      <img
+        src="assets/headphones.png"
+        alt="Illustration representing award-winning podcast work"
+      />
+      <div class="inner-wrap">
+        <h4><b>Women With Disabilities</b></h4>
+        <p>Award-winning podcast episode</p>
+        <p>My Voice, My Ability, My Rights</p>
+        <p>CBAA Award Winner</p>
         <a
+          href="assets/Women-With-Disabilities-Rights-MASTERED.mp3"
+          class="btn-primary btn-media"
+          >Listen</a
+        >
+      </div>
+    </div>
+
+    <div class="media-card">
+      <img
+        src="assets/radio-screenshot.png"
+        alt="Illustration representing radio commercial production"
+      />
+      <div class="inner-wrap">
+        <h4><b>Radio Commercial</b></h4>
+        <p>Dolphin Marine Magic</p>
+        <p>Scriptwriting and production</p>
+        <p>Concept to final mix in under 48 hours</p>
+        <a href="assets/Dolphin_Marine_Magic.mp3" class="btn-primary btn-media"
+          >Listen</a
+        >
+      </div>
+    </div>
+
+    <div class="media-card">
+      <img
+        src="assets/headphones.png"
+        alt="Illustration representing award-winning podcast work"
+      />
+      <div class="inner-wrap">
+        <h4><b>Public Transport</b></h4>
+        <p>Award-winning podcast episode</p>
+        <p>My Voice, My Ability, My Rights</p>
+        <p>CBAA Award Winner</p>
+        <a
+          href="assets/Public-Transport-Disability-Discrimination-MASTERED.mp3"
+          class="btn-primary btn-media"
+          >Listen</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a href="https://github.com/Rebecca-de-Winter" target="_blank" title="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
             href="https://www.linkedin.com/in/rebecca-c-52141625/"
             target="_blank"
             title="LinkedIn"
             ><i class="fa-brands fa-linkedin-in"></i>
           </a>
-        <!-- <a href="https://codepen.io/Becky-Cole-the-encoder" title="Portfolio" id="profile-link" target="_blank"><i class="fa-solid fa-briefcase"></i></a> -->
-        <a href="mailto:beckylouise81@gmail.com" title="Email me"><i class="fa-solid fa-at"></i></a>
-        <!-- <a href="tel:+123456789"title="Call me"><i class="fa-solid fa-phone" ></i></a>  -->
-      </div>
+          <a href="mailto:beckylouise81@gmail.com" title="Email me"
+            ><i class="fa-solid fa-at"></i
+          ></a>
+        </div>
       </section>
     </footer>
-</body>
+  </body>
 </html>
-
-
