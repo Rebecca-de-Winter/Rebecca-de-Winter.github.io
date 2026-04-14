@@ -2506,3 +2506,18 @@ footer {
     padding-bottom: 36px;
   }
 }
+/* ==========================================
+   ABOUT PAGE MOBILE WIDTH FIX
+   make the top About Me panel feel as wide
+   as the projects page
+   ========================================== */
+
+@media (max-width: 767.98px) {
+  .about-intro-panel {
+    width: calc(100% + 12px);
+    max-width: none;
+    margin-left: -6px;
+    margin-right: -6px;
+    padding: 1.45rem 1rem 1.7rem;
+  }
+}
