@@ -2513,8 +2513,8 @@ footer {
 
 @media (max-width: 767.98px) {
   .about-page-shell {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .about-intro-panel {
