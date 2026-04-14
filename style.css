@@ -637,54 +637,124 @@ header .mobile-header {
   }
 }
 
-/* ---------------------------------- Homepage About Section ---------------------------------- */
+/* ---------------------------------- HOMEPAGE ABOUT SECTION ---------------------------------- */
+/* Mobile first:
+   Stacked on mobile, balanced two-column layout on desktop.
+   Keeps the button from stretching like a full-width banner.
+*/
 
 .articles-container {
+  display: block;
   border-bottom: 5px solid var(--educator-text);
 }
 
-@media (min-width: 768px) {
-  .articles-container {
-    display: flex;
-  }
-
-  /* careful applying this to all articles */
-  article {
-    padding: 56px;
-  }
+.articles-container article {
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }
 
-article {
+/* Left side: image panel */
+.aboutme-background {
+  position: relative;
+  background: url("assets/bubblebackground.jpg") center center / cover no-repeat;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.aboutmeimage {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  animation: bobFloat 2.5s ease-in-out infinite;
+}
+
+/* Right side: text panel */
+.about-me-container {
   background: linear-gradient(
     180deg,
     rgba(255, 245, 245, 1) 0%,
     rgba(255, 208, 216, 1) 100%
   );
-  padding: 40px;
-  transition: all 0.3s ease;
-  line-height: 1.8;
-  margin-inline: auto;
+  padding: 2rem 1.5rem 2.25rem;
 }
 
-article p {
-  margin-bottom: 16px;
-}
-
-/* homepage bubble section */
-.aboutme-background {
-  position: relative; /* establishes stacking context */
-  background: url("assets/bubblebackground.jpg") center bottom / cover no-repeat;
-}
-
-.aboutmeimage {
-  display: inline-block;
-  height: auto;
-  padding: 16px;
-  animation: bobFloat 2.5s ease-in-out infinite;
-}
-
-article h2 {
+.about-me-container h2 {
   color: var(--educator-text);
+  font-family: var(--font-ui);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.about-me-container p {
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+/* IMPORTANT: keep button pill-sized */
+.about-me-container .btn-primary {
+  display: inline-flex;
+  width: auto;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+  }
+
+  .aboutme-background {
+    min-height: 640px;
+    padding: 2.5rem;
+  }
+
+  .aboutmeimage {
+    width: min(100%, 620px);
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* stops children stretching full width */
+    padding: 3.25rem 2.25rem;
+  }
+
+  .about-me-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-me-container p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    max-width: 34ch;
+  }
+}
+
+@media (min-width: 1100px) {
+  .aboutme-background {
+    min-height: 700px;
+  }
+
+  .about-me-container {
+    padding: 3.5rem 2.75rem;
+  }
+
+  .about-me-container p {
+    font-size: 1.1rem;
+  }
 }
 
 /* ---------------------------------- Homepage Projects ---------------------------------- */
@@ -704,7 +774,8 @@ article h2 {
   margin: 0 auto 24px;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: var(--socialbar);
-  font-family: var(--font-display);
+  font-family: var(--ui);
+  font-weight:800;
 }
 
 .cards {
@@ -744,7 +815,7 @@ article h2 {
 .inner-wrap {
   border-radius: 20px;
   text-align: center;
-  padding: 10px 18px 16px; /* controls title/body/button spacing inside cards */
+  padding: 2px 18px 12px; /* controls title/body/button spacing inside cards */
   margin-top: auto;
 }
 
@@ -762,7 +833,7 @@ article h2 {
 .media-card h4 {
   font-family: var(--font-display);
   font-size: 1.55rem;
-  margin: 14px 0 12px; /* pushes title lower so it isn't glued to the top */
+  margin: 8px 0 12px; /* pushes title lower so it isn't glued to the top */
   line-height: 1.1;
   display: flex;
   justify-content: center;
@@ -1029,53 +1100,306 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
-/* ---------------------------------- About Page ---------------------------------- */
-
-.img-container {
-  padding-top: 96px;
+.proj-intro {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2f2a49;
 }
 
-.about-me-background {
+.project-banner-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* better for wide banners */
+  object-position: center;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: #0b0e32;
+}
+/* ---------------------------------- About Page ---------------------------------- */
+/* Full page structure with intro panel, strengths cards, and highlights/CTA panel.
+   This version includes the spacing polish so you don't need extra override snippets.
+*/
+
+.about-page-shell {
+  padding-top: 84px; /* clears fixed nav */
+  padding-bottom: 56px;
+}
+
+/* Top intro panel */
+.about-intro-panel {
+  max-width: 1080px;
+  margin: 0 auto 2.4rem;
   background: linear-gradient(
     180deg,
-    rgba(255, 245, 245, 1) 0%,
-    rgba(255, 208, 216, 1) 100%
+    rgba(255, 245, 245, 0.97) 0%,
+    rgba(255, 208, 216, 0.93) 100%
   );
-  border-top: 2px solid var(--educator-border);
-  text-align: center;
-  min-height: calc(100vh - 52px - 100px); /* 52 header, approx 100 footer */
+  border: 2px solid rgba(255, 135, 155, 0.5);
+  border-radius: 32px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  padding: 1.75rem 1.4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.about-intro-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-intro-copy {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .about-me-header {
-  font-size: 2.5rem;
+  font-size: clamp(2.3rem, 4.6vw, 3.25rem);
   color: var(--educator-text);
-  margin: 24px 0 8px;
+  margin: 0 0 0.85rem;
   text-align: center;
 }
 
 .about-me-long-text {
-  margin: 0 auto 20px;
-  max-width: 820px;
+  margin: 0 auto;
 }
 
 .about-me-long-text p {
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 1.04rem;
+  line-height: 1.82;
   text-align: left;
+  margin-bottom: 0.95rem;
 }
 
 .becky-pic {
   display: block;
+  width: min(100%, 250px);
   height: auto;
-  max-width: 240px;
-  text-align: center;
   object-fit: cover;
   margin: 0 auto;
   border: 6px solid var(--educator-text);
   border-radius: 60px;
 }
 
+/* Lower shared panels */
+.about-strengths-panel,
+.about-highlights-panel {
+  max-width: 1080px;
+  margin: 0 auto 2.4rem;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(224, 123, 162, 0.28);
+  border-radius: 28px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  padding: 1.9rem 1.35rem 2.1rem;
+}
+
+.about-section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-align: center;
+  color: var(--socialbar);
+  margin-bottom: 1.35rem;
+  font-family: var(--font-display);
+}
+
+/* What I Bring cards */
+.about-strengths-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.strength-card {
+  border-radius: 24px;
+  padding: 1.55rem 1.2rem;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.strength-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.65rem;
+}
+
+.strength-card p {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 0.4rem;
+}
+
+.strength-card-dev {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 255, 253, 1) 0%,
+    rgba(180, 243, 236, 0.95) 100%
+  );
+  border-color: #7adfdb;
+}
+
+.strength-card-dev h3 {
+  color: #3da5a7;
+}
+
+.strength-card-edu {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 1) 0%,
+    rgba(255, 208, 216, 0.95) 100%
+  );
+  border-color: #ff879b;
+}
+
+.strength-card-edu h3 {
+  color: #e07ba2;
+}
+
+.strength-card-media {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 245, 1) 0%,
+    rgba(255, 230, 192, 0.98) 100%
+  );
+  border-color: #fdd8aa;
+}
+
+.strength-card-media h3 {
+  color: #fdaf69;
+}
+
+/* Highlights + CTA */
+.about-highlights-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.about-highlights-copy,
+.about-cta-block {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 22px;
+  padding: 1.55rem 1.35rem;
+}
+
+.about-highlight-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+
+.about-highlight-list li {
+  display: list-item;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.65rem;
+}
+
+.about-cta-block {
+  background: rgba(255, 208, 216, 0.28);
+  border: 1.5px solid rgba(224, 123, 162, 0.2);
+}
+
+.about-cta-block h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+  color: var(--educator-text);
+}
+
+.about-cta-block p {
+  font-family: var(--font-ui);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 1.1rem;
+}
+
+.about-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 1.75rem;
+    padding: 2.1rem 2.2rem 2.35rem;
+    align-items: start;
+  }
+
+  .about-intro-photo {
+    justify-content: center;
+    align-self: start;
+    padding-top: 0;
+  }
+
+  .becky-pic {
+    width: 100%;
+    max-width: 210px;
+  }
+
+  .about-intro-copy {
+    max-width: 100%;
+    margin: 0;
+    align-self: start;
+  }
+
+  .about-me-header {
+    text-align: left;
+    margin: 0 0 0.9rem;
+  }
+
+  .about-me-long-text p {
+    font-size: 1.06rem;
+  }
+
+  .about-strengths-panel,
+  .about-highlights-panel {
+    padding: 2rem 1.75rem 2.15rem;
+  }
+
+  .about-strengths-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-highlights-panel {
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 1.3rem;
+    align-items: start;
+  }
+
+  .about-highlights-copy,
+  .about-cta-block {
+    height: 100%;
+  }
+}
+
+/* Mobile refinements */
+@media (max-width: 767.98px) {
+  .about-intro-panel {
+    padding: 1.5rem 1.15rem 1.8rem;
+  }
+
+  .about-me-header {
+    font-size: 2.15rem;
+    text-align: center;
+  }
+
+  .about-strengths-panel,
+  .about-highlights-panel {
+    padding: 1.5rem 1rem 1.7rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: row;
+    gap: 0.65rem;
+  }
+}
 /* ---------------------------------- Case Studies ---------------------------------- */
 
 .case-studies-grid {
@@ -1135,3 +1459,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
