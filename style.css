@@ -2559,3 +2559,119 @@ footer {
     padding: 1.5rem 1.15rem 1.8rem;
   }
 }
+/* ==========================================
+   ABOUT PAGE PHOTO - FULLER LEFT COLUMN
+   desktop/tablet only
+   ========================================== */
+
+@media (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: minmax(260px, 290px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    display: block;
+    align-self: start;
+  }
+
+  .becky-pic {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: block;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 42px;
+  }
+}
+/* ==========================================
+   ABOUT PAGE REFINEMENT PASS
+   keep fuller photo, soften balance slightly
+   ========================================== */
+
+@media (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: minmax(245px, 272px) minmax(0, 1fr);
+    gap: 2.35rem;
+    align-items: start;
+    padding: 2.15rem 2.25rem 2.35rem;
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    align-self: start;
+  }
+
+  .becky-pic {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40px;
+  }
+
+  .about-intro-copy {
+    max-width: 62ch;
+    align-self: start;
+  }
+
+  .about-me-header {
+    margin-bottom: 1.1rem;
+    line-height: 1.04;
+  }
+
+  .about-me-long-text p {
+    max-width: 60ch;
+    line-height: 1.72;
+    margin-bottom: 1rem;
+  }
+}
+/* ==========================================
+   ABOUT PAGE TABLET REFINEMENT
+   smooth the 820-ish awkward zone
+   ========================================== */
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: minmax(210px, 235px) minmax(0, 1fr);
+    gap: 1.6rem;
+    padding: 1.9rem 1.6rem 2rem;
+    align-items: start;
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    align-self: start;
+  }
+
+  .becky-pic {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 34px;
+  }
+
+  .about-intro-copy {
+    max-width: 100%;
+  }
+
+  .about-me-header {
+    font-size: clamp(2.7rem, 4.8vw, 3.2rem);
+    margin-bottom: 0.95rem;
+  }
+
+  .about-me-long-text p {
+    font-size: 1rem;
+    line-height: 1.68;
+    max-width: 34ch;
+  }
+}
