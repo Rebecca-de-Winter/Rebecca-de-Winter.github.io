@@ -2514,10 +2514,10 @@ footer {
 
 @media (max-width: 767.98px) {
   .about-intro-panel {
-    width: calc(100% + 12px);
+    width: calc(100% + 16px);
     max-width: none;
-    margin-left: -6px;
-    margin-right: -6px;
+    margin-left: -8px;
+    margin-right: -8px;
     padding: 1.45rem 1rem 1.7rem;
   }
 }
