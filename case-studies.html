@@ -52,93 +52,110 @@
     </header>
 
     <!-------------------------------------------CASE STUDIES HERO------------------------------------------------>
-    <section>
-      <article class="about-me-background">
-        <div class="img-container">
+   <!-------------------------------------------CASE STUDIES------------------------------------------------>
+<main class="about-page-shell case-studies-page">
+  <section class="about-intro-panel case-studies-intro-panel">
+    <div class="about-intro-photo case-studies-hero-photo">
+      <img
+        src="assets/Developer.png"
+        class="case-studies-hero-graphic"
+        alt="Illustration of Becky and a unicorn working at a laptop"
+      />
+    </div>
+
+    <div class="about-intro-copy case-studies-intro-copy">
+      <h1 class="about-me-header case-studies-title">Case Studies</h1>
+
+      <div class="about-me-long-text case-studies-intro-text">
+        <p>
+          These projects show how I think, build, and solve problems across
+          full stack development, product design, and user experience.
+        </p>
+
+        <p>
+          I’m especially drawn to ideas that combine technical depth with real
+          human needs, whether that means building structured accountability
+          workflows or creating community-focused platforms that feel warm,
+          practical, and memorable.
+        </p>
+
+        <p>Here are two of my strongest recent projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-highlights-panel case-studies-cards-panel">
+    <h2 class="about-section-title">Featured Case Studies</h2>
+
+    <div class="case-studies-grid">
+      <article class="case-study-card case-study-card--dev">
+        <div class="case-study-media case-study-media--dev">
           <img
-            src="assets/Developer.png"
-            class="becky-pic"
-            alt="Illustration representing development work"
+            src="assets/podflow-screenshot.png"
+            class="case-study-image case-study-image--podflow"
+            alt="Screenshot of the PodFlow interface"
           />
         </div>
 
-        <h1 class="about-me-header">Case Studies</h1>
+        <div class="case-study-content">
+          <h3>PodFlow</h3>
+          <p class="case-study-subtitle">Full Stack Accountability Platform</p>
 
-        <div class="about-me-long-text">
-          <p>
-            These projects show how I think, build, and solve problems across
-            full stack development, product design, and user experience.
+          <p class="case-study-copy">
+            A private accountability platform built with React and Django REST
+            Framework, designed to help people keep goals moving together.
           </p>
-          <p>
-            I’m especially drawn to ideas that combine technical depth with real
-            human needs, whether that means building structured accountability
-            workflows or creating community-focused platforms that feel warm,
-            practical, and memorable.
-          </p>
-          <p>
-            Here are two of my strongest recent projects.
-          </p>
-        </div>
 
-        <div class="case-studies-grid">
-          <article class="case-study-card podflow-card">
-            <img
-              src="assets/Developer.png"
-              class="case-study-image"
-              alt="Illustration for PodFlow case study"
-            />
-            <div class="case-study-content">
-              <h2>PodFlow</h2>
-              <p class="case-study-subtitle">
-                Full Stack Accountability Platform
-              </p>
-              <p>
-                A private accountability platform built with React and Django
-                REST Framework, designed to help people keep goals moving
-                together.
-              </p>
-              <ul class="case-study-points">
-                <li>Private pods and trusted accountability</li>
-                <li>Shared goals, check-ins, and verification workflows</li>
-                <li>Role-based permissions and notifications system</li>
-              </ul>
-              <a href="podflow-case-study.html" class="btn-primary btn-dev"
-                >Read Case Study</a
-              >
-            </div>
-          </article>
+          <ul class="case-study-points">
+            <li>Private pods and trusted accountability</li>
+            <li>Shared goals, check-ins, and verification workflows</li>
+            <li>Role-based permissions and notifications system</li>
+          </ul>
 
-          <article class="case-study-card backyard-card">
-            <img
-              src="assets/Educator.png"
-              class="case-study-image"
-              alt="Illustration for Backyard Festival case study"
-            />
-            <div class="case-study-content">
-              <h2>Backyard Festival</h2>
-              <p class="case-study-subtitle">
-                Community-Powered Event Crowdfunding Platform
-              </p>
-              <p>
-                A full stack platform for grassroots events where supporters can
-                pledge money, time, or physical items to help bring community
-                ideas to life.
-              </p>
-              <ul class="case-study-points">
-                <li>Flexible money, time, and item pledges</li>
-                <li>Supporter and organiser dashboard views</li>
-                <li>Strong visual identity and responsive UI design</li>
-              </ul>
-              <a
-                href="backyard-festival-case-study.html"
-                class="btn-primary btn-edu"
-                >Read Case Study</a
-              >
-            </div>
-          </article>
+          <a href="podflow-case-study.html" class="btn-primary btn-dev">
+            Read Case Study
+          </a>
         </div>
       </article>
-    </section>
+
+      <article class="case-study-card case-study-card--edu">
+        <div class="case-study-media case-study-media--edu">
+          <img
+            src="assets/backyard-festival-screenshot.png"
+            class="case-study-image case-study-image--backyard"
+            alt="Screenshot of the Backyard Festival interface"
+          />
+        </div>
+
+        <div class="case-study-content">
+          <h3>Backyard Festival</h3>
+          <p class="case-study-subtitle">
+            Community-Powered Event Crowdfunding Platform
+          </p>
+
+          <p class="case-study-copy">
+            A full stack platform for grassroots events where supporters can
+            pledge money, time, or physical items to help bring community ideas
+            to life.
+          </p>
+
+          <ul class="case-study-points">
+            <li>Flexible money, time, and item pledges</li>
+            <li>Supporter and organiser dashboard views</li>
+            <li>Strong visual identity and responsive UI design</li>
+          </ul>
+
+          <a
+            href="backyard-festival-case-study.html"
+            class="btn-primary btn-edu"
+          >
+            Read Case Study
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
 
     <!-------------------------------------------------------FOOTER------------------------------------------------->
     <footer>

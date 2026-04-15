@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=11" />
+    <title>PodFlow Case Study | Becky Cole Portfolio</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------NAV_BAR--------------------------------------------->
+    <header>
+      <nav id="navbar" class="topnav">
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="case-studies.html">Case Studies</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
+      </nav>
+    </header>
+
+    <!-------------------------------------------CASE STUDY PAGE------------------------------------------->
+    <main class="podflow-case-page">
+      <section class="podflow-case-panel podflow-case-panel--hero">
+        <div class="podflow-hero-grid">
+          <div class="podflow-hero-media">
+            <img
+              src="assets/podflow-screenshot.png"
+              class="podflow-hero-image"
+              alt="Screenshot of the PodFlow dashboard"
+            />
+          </div>
+
+          <div class="podflow-hero-copy">
+            <h1 class="podflow-case-title">PodFlow</h1>
+            <p class="podflow-case-subtitle">Full Stack Accountability Platform</p>
+
+            <div class="podflow-hero-text">
+              <p>
+                PodFlow is a private accountability platform designed to help
+                people make real progress with trusted support. Instead of
+                public posting or performative productivity, it focuses on small
+                groups, shared goals, check-ins, and meaningful follow-through.
+              </p>
+
+              <p>
+                Built with React, HTML, CSS, Django REST Framework, and PostgreSQL, PodFlow was designed with a strong emphasis on permissions, workflow design, verification logic, notifications, and UI clarity.
+              </p>
+              <p>Created as a team project, I led the product build and delivered the core application, including frontend development, backend logic, workflow architecture, permissions, notifications, and UI/UX. Teammates contributed testing, project coordination, documentation, social media support, and selected supporting pages.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel">
+        <h2 class="podflow-panel-title">Project Snapshot</h2>
+
+        <div class="podflow-meta-grid">
+          <article class="podflow-meta-card">
+            <h3>Role</h3>
+            <p>Primary Full Stack Developer</p>
+            <p>Product and workflow design</p>
+            <p>UI/UX design and implementation</p>
+          </article>
+
+          <article class="podflow-meta-card">
+            <h3>Stack</h3>
+            <p>React (JavaScript), HTML, CSS</p>
+            <p>Django REST Framework (Python) and PostgreSQL</p>
+            <p>Netlify, Heroku and Insomnia</p>
+          </article>
+
+          <article class="podflow-meta-card">
+            <h3>Core Strengths</h3>
+            <p>Permissions and access control</p>
+            <p>Verification and notification systems</p>
+            <p>Responsive frontend and UI design</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel">
+        <div class="podflow-content-grid">
+          <article class="podflow-content-card">
+            <h2 class="podflow-content-heading">The challenge</h2>
+            <p>
+              Many accountability tools rely on public posting, loose goal tracking, or one-size-fits-all workflows. PodFlow was designed as a more private and structured alternative, focused on trusted groups, shared progress, and meaningful follow-through.
+            </p>
+            <p>
+              That meant designing more than a simple tracking app. The product needed to support individual goals, pod goals, verification workflows, layered permissions, membership states, notifications, and relationship management, while still remaining clear and intuitive to use.
+            </p>
+          </article>
+
+          <article class="podflow-content-card">
+            <h2 class="podflow-content-heading">How I approached it</h2>
+            <p>
+              I approached PodFlow as both a product and engineering challenge. The interface needed to feel clear and approachable, while the underlying system supported complex workflows around permissions, verification, notifications, and shared accountability.
+
+            </p>
+            <p>
+              I placed a strong emphasis on consistency across the product, so the language, status labels, actions, and workflow logic stayed aligned across different features and user journeys.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel">
+        <h2 class="podflow-panel-title">Feature Walkthroughs</h2>
+        <p class="podflow-section-intro">
+          These demos show how the product balances a simple user experience
+          with complex workflow logic under the hood.
+        </p>
+
+        <div class="podflow-walkthrough-grid">
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/notifications-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/notifications.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Workflow visibility</p>
+              <h3>Notifications that connect the whole product</h3>
+              <p>
+                PodFlow uses notifications to guide users through invites, approvals, verification requests, and other important actions across the platform. Because notifications touch so many different workflows, they became a major part of making the product feel intuitive, responsive, and easy to use.
+              </p>
+            </div>
+          </article>
+
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/adaptive-checkins-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/adaptive-checkins.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Cross-app consistency</p>
+              <h3>Adaptive check-ins and naming conventions</h3>
+              <p>
+                PodFlow supports multiple check-in types, including done/not done, number-based, and duration-based tracking. I designed the interface and language to update accordingly across forms, labels, progress displays, and check-in history.
+            </div>
+          </article>
+
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/private-pods-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/private-pods.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Trust-first design</p>
+              <h3>Private pods and structured participation</h3>
+              <p>
+                PodFlow is designed to make accountability feel more supportive and intentional. By letting users create invite-only pods with trusted people, it encourages clearer participation, stronger follow-through, and a greater sense of shared momentum.
+            </div>
+          </article>
+
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/verification-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/verification.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Accountability loop</p>
+              <h3>Verification logic beyond self-reporting</h3>
+              <p>
+                Check-ins are not just logged and forgotten. PodFlow supports
+                review and approval by others, creating a more realistic
+                accountability model where progress can be verified rather than
+                simply claimed.
+              </p>
+            </div>
+          </article>
+
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/connections-members-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/connections-members.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Relationship management</p>
+              <h3>Connections and handpicked pod membership</h3>
+              <p>
+                PodFlow separates connections from pod membership. Users can
+                build a trusted network first, then handpick the right people
+                into shared spaces and group goals, making collaboration feel
+                intentional from the start.
+              </p>
+            </div>
+          </article>
+
+          <article class="podflow-walkthrough-card">
+            <div class="podflow-walkthrough-media">
+              <video
+                class="podflow-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/podflow/permissions-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/podflow/permissions.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="podflow-walkthrough-body">
+              <p class="podflow-kicker">Backend depth</p>
+              <h3>Airtight permissions across layered workflows</h3>
+              <p>
+                A major part of the engineering challenge was ensuring that only the right people could view, edit, verify, invite, approve, or manage each part of the system. That meant handling role-based access, membership states, ownership rules, and cross-feature permissions so the product stayed consistent, secure, and predictable.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel">
+        <h2 class="podflow-panel-title">Engineering Decisions</h2>
+
+        <div class="podflow-feature-grid">
+          <article class="podflow-feature-card">
+            <h3>Consistent language model</h3>
+            <p>
+              I designed the app so the language stayed consistent across forms, labels, progress displays, and check-in history. That consistency helped complex workflows feel clear and intuitive across the product.
+            </p>
+          </article>
+
+          <article class="podflow-feature-card">
+            <h3>Separate workflow pathways</h3>
+            <p>
+              PodFlow supports both individual goals and pod-based goals, with different collaboration, review, and accountability behaviours depending on the context.
+            </p>
+          </article>
+
+          <article class="podflow-feature-card">
+            <h3>State-aware permissions</h3>
+            <p>
+              Access is not just determined by whether someone belongs to a pod. It also depends on their role, membership status, ownership, and the specific action they are trying to perform.
+            </p>
+          </article>
+
+          <article class="podflow-feature-card">
+            <h3>Action-driven notifications</h3>
+            <p>
+              Notification logic was designed to support the product’s core workflows, helping users respond to invites, approvals, verification requests, and other actions needing attention in a clear and timely way.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel">
+        <div class="podflow-content-grid">
+          <article class="podflow-content-card">
+            <h2 class="podflow-content-heading">What makes this project strong</h2>
+            <p>
+              PodFlow demonstrates the kind of work I enjoy most: translating
+              human behaviour into structured systems. It is not just visually
+              polished. It also models trust, accountability, and shared action
+              in a way that required careful product thinking and technical
+              design.
+            </p>
+          </article>
+
+          <article class="podflow-content-card">
+            <h2 class="podflow-content-heading">What I’m proud of</h2>
+            <p>
+              I’m especially proud of the balance between simplicity and depth.
+              The interface stays approachable, but the logic underneath is
+              doing serious work: adaptive UI language, layered permissions,
+              realistic verification, thoughtful relationship management, and
+              clean workflow handling across the site.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="podflow-case-panel podflow-case-panel--cta">
+        <div class="podflow-cta-block">
+          <p class="podflow-cta-eyebrow">Next Case Study</p>
+          <h2 class="podflow-content-heading">Want to explore the next project?</h2>
+          <p>
+            Backyard Festival shows a different side of my work, with community
+            crowdfunding, supporter flows, and a strong visual identity.
+          </p>
+
+          <div class="podflow-cta-buttons">
+            <a href="backyard-festival-case-study.html" class="btn-primary btn-edu">
+              Backyard Festival
+            </a>
+            <a href="case-studies.html" class="btn-primary btn-dev">
+              Back to Case Studies
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a
+            href="https://github.com/Rebecca-de-Winter"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rebecca-c-52141625/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:beckylouise81@gmail.com" title="Email me">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
