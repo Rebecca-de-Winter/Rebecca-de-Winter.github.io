@@ -108,7 +108,7 @@
   left: 0;
   width: 100%;
   height: 33%;
-  background: url("assets/stars.png") repeat top center;
+  background: url("../assets/stars.png") repeat top center;
   background-size: cover;
   pointer-events: none;
   z-index: 0;
@@ -259,7 +259,7 @@
   justify-content: center;
   min-height: 340px;
   padding: 2rem 1.25rem;
-  background: url("assets/bubblebackground.jpg") center center / cover no-repeat;
+  background: url("../assets/bubblebackground.jpg") center center / cover no-repeat;
 }
 
 .aboutmeimage {
