@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=13" />
+    <title>Backyard Festival Case Study | Becky Cole Portfolio</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------NAV_BAR--------------------------------------------->
+    <header>
+      <nav id="navbar" class="topnav">
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="case-studies.html">Case Studies</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
+      </nav>
+    </header>
+
+    <!-------------------------------------------CASE STUDY PAGE------------------------------------------->
+    <main class="bf-case-page">
+      <section class="bf-case-panel bf-case-panel--hero">
+        <div class="bf-hero-grid">
+          <div class="bf-hero-media">
+            <img
+              src="assets/backyard-festival-screenshot.png"
+              class="bf-hero-image"
+              alt="Screenshot of the Backyard Festival platform"
+            />
+          </div>
+
+          <div class="bf-hero-copy">
+            <p class="bf-case-eyebrow">Case Study</p>
+            <h1 class="bf-case-title">Backyard Festival</h1>
+            <p class="bf-case-subtitle">Community-Powered Fundraising Platform</p>
+
+            <div class="bf-hero-text">
+              <p>
+                Backyard Festival is a full stack platform designed to help
+                grassroots events raise support in more than one way. Instead of
+                relying on donations alone, it allows supporters to contribute
+                money, time, or physical items, making fundraising more flexible
+                and more practical for real organisers.
+              </p>
+
+              <p>
+                Built with React, HTML, CSS, Django REST Framework, and
+                PostgreSQL, Backyard Festival was designed with a strong
+                emphasis on flexible pledge types, reusable fundraiser
+                templates, organiser control, dynamic reward logic, responsive
+                UI, and clear progress tracking across different contribution
+                types.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bf-case-panel">
+        <h2 class="bf-panel-title">Project Snapshot</h2>
+
+        <div class="bf-meta-grid">
+          <article class="bf-meta-card">
+            <h3>Role</h3>
+            <p>Full Stack Developer</p>
+            <p>Product and workflow design</p>
+            <p>UI/UX design and implementation</p>
+          </article>
+
+          <article class="bf-meta-card">
+            <h3>Stack</h3>
+            <p>React (JavaScript), HTML, CSS</p>
+            <p>Django REST Framework (Python), PostgreSQL</p>
+            <p>Netlify, Heroku, and Insomnia</p>
+          </article>
+
+          <article class="bf-meta-card">
+            <h3>Core Strengths</h3>
+            <p>Flexible multi-type pledge logic</p>
+            <p>Templates, rewards, and organiser workflows</p>
+            <p>Responsive dashboards and live progress tracking</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bf-case-panel">
+        <div class="bf-content-grid">
+          <article class="bf-content-card">
+            <h2 class="bf-content-heading">The challenge</h2>
+            <p>
+              Many fundraising platforms focus almost entirely on money, but
+              real community events often need much more than financial support
+              alone. Organisers may need volunteers, borrowed equipment,
+              donated items, or a mix of all three, and they often need a
+              practical starting point rather than building every fundraiser
+              from scratch.
+            </p>
+            <p>
+              That meant designing more than a standard donation flow. Backyard
+              Festival needed to support money, time, and item pledges, item
+              donations as well as loans, reusable templates, cumulative reward
+              logic, reward categories linked to pledge type, organiser
+              approval settings, live progress updates, and clear supporter and
+              organiser experiences, while still remaining easy to use.
+            </p>
+          </article>
+
+          <article class="bf-content-card">
+            <h2 class="bf-content-heading">How I approached it</h2>
+            <p>
+              I approached Backyard Festival as both a product and engineering
+              challenge. The platform needed to feel simple and inviting for
+              supporters, while also giving organisers enough control to manage
+              different kinds of contributions in a practical way.
+            </p>
+            <p>
+              I focused on building flexible workflows that reflected how real
+              events operate, including multiple pledge types, reusable
+              templates, reward categories, live status feedback, organiser
+              approval rules, and dashboards for different user roles.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bf-case-panel">
+        <h2 class="bf-panel-title">Feature Walkthroughs</h2>
+        <p class="bf-section-intro">
+          These demos show how the platform combines flexible supporter flows
+          with practical organiser controls and live fundraising feedback.
+        </p>
+
+        <div class="bf-walkthrough-grid">
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/pledge-types-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/pledge-types.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Flexible support model</p>
+              <h3>Contribute money, time, or items</h3>
+              <p>
+                Backyard Festival allows supporters to contribute in the way
+                that makes most sense for the event, whether that is money,
+                time, or physical items. Item pledges can be offered as either
+                donations or loans, making the platform more practical for real
+                organisers managing equipment, supplies, and community support.
+              </p>
+            </div>
+          </article>
+
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/live-updates-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/live-updates.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Responsive pledge tracking</p>
+              <h3>Live updates to remaining spots and needs</h3>
+              <p>
+                The interface updates automatically as pledges are made, so
+                organisers and supporters can immediately see changes such as
+                volunteer spots dropping from six to five. That live feedback
+                helps the platform feel clear, responsive, and trustworthy.
+              </p>
+            </div>
+          </article>
+
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/cumulative-rewards-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/cumulative-rewards.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Supporter reward logic</p>
+              <h3>Cumulative money rewards that stack</h3>
+              <p>
+                Backyard Festival supports cumulative reward thresholds for
+                money pledges. If a supporter contributes enough to qualify for
+                multiple reward levels over time, the platform recognises that
+                progress and grants each eligible reward.
+              </p>
+            </div>
+          </article>
+
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/reward-categories-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/reward-categories.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Tailored incentive design</p>
+              <h3>Rewards matched to money, time, and item pledges</h3>
+              <p>
+                Rewards are categorised by contribution type, so organisers can
+                choose what kind of reward makes sense for someone who donates
+                money, volunteers time, donates an item, or loans one. This
+                makes the reward system more flexible and better aligned to how
+                support is actually given.
+              </p>
+            </div>
+          </article>
+
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/templates-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/templates.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Guided fundraiser setup</p>
+              <h3>Choose a template and adapt it</h3>
+              <p>
+                Backyard Festival includes pre-loaded fundraiser templates that
+                organisers can choose and customise for their own event. This
+                makes setup faster, reduces friction, and helps users start
+                with a practical structure instead of building a fundraiser
+                from scratch.
+              </p>
+            </div>
+          </article>
+
+          <article class="bf-walkthrough-card">
+            <div class="bf-walkthrough-media">
+              <video
+                class="bf-walkthrough-visual"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/case-studies/backyard-festival/dashboard-approval-poster.jpg"
+              >
+                <source
+                  src="assets/case-studies/backyard-festival/dashboard-approval.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <div class="bf-walkthrough-body">
+              <p class="bf-kicker">Organiser workflow control</p>
+              <h3>Dashboards, approvals, and pledge management</h3>
+              <p>
+                Organisers can manage fundraisers through a dedicated
+                dashboard, review pledges, and decide whether certain
+                contributions need approval before being accepted. Supporters
+                also have their own dashboard view, making the platform easier
+                to navigate from both sides of the experience.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bf-case-panel">
+        <h2 class="bf-panel-title">Engineering Decisions</h2>
+
+        <div class="bf-feature-grid">
+          <article class="bf-feature-card">
+            <h3>Multi-type contribution architecture</h3>
+            <p>
+              The platform was designed to support money, time, and item
+              pledges within a single system, with item contributions able to
+              function as either donations or loans. That flexibility was
+              central to making the product useful for real events rather than
+              only financial campaigns.
+            </p>
+          </article>
+
+          <article class="bf-feature-card">
+            <h3>Template-driven fundraiser setup</h3>
+            <p>
+              Reusable templates help organisers get started faster and give
+              them a practical structure to adapt for their own event. This
+              reduces friction during setup and makes the product more usable
+              from the very first interaction.
+            </p>
+          </article>
+
+          <article class="bf-feature-card">
+            <h3>Responsive, state-driven UI</h3>
+            <p>
+              Live counts, progress bars, and dashboard views update as pledge
+              data changes, helping users understand the current state of a
+              fundraiser without extra friction.
+            </p>
+          </article>
+
+          <article class="bf-feature-card">
+            <h3>Reward and approval workflow logic</h3>
+            <p>
+              The system supports cumulative reward handling, reward categories
+              linked to pledge type, and optional organiser approval rules,
+              allowing the platform to manage more nuanced fundraising
+              scenarios without losing clarity for users.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bf-case-panel">
+        <div class="bf-content-grid">
+          <article class="bf-content-card">
+            <h2 class="bf-content-heading">What makes this project strong</h2>
+            <p>
+              Backyard Festival stands out because it treats fundraising as an
+              operational problem, not just a payment flow. It supports the
+              different ways people contribute to community events and
+              translates those needs into a structured, responsive user
+              experience that is practical for both organisers and supporters.
+            </p>
+          </article>
+
+          <article class="bf-content-card">
+            <h2 class="bf-content-heading">What I’m proud of</h2>
+            <p>
+              I’m especially proud of how much flexibility the platform
+              supports without becoming confusing. Features like multi-type
+              pledges, item loan logic, cumulative rewards, reward categories,
+              reusable templates, approval workflows, live availability
+              updates, dual dashboards, and progress tracking all work together
+              to make the product feel practical, thoughtful, and grounded in
+              real event needs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bf-case-panel bf-case-panel--cta">
+        <div class="bf-cta-block">
+          <p class="bf-cta-eyebrow">Next Case Study</p>
+          <h2 class="bf-content-heading">Want to explore the next project?</h2>
+          <p>
+            PodFlow shows a different side of my work, with private
+            accountability, layered permissions, verification workflows, and
+            notifications woven through the product.
+          </p>
+
+          <div class="bf-cta-buttons">
+            <a href="podflow-case-study.html" class="btn-primary btn-dev">
+              PodFlow
+            </a>
+            <a href="case-studies.html" class="btn-primary btn-edu">
+              Back to Case Studies
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a
+            href="https://github.com/Rebecca-de-Winter"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rebecca-c-52141625/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:beckylouise81@gmail.com" title="Email me">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

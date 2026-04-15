@@ -1,0 +1,516 @@
+/* ----------------------------------
+   Hero
+---------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(2, 0, 36, 1) 8%,
+    rgba(9, 9, 121, 1) 14%,
+    rgba(173, 218, 233, 1) 55%
+  );
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero h1,
+.hero-name {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-top: 96px;
+  padding-bottom: 10px;
+  color: var(--white);
+  font-family: var(--font-ui);
+  font-size: clamp(4.6rem, 9vw, 7.2rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.hero-roles {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding-top: 12px;
+  color: var(--white);
+  font-family: var(--font-ui);
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  column-gap: 14px;
+}
+
+.hero-roles .role {
+  font-family: var(--font-ui);
+  line-height: 1.15;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4),
+    0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+.role-dev {
+  animation: myAnim-dev 1s ease 1.4s 1 normal both;
+}
+
+.role-edu {
+  animation: myAnim-edu 1s ease 1.4s 1 normal both;
+}
+
+.role-med {
+  animation: myAnim-med 1s ease 1.4s 1 normal both;
+}
+
+@keyframes myAnim-dev {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes myAnim-edu {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes myAnim-med {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero .stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33%;
+  background: url("assets/stars.png") repeat top center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .logo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.hero .ocean {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: var(--ocean-height);
+}
+
+.hero .ocean img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .logo-stack {
+  position: absolute;
+  bottom: calc(50% - (min(42vw, 360px) / 1.2));
+  left: 50%;
+  z-index: 1;
+  width: min(42vw, 360px);
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%) translateY(calc(var(--drop-distance) * -1));
+  animation: drop var(--drop-duration) ease-in var(--drop-delay) forwards;
+}
+
+.hero .logo-circle {
+  z-index: 2;
+  animation: fade-out 0.35s linear
+    calc(var(--drop-delay) + var(--drop-duration) - var(--fade-overlap))
+    forwards;
+}
+
+.hero .logo-cutout {
+  z-index: 1;
+  animation: bobFloat 3.5s ease-in-out
+    calc(var(--drop-delay) + var(--drop-duration)) infinite;
+}
+
+@keyframes drop {
+  from {
+    transform: translate(-50%, -50%) translateY(calc(var(--drop-distance) * -1));
+  }
+  to {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bobFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.8vh);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 92svh;
+  }
+
+  .hero .logo {
+    height: auto;
+    max-width: 60vw;
+  }
+
+  .hero .hero-roles {
+    font-size: 1.52rem;
+    font-weight: 700;
+    padding-top: 14px;
+    column-gap: clamp(20px, 3vw, 34px);
+  }
+
+  .hero h1,
+  .hero-name {
+    max-width: 100%;
+    padding-top: 96px;
+    padding-bottom: 10px;
+    font-size: clamp(5rem, 8vw, 6.8rem);
+    text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black,
+      -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
+  }
+
+  .hero .logo-stack {
+    bottom: calc(44% - (min(42vw, 360px) / 1.2));
+  }
+
+  .role-edu {
+    transform: translateX(2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .logo {
+    height: auto;
+    max-width: 60vw;
+  }
+
+  .hero-roles {
+    column-gap: 14px;
+  }
+}
+
+
+/* ----------------------------------
+   Homepage About Section
+---------------------------------- */
+
+.articles-container {
+  display: block;
+  border-bottom: 5px solid var(--educator-text);
+}
+
+.articles-container article {
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.aboutme-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  padding: 2rem 1.25rem;
+  background: url("assets/bubblebackground.jpg") center center / cover no-repeat;
+}
+
+.aboutmeimage {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  animation: bobFloat 2.5s ease-in-out infinite;
+}
+
+.about-me-container {
+  padding: 2rem 1.5rem 2.25rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 1) 0%,
+    rgba(255, 208, 216, 1) 100%
+  );
+}
+
+.about-me-container h2 {
+  margin-bottom: 1rem;
+  color: var(--educator-text);
+  font-family: var(--font-ui);
+  font-size: clamp(2.45rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+.about-me-container p {
+  margin-bottom: 1rem;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-me-container .btn-primary {
+  display: inline-flex;
+  width: auto;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+  }
+
+  .aboutme-background {
+    min-height: 640px;
+    padding: 2.5rem;
+  }
+
+  .aboutmeimage {
+    width: min(100%, 620px);
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3.25rem 2.25rem;
+  }
+
+  .about-me-container p {
+    max-width: 36ch;
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+}
+
+@media (min-width: 1100px) {
+  .aboutme-background {
+    min-height: 700px;
+  }
+
+  .about-me-container {
+    padding: 3.5rem 2.75rem;
+  }
+
+  .about-me-container p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ----------------------------------
+   Homepage Projects
+---------------------------------- */
+
+.my-projects-container,
+.my-dev-container,
+.my-edu-container,
+.my-media-container,
+.about-page-shell {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.my-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.my-projects-container .projects-title,
+.proj-title,
+.about-section-title {
+  color: var(--socialbar);
+  font-family: var(--font-ui);
+  font-size: var(--section-title-size);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: var(--section-title-line);
+}
+
+.my-projects-container .projects-title {
+  margin: 0 auto 1.6rem;
+}
+
+.my-projects-container .cards,
+.project-cards,
+.proj-intro,
+.about-intro-panel,
+.about-strengths-panel,
+.about-highlights-panel {
+  max-width: var(--content-max-width);
+}
+
+.my-projects-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 26px;
+}
+
+.my-projects-container .dev-card,
+.my-projects-container .edu-card,
+.my-projects-container .media-card {
+  flex: 1 1 320px;
+  max-width: 338px;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  box-sizing: border-box;
+}
+
+.my-projects-container .dev-card {
+  background: linear-gradient(180deg, #b4f3ec 0%, #c7f5ea 40%, #d9f7e6 100%);
+  border: 2px solid #7adfdb;
+}
+
+.my-projects-container .edu-card {
+  background: #ffd0d8;
+  border: 2px solid #ff879b;
+}
+
+.my-projects-container .media-card {
+  background: #ffe6c0;
+  border: 2px solid #fdd8aa;
+}
+
+.my-projects-container .dev-card img,
+.my-projects-container .edu-card img,
+.my-projects-container .media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.my-projects-container .inner-wrap {
+  margin-top: 0;
+  padding: 10px 18px 16px;
+  border-radius: 0 0 var(--inner-radius) var(--inner-radius);
+  text-align: center;
+}
+
+.my-projects-container .dev-card .inner-wrap {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 255, 253, 1) 0%,
+    rgba(122, 223, 219, 1) 100%
+  );
+}
+
+.my-projects-container .edu-card .inner-wrap {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 1) 0%,
+    rgba(255, 208, 216, 1) 100%
+  );
+}
+
+.my-projects-container .media-card .inner-wrap {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 245, 1) 0%,
+    rgba(255, 230, 192, 1) 100%
+  );
+}
+
+.my-projects-container .dev-card h4,
+.my-projects-container .edu-card h4,
+.my-projects-container .media-card h4 {
+  display: block;
+  margin: 10px 0;
+  font-family: var(--font-ui);
+  font-size: var(--card-title-home);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.my-projects-container .dev-card h4 {
+  color: #3da5a7;
+}
+
+.my-projects-container .edu-card h4 {
+  color: #e07ba2;
+}
+
+.my-projects-container .media-card h4 {
+  color: #fdaf69;
+}
+
+.my-projects-container .dev-card p,
+.my-projects-container .edu-card p,
+.my-projects-container .media-card p {
+  display: block;
+  margin: 0;
+  padding-bottom: 8px;
+  font-family: var(--font-ui);
+  line-height: 1.35;
+}
+
+.my-projects-container .inner-wrap .btn-primary {
+  margin-top: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .my-projects-container .projects-title,
+  .proj-title,
+  .about-section-title,
+  .about-me-header {
+    font-size: clamp(2.4rem, 9vw, 2.95rem);
+  }
+}

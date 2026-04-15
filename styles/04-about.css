@@ -1,0 +1,355 @@
+/* ----------------------------------
+   About Page
+---------------------------------- */
+
+.about-page-shell {
+  padding-top: 84px;
+  padding-bottom: 44px;
+}
+
+.about-intro-panel,
+.about-strengths-panel,
+.about-highlights-panel {
+  max-width: var(--content-max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-intro-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  align-items: start;
+  margin-bottom: var(--section-spacing);
+  padding: 1.9rem 1.5rem 2.1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 0.97) 0%,
+    rgba(255, 208, 216, 0.93) 100%
+  );
+  border: 2px solid rgba(255, 135, 155, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.about-intro-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-intro-copy {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-me-header {
+  margin: 0 0 1rem;
+  color: var(--educator-text);
+  font-family: var(--font-ui);
+  font-size: clamp(2.7rem, 4.5vw, 3.55rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  text-align: center;
+}
+
+.about-me-long-text {
+  margin: 0 auto;
+}
+
+.about-me-long-text p {
+  margin-bottom: 1rem;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.becky-pic {
+  display: block;
+  width: min(100%, 250px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 6px solid var(--educator-text);
+  border-radius: 60px;
+}
+
+.about-strengths-panel,
+.about-highlights-panel {
+  margin-bottom: var(--section-spacing);
+  padding: 2rem 1.5rem 2.15rem;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(224, 123, 162, 0.28);
+  border-radius: 30px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about-section-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-strengths-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.strength-card {
+  padding: 1.55rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.strength-card h3 {
+  margin-bottom: 0.65rem;
+  font-family: var(--font-ui);
+  font-size: clamp(1.65rem, 2vw, 1.9rem);
+  font-weight: 800;
+}
+
+.strength-card p {
+  margin-bottom: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.strength-card-dev {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 255, 253, 1) 0%,
+    rgba(180, 243, 236, 0.95) 100%
+  );
+  border-color: #7adfdb;
+}
+
+.strength-card-dev h3 {
+  color: #3da5a7;
+}
+
+.strength-card-edu {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 1) 0%,
+    rgba(255, 208, 216, 0.95) 100%
+  );
+  border-color: #ff879b;
+}
+
+.strength-card-edu h3 {
+  color: #e07ba2;
+}
+
+.strength-card-media {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 245, 1) 0%,
+    rgba(255, 230, 192, 0.98) 100%
+  );
+  border-color: #fdd8aa;
+}
+
+.strength-card-media h3 {
+  color: #fdaf69;
+}
+
+.about-highlights-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.about-highlights-copy,
+.about-cta-block {
+  padding: 1.55rem 1.35rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.about-highlight-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+
+.about-highlight-list li {
+  display: list-item;
+  margin-bottom: 0.65rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-cta-block {
+  background: rgba(255, 208, 216, 0.28);
+  border: 1.5px solid rgba(224, 123, 162, 0.2);
+  text-align: center;
+}
+
+.about-cta-block h3 {
+  margin-bottom: 0.75rem;
+  color: var(--educator-text);
+  font-family: var(--font-ui);
+  font-size: clamp(1.9rem, 2.6vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.about-cta-block p,
+.about-me-long-text p {
+  line-height: 1.7;
+}
+
+.about-cta-block p {
+  max-width: 58ch;
+  margin-right: auto;
+  margin-bottom: 1.1rem;
+  margin-left: auto;
+  font-family: var(--font-ui);
+  font-size: 1.02rem;
+  text-align: center;
+}
+
+.about-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.about-cta-buttons .btn-primary {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 767.98px) {
+  .about-page-shell,
+  .about-page-shell.page-shell {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 84px 20px 56px;
+  }
+
+  .about-intro-panel,
+  .about-strengths-panel,
+  .about-highlights-panel {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .about-intro-panel {
+    padding: 1.5rem 1.15rem 1.8rem;
+  }
+
+  .about-me-header {
+    text-align: center;
+  }
+
+  .about-strengths-panel,
+  .about-highlights-panel {
+    padding: 1.5rem 1rem 1.7rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: row;
+    gap: 0.65rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: minmax(245px, 272px) minmax(0, 1fr);
+    gap: 2.35rem;
+    align-items: start;
+    padding: 2.15rem 2.25rem 2.35rem;
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    justify-content: center;
+    align-self: start;
+    padding-top: 0;
+  }
+
+  .becky-pic {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40px;
+  }
+
+  .about-intro-copy {
+    max-width: 62ch;
+    margin: 0;
+    align-self: start;
+  }
+
+  .about-me-header {
+    margin-bottom: 1.1rem;
+    text-align: left;
+    line-height: 1.04;
+  }
+
+  .about-me-long-text p {
+    max-width: 60ch;
+    font-size: 1.06rem;
+  }
+
+  .about-strengths-panel,
+  .about-highlights-panel {
+    padding: 2.1rem 1.85rem 2.2rem;
+  }
+
+  .about-strengths-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-highlights-panel {
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 1.3rem;
+    align-items: start;
+  }
+
+  .about-highlights-copy,
+  .about-cta-block {
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .about-intro-panel {
+    grid-template-columns: minmax(210px, 235px) minmax(0, 1fr);
+    gap: 1.6rem;
+    padding: 1.9rem 1.6rem 2rem;
+    align-items: start;
+  }
+
+  .becky-pic {
+    border-radius: 34px;
+  }
+
+  .about-intro-copy {
+    max-width: 100%;
+  }
+
+  .about-me-header {
+    margin-bottom: 0.95rem;
+    font-size: clamp(2.7rem, 4.8vw, 3.2rem);
+  }
+
+  .about-me-long-text p {
+    max-width: 34ch;
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+}

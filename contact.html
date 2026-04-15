@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,17 +11,22 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-    <link rel="stylesheet" href="style.css"/>
-    <title>Becky Cole Portfolio</title>
-</head>
-<body class="contact-page">
-  <!----------------------------------------------NAV_BAR--------------------------------------------->
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=16" />
+    <title>Contact | Becky Cole Portfolio</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------NAV_BAR--------------------------------------------->
     <header>
       <nav id="navbar" class="topnav">
-          <img src="assets/BeckyUnicorn.png" class ="nav-logo" alt="girl in bubble logo" /> 
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
 
         <div class="nav-links">
           <a class="nav-link" href="index.html">Home</a>
@@ -31,26 +36,124 @@
           <a class="nav-link" href="contact.html">Contact</a>
         </div>
 
-        <button class="hamburger-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-          <img src="assets/hamburger.svg" class="hamburger-icon" alt="three horizontal lines stacked on top of each other" />
-        </button>  
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
       </nav>
-     </header>
+    </header>
 
-  <script src="script.js" defer></script>
+    <!-------------------------------------------CONTACT PAGE------------------------------------------->
+    <main class="contact-page">
+      <section class="contact-panel contact-panel--hero">
+        <div class="contact-hero-grid">
+          <div class="contact-hero-media">
+            <img
+              src="assets/BeckyUnicorn.png"
+              class="contact-hero-image"
+              alt="Illustration of Becky and a unicorn"
+            />
+          </div>
 
-<!---------------------------------------------------CONTACT_FORM----------------------------------------------->
+          <div class="contact-hero-copy">
+            <p class="contact-eyebrow">Get in touch</p>
+            <h1 class="contact-title">Come join the party!</h1>
+            <p class="contact-intro">
+              Whether you want to talk software, product ideas, creative
+              projects, or opportunities, I’d love to hear from you.
+            </p>
+            <p class="contact-intro">
+              Send me a message and I’ll get back to you as soon as I can.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section class="contact-form">
-        <h2>Come join the party!</h2>
-        <form>
-            <label for="your-name">Your Name</label>
-            <input type="text" id="your-name">
-            <label for="email">Your Email</label>
-            <input type="email" id="your-email">
-            </select>
-            <label for="message">Your Message</label>
-            <textarea name="message-text" id="message" rows="10"></textarea>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+      <section class="contact-panel contact-panel--form">
+        <div class="contact-form-wrap">
+          <h2 class="contact-form-title">Send me a message</h2>
+          <p class="contact-form-copy">
+            Fill out the form below and I’ll be in touch.
+          </p>
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="contact-field">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="contact-field">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="contact-field">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-submit-row">
+              <button type="submit" class="contact-submit-btn">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a
+            href="https://github.com/Rebecca-de-Winter"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rebecca-c-52141625/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:beckylouise81@gmail.com" title="Email me">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -11,10 +11,10 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-    <link rel="stylesheet" href="style.css?v=7" />
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=14" />
     <title>Case Studies | Becky Cole Portfolio</title>
   </head>
 
@@ -51,111 +51,114 @@
       </nav>
     </header>
 
-    <!-------------------------------------------CASE STUDIES HERO------------------------------------------------>
-   <!-------------------------------------------CASE STUDIES------------------------------------------------>
-<main class="about-page-shell case-studies-page">
-  <section class="about-intro-panel case-studies-intro-panel">
-    <div class="about-intro-photo case-studies-hero-photo">
-      <img
-        src="assets/Developer.png"
-        class="case-studies-hero-graphic"
-        alt="Illustration of Becky and a unicorn working at a laptop"
-      />
-    </div>
+    <!-------------------------------------------CASE STUDIES PAGE------------------------------------------->
+    <main class="cs-page">
+      <section class="cs-panel cs-panel--hero">
+        <div class="cs-hero-grid">
+          <div class="cs-hero-media">
+            <img
+              src="assets/Developer.png"
+              class="cs-hero-image"
+              alt="Illustration of Becky and a unicorn working at a laptop"
+            />
+          </div>
 
-    <div class="about-intro-copy case-studies-intro-copy">
-      <h1 class="about-me-header case-studies-title">Case Studies</h1>
+          <div class="cs-hero-copy">
+            <h1 class="cs-page-title">Case Studies</h1>
 
-      <div class="about-me-long-text case-studies-intro-text">
-        <p>
-          These projects show how I think, build, and solve problems across
-          full stack development, product design, and user experience.
-        </p>
+            <div class="cs-hero-text">
+              <p>
+                These projects show how I think, build, and solve problems
+                across full stack development, product design, and user
+                experience.
+              </p>
 
-        <p>
-          I’m especially drawn to ideas that combine technical depth with real
-          human needs, whether that means building structured accountability
-          workflows or creating community-focused platforms that feel warm,
-          practical, and memorable.
-        </p>
+              <p>
+                I’m especially drawn to ideas that combine technical depth with
+                real human needs, whether that means building structured
+                accountability workflows or creating community-focused
+                platforms that feel warm, practical, and memorable.
+              </p>
 
-        <p>Here are two of my strongest recent projects.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-highlights-panel case-studies-cards-panel">
-    <h2 class="about-section-title">Featured Case Studies</h2>
-
-    <div class="case-studies-grid">
-      <article class="case-study-card case-study-card--dev">
-        <div class="case-study-media case-study-media--dev">
-          <img
-            src="assets/podflow-screenshot.png"
-            class="case-study-image case-study-image--podflow"
-            alt="Screenshot of the PodFlow interface"
-          />
+              <p>Here are two of my strongest recent projects.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="case-study-content">
-          <h3>PodFlow</h3>
-          <p class="case-study-subtitle">Full Stack Accountability Platform</p>
+      <section class="cs-panel cs-panel--cards">
+        <h2 class="cs-panel-title">Featured Case Studies</h2>
 
-          <p class="case-study-copy">
-            A private accountability platform built with React and Django REST
-            Framework, designed to help people keep goals moving together.
-          </p>
+        <div class="cs-grid">
+          <article class="cs-card cs-card--podflow">
+            <div class="cs-card-media cs-card-media--podflow">
+              <img
+                src="assets/podflow-screenshot.png"
+                class="cs-card-image cs-card-image--podflow"
+                alt="Screenshot of the PodFlow interface"
+              />
+            </div>
 
-          <ul class="case-study-points">
-            <li>Private pods and trusted accountability</li>
-            <li>Shared goals, check-ins, and verification workflows</li>
-            <li>Role-based permissions and notifications system</li>
-          </ul>
+            <div class="cs-card-body">
+              <h3>PodFlow</h3>
+              <p class="cs-card-subtitle">Full Stack Accountability Platform</p>
 
-          <a href="podflow-case-study.html" class="btn-primary btn-dev">
-            Read Case Study
-          </a>
+              <p class="cs-card-copy">
+                A private accountability platform built with React and Django
+                REST Framework, designed to help people keep goals moving
+                together.
+              </p>
+
+              <ul class="cs-card-points">
+                <li>Private pods and trusted accountability</li>
+                <li>Shared goals, check-ins, and verification workflows</li>
+                <li>Role-based permissions and notifications system</li>
+              </ul>
+
+              <a href="podflow-case-study.html" class="btn-primary btn-dev">
+                Read Case Study
+              </a>
+            </div>
+          </article>
+
+          <article class="cs-card cs-card--backyard">
+            <div class="cs-card-media cs-card-media--backyard">
+              <img
+                src="assets/backyard-festival-screenshot.png"
+                class="cs-card-image cs-card-image--backyard"
+                alt="Screenshot of the Backyard Festival interface"
+              />
+            </div>
+
+            <div class="cs-card-body">
+              <h3>Backyard Festival</h3>
+              <p class="cs-card-subtitle">
+                Community-Powered Event Crowdfunding Platform
+              </p>
+
+              <p class="cs-card-copy">
+                A full stack platform for grassroots events where supporters can
+                pledge money, time, or physical items to help bring community
+                ideas to life.
+              </p>
+
+              <ul class="cs-card-points">
+                <li>Flexible money, time, and item pledges</li>
+                <li>Supporter and organiser dashboard views</li>
+                <li>Strong visual identity and responsive UI design</li>
+              </ul>
+
+              <a
+                href="backyard-festival-case-study.html"
+                class="btn-primary btn-edu"
+              >
+                Read Case Study
+              </a>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="case-study-card case-study-card--edu">
-        <div class="case-study-media case-study-media--edu">
-          <img
-            src="assets/backyard-festival-screenshot.png"
-            class="case-study-image case-study-image--backyard"
-            alt="Screenshot of the Backyard Festival interface"
-          />
-        </div>
-
-        <div class="case-study-content">
-          <h3>Backyard Festival</h3>
-          <p class="case-study-subtitle">
-            Community-Powered Event Crowdfunding Platform
-          </p>
-
-          <p class="case-study-copy">
-            A full stack platform for grassroots events where supporters can
-            pledge money, time, or physical items to help bring community ideas
-            to life.
-          </p>
-
-          <ul class="case-study-points">
-            <li>Flexible money, time, and item pledges</li>
-            <li>Supporter and organiser dashboard views</li>
-            <li>Strong visual identity and responsive UI design</li>
-          </ul>
-
-          <a
-            href="backyard-festival-case-study.html"
-            class="btn-primary btn-edu"
-          >
-            Read Case Study
-          </a>
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
+      </section>
+    </main>
 
     <!-------------------------------------------------------FOOTER------------------------------------------------->
     <footer>
@@ -165,19 +168,21 @@
             href="https://github.com/Rebecca-de-Winter"
             target="_blank"
             title="GitHub"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
 
           <a
             href="https://www.linkedin.com/in/rebecca-c-52141625/"
             target="_blank"
             title="LinkedIn"
-            ><i class="fa-brands fa-linkedin-in"></i>
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
 
-          <a href="mailto:beckylouise81@gmail.com" title="Email me"
-            ><i class="fa-solid fa-at"></i
-          ></a>
+          <a href="mailto:beckylouise81@gmail.com" title="Email me">
+            <i class="fa-solid fa-at"></i>
+          </a>
         </div>
       </section>
     </footer>
