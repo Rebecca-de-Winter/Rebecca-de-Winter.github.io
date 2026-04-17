@@ -240,7 +240,7 @@
 .bf-walkthrough-visual {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: #0f373c;
 }
