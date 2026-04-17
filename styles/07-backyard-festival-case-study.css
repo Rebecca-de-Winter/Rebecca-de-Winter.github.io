@@ -235,13 +235,18 @@
     rgba(15, 55, 60, 1) 0%,
     rgba(31, 103, 109, 1) 100%
   );
+  aspect-ratio: 16 / 9;
+  background: #0f373c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bf-walkthrough-visual {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   background: #0f373c;
 }
 
