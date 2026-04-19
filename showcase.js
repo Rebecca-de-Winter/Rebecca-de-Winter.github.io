@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondaryEl = document.getElementById("slideSecondary");
   const introVisual = document.getElementById("introVisual");
   const introWave = document.getElementById("introWave");
+  const visualWrap = document.getElementById("slideVisualWrap");
+  const visualImage = document.getElementById("slideVisualImage");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
@@ -166,6 +168,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function renderSlideVisual(slide) {
+    if (!visualWrap || !visualImage) return;
+
+    if (slide.showIntroArt) {
+      visualWrap.style.display = "none";
+      visualImage.removeAttribute("src");
+      visualImage.alt = "";
+      return;
+    }
+
+    visualWrap.style.display = "flex";
+    visualImage.src = slide.image;
+    visualImage.alt = slide.key + " showcase visual";
+  }
+
   function renderSlide() {
     const slide = slides[index];
 
@@ -195,6 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     introVisual.hidden = !slide.showIntroArt;
     introWave.hidden = !slide.showIntroArt;
 
+    renderSlideVisual(slide);
     renderBackgrounds();
     renderDots();
   }
@@ -230,8 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function startAuto() {
     stopAuto();
     intervalId = window.setInterval(() => {
-      index = clampIndex(index + 1);
-      renderSlide();
+      goTo(index + 1);
     }, AUTO_MS);
   }
 
