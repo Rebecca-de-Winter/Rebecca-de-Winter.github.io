@@ -1,66 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("navbar");
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.querySelectorAll("#navbar .nav-link");
-
-  if (navbar && menuToggle) {
-    const closeMenu = () => {
-      navbar.classList.remove("responsive");
-      menuToggle.setAttribute("aria-expanded", "false");
-    };
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navbar.classList.toggle("responsive");
-      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!navbar.contains(event.target)) {
-        closeMenu();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 600) {
-        closeMenu();
-      }
-    });
-  }
-
   const slides = [
     {
       key: "intro",
-      eyebrow: "Full Stack Developer",
-      title: "Becky Cole\nDeveloper, educator,\nand media creator.",
+      eyebrow: "Portfolio",
+      title: "Becky Cole\nFull Stack Developer",
       subtitle:
-        "Thoughtful software, polished interfaces, and a strong instinct for turning complexity into something people can actually use.",
+        "React, Django REST, thoughtful UX, and real product work with a teacher's eye for clarity.",
       bullets: [
-        "React and Django REST product work",
-        "Workflow logic, permissions, and real user journeys",
-        "A teacher’s eye for clarity, onboarding, and UX",
+        "Frontend and backend product builds",
+        "Workflow logic, permissions, and user journeys",
+        "Clean presentation mode for live demos",
       ],
-      image: "assets/stars.png",
+      image: "",
       logo: "",
-      primaryLabel: "View case studies",
+      primaryLabel: "Case studies",
       primaryHref: "case-studies.html",
-      secondaryLabel: "About Becky",
-      secondaryHref: "about.html",
+      secondaryLabel: "Projects",
+      secondaryHref: "projects.html#developer",
       showIntroArt: true,
     },
     {
       key: "podflow",
-      eyebrow: "Case study",
-      title: "PodFlow\nTrust-first accountability\nwith real follow-through.",
+      eyebrow: "Case Study",
+      title: "PodFlow",
       subtitle:
-        "A private accountability platform designed for trusted pods, shared momentum, and meaningful next actions.",
+        "Trust-first accountability for private pods, shared goals, and meaningful follow-through.",
       bullets: [
-        "Private pods for real accountability",
-        "Check-ins, progress, and shared momentum",
-        "Permissions, verification, and action-driven workflow",
+        "Private accountability pods",
+        "Adaptive check-ins and verification",
+        "Notifications built around action",
       ],
       image: "assets/showcase/podflow-slide.png",
       logo: "assets/showcase/podflow-logo.png",
@@ -72,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       key: "backyard",
-      eyebrow: "Case study",
-      title: "Backyard Festival\nCrowdfunding for\ngrassroots events.",
+      eyebrow: "Case Study",
+      title: "Backyard Festival",
       subtitle:
-        "A community-powered platform where supporters can pledge money, time, or items to help bring events to life.",
+        "Crowdfunding for grassroots events, with pledges for money, time, and items.",
       bullets: [
         "Support gigs, fundraisers, and community events",
-        "Pledge money, time, or items",
-        "Track live needs, rewards, and organiser progress",
+        "Track live needs and rewards",
+        "Built with React and Django REST",
       ],
       image: "assets/showcase/backyard-slide.png",
       logo: "",
@@ -91,18 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       key: "wolfie",
-      eyebrow: "Creative tech",
-      title: "Wolfie\nPlayful experiments\nbeyond the browser.",
+      eyebrow: "Creative Tech",
+      title: "Wolfie",
       subtitle:
-        "Raspberry Pi robotics, creative coding, and curious technical problem solving with a bit of personality.",
+        "Playful robotics and creative tech experiments beyond the browser.",
       bullets: [
-        "Python, hardware tinkering, and robotics",
-        "Fast debugging and hands-on experimentation",
-        "Creative tech that makes people smile and ask questions",
+        "Raspberry Pi and Python tinkering",
+        "Fast debugging and hands-on experiments",
+        "Technical work with personality",
       ],
-      image: "assets/showcase/wolfie-slide.png",
+      image: "assets/showcase/wolfie-slide.jpg",
       logo: "",
-      primaryLabel: "View portfolio",
+      primaryLabel: "Back to portfolio",
       primaryHref: "index.html",
       secondaryLabel: "Contact Becky",
       secondaryHref: "contact.html",
@@ -167,12 +135,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, slideIndex) => {
       const bg = document.createElement("div");
-      bg.className = "carousel__bg" + (slideIndex === index ? " is-active" : "");
+      bg.className =
+        "showcase-carousel__bg" + (slideIndex === index ? " is-active" : "");
 
       if (slide.key === "intro") {
         bg.style.backgroundImage =
-          "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 22%, rgba(173,218,233,1) 82%)";
-      } else {
+          "linear-gradient(180deg, rgba(0,0,8,1) 0%, rgba(2,0,36,1) 14%, rgba(9,9,121,1) 34%, rgba(173,218,233,1) 92%)";
+      } else if (slide.image) {
         bg.style.backgroundImage = `url("${slide.image}")`;
       }
 
@@ -186,7 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     slides.forEach((slide, slideIndex) => {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "carousel__dot" + (slideIndex === index ? " is-active" : "");
+      btn.className =
+        "showcase-carousel__dot" + (slideIndex === index ? " is-active" : "");
       btn.setAttribute("aria-label", `Go to slide ${slideIndex + 1}`);
       btn.addEventListener("click", () => goTo(slideIndex));
       dotsWrap.appendChild(btn);
@@ -204,14 +174,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderSlideVisual(slide) {
-    if (slide.showIntroArt) {
-      visualWrap.style.display = "none";
+    if (slide.showIntroArt || !slide.image) {
+      visualWrap.hidden = true;
+      visualWrap.classList.remove("is-missing");
       visualImage.removeAttribute("src");
       visualImage.alt = "";
       return;
     }
 
-    visualWrap.style.display = "flex";
+    visualWrap.hidden = false;
+    visualWrap.classList.remove("is-missing");
     visualImage.src = slide.image;
     visualImage.alt = `${slide.key} showcase visual`;
   }
@@ -254,10 +226,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isTransitioning) return;
 
     isTransitioning = true;
-    index = clampIndex(nextIndex);
     fadeLayer.classList.add("is-on");
 
     window.setTimeout(() => {
+      index = clampIndex(nextIndex);
       renderSlide();
 
       window.setTimeout(() => {
@@ -288,6 +260,16 @@ document.addEventListener("DOMContentLoaded", () => {
       goTo(index + 1);
     }, AUTO_MS);
   }
+
+  visualImage.addEventListener("error", () => {
+    visualWrap.classList.add("is-missing");
+  });
+
+  logoEl.addEventListener("error", () => {
+    logoEl.hidden = true;
+    logoEl.removeAttribute("src");
+    logoEl.alt = "";
+  });
 
   prevBtn.addEventListener("click", goPrev);
   nextBtn.addEventListener("click", goNext);
