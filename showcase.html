@@ -26,12 +26,14 @@
             </div>
           </div>
 
-          <div class="showcase__chips" aria-label="Skills">
-            <span class="chip chip--dev">React</span>
-            <span class="chip chip--stack">Django REST</span>
-            <span class="chip chip--media">Python</span>
-            <span class="chip chip--edu">UI / UX</span>
-          </div>
+          <nav class="showcase__navlinks" aria-label="Showcase navigation">
+            <a class="showcase__navlink" href="index.html">Home</a>
+            <a class="showcase__navlink" href="about.html">About</a>
+            <a class="showcase__navlink" href="projects.html">Projects</a>
+            <a class="showcase__navlink" href="case-studies.html">Case Studies</a>
+            <a class="showcase__navlink showcase__navlink--current" href="showcase.html">Showcase</a>
+            <a class="showcase__navlink" href="contact.html">Contact</a>
+          </nav>
         </header>
 
         <section class="showcase__main">
@@ -62,7 +64,11 @@
                   >
                     View case studies
                   </a>
-                  <a class="btn btn--secondary" id="slideSecondary" href="projects.html">
+                  <a
+                    class="btn btn--secondary"
+                    id="slideSecondary"
+                    href="projects.html"
+                  >
                     See projects
                   </a>
                 </div>
@@ -86,7 +92,23 @@
                       ›
                     </button>
                   </div>
-                  <div class="carousel__dots" id="carouselDots" aria-label="Select slide"></div>
+
+                  <div
+                    class="carousel__dots"
+                    id="carouselDots"
+                    aria-label="Select slide"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="carousel__visual" id="slideVisualWrap">
+                <div class="carousel__visual-frame">
+                  <img
+                    id="slideVisualImage"
+                    class="carousel__visual-image"
+                    src="assets/showcase/backyard-slide.png"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -126,14 +148,18 @@
 
             <div class="qr-panel__foot">
               Best on a full-screen display at the showcase. Press <strong>F11</strong>,
-              let it auto-rotate, and let the little carousel peacock do its thing.
+              let it auto-rotate, and let the carousel do its thing.
             </div>
           </aside>
         </section>
 
         <footer class="showcase__footer">
-          <div><strong>Featured:</strong> PodFlow • Backyard Festival • creative tech experiments</div>
-          <div>Full Stack Developer • React • Django REST • workflow design • UI / UX</div>
+          <div>
+            <strong>Featured:</strong> PodFlow • Backyard Festival • creative tech experiments
+          </div>
+          <div>
+            Full Stack Developer • React • Django REST • workflow design • UI / UX
+          </div>
         </footer>
       </div>
     </main>
