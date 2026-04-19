@@ -2,84 +2,152 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = [
     {
       key: "intro",
-      eyebrow: "Portfolio",
-      title: "Becky Cole\nFull Stack Developer",
+      eyebrow: "Full Stack Developer",
+      title: "Becky Cole",
       subtitle:
-        "React, Django REST, thoughtful UX, and real product work with a teacher's eye for clarity.",
+        "Full stack developer building thoughtful interfaces, real workflow logic, and polished user experiences.",
       bullets: [
-        "Frontend and backend product builds",
-        "Workflow logic, permissions, and user journeys",
-        "Clean presentation mode for live demos",
+        "React and Django REST product work",
+        "Clear UX shaped by a teacher's eye for structure",
+        "Portfolio highlights rotating for showcase night",
       ],
-      image: "",
-      logo: "",
+      image: "assets/showcase/becky-showcase.jpg",
+      position: "center center",
       primaryLabel: "Case studies",
       primaryHref: "case-studies.html",
       secondaryLabel: "Projects",
       secondaryHref: "projects.html#developer",
-      showIntroArt: true,
     },
     {
-      key: "podflow",
-      eyebrow: "Case Study",
-      title: "PodFlow",
+      key: "podflow-notifications",
+      eyebrow: "PodFlow",
+      title: "Workflow visibility\nthrough notifications",
       subtitle:
-        "Trust-first accountability for private pods, shared goals, and meaningful follow-through.",
+        "PodFlow ties the product together with action-based notifications for invites, approvals, verification requests, and other next-step moments.",
       bullets: [
-        "Private accountability pods",
-        "Adaptive check-ins and verification",
-        "Notifications built around action",
+        "Notifications built around real actions",
+        "Guides users through complex workflows",
+        "Responsive, mobile-friendly, and dark mode ready",
       ],
-      image: "assets/showcase/podflow-slide.png",
-      logo: "assets/showcase/podflow-logo.png",
-      primaryLabel: "Open case study",
+      image: "assets/showcase/podflow-notifications.jpg",
+      position: "center top",
+      primaryLabel: "PodFlow case study",
       primaryHref: "case-studies.html#podflow",
       secondaryLabel: "View projects",
       secondaryHref: "projects.html#developer",
-      showIntroArt: false,
     },
     {
-      key: "backyard",
-      eyebrow: "Case Study",
-      title: "Backyard Festival",
+      key: "podflow-goals",
+      eyebrow: "PodFlow",
+      title: "Adaptive goals\nand naming logic",
       subtitle:
-        "Crowdfunding for grassroots events, with pledges for money, time, and items.",
+        "The interface adapts across done-or-not-done, number-based, and duration-based goals, while keeping labels and progress language consistent.",
       bullets: [
-        "Support gigs, fundraisers, and community events",
-        "Track live needs and rewards",
-        "Built with React and Django REST",
+        "Custom goal tracking modes",
+        "Naming carries across the whole product",
+        "Built to feel personal and intuitive",
       ],
-      image: "assets/showcase/backyard-slide.png",
-      logo: "",
-      primaryLabel: "Open case study",
+      image: "assets/showcase/podflow-goals.jpg",
+      position: "center top",
+      primaryLabel: "PodFlow case study",
+      primaryHref: "case-studies.html#podflow",
+      secondaryLabel: "View projects",
+      secondaryHref: "projects.html#developer",
+    },
+    {
+      key: "podflow-pods",
+      eyebrow: "PodFlow",
+      title: "Trust-first pods\nand layered permissions",
+      subtitle:
+        "Private pods, connection-first invitations, verification, and role-based permissions were designed to make accountability supportive and intentional.",
+      bullets: [
+        "Private pods with trusted people",
+        "Verification beyond self-reporting",
+        "Layered permissions across connections, goals, and pods",
+      ],
+      image: "assets/showcase/podflow-pods.jpg",
+      position: "center center",
+      primaryLabel: "PodFlow case study",
+      primaryHref: "case-studies.html#podflow",
+      secondaryLabel: "View projects",
+      secondaryHref: "projects.html#developer",
+    },
+    {
+      key: "backyard-support",
+      eyebrow: "Backyard Festival",
+      title: "Flexible support\nfor real events",
+      subtitle:
+        "Backyard Festival goes beyond cash-only crowdfunding with support for money, volunteer time, and physical items, including donated or loaned gear.",
+      bullets: [
+        "Money, time, and item pledges",
+        "Donation and loan tracking for items",
+        "Built for practical community event planning",
+      ],
+      image: "assets/showcase/backyard-support.jpg",
+      position: "center top",
+      primaryLabel: "Backyard Festival case study",
       primaryHref: "case-studies.html#backyard-festival",
       secondaryLabel: "View projects",
       secondaryHref: "projects.html#developer",
-      showIntroArt: false,
+    },
+    {
+      key: "backyard-live",
+      eyebrow: "Backyard Festival",
+      title: "Live pledge feedback\nand progress tracking",
+      subtitle:
+        "As pledges come in, organisers and supporters can immediately see remaining spots, updated needs, and changing fundraiser progress.",
+      bullets: [
+        "Live updates as support is approved",
+        "Clear feedback for organisers and supporters",
+        "Designed to feel active and responsive",
+      ],
+      image: "assets/showcase/backyard-live.jpg",
+      position: "center center",
+      primaryLabel: "Backyard Festival case study",
+      primaryHref: "case-studies.html#backyard-festival",
+      secondaryLabel: "View projects",
+      secondaryHref: "projects.html#developer",
+    },
+    {
+      key: "backyard-dashboard",
+      eyebrow: "Backyard Festival",
+      title: "Organiser control,\napprovals, and dashboards",
+      subtitle:
+        "Dedicated organiser and supporter views make it easier to manage fundraisers, review pledges, and handle more complex workflows as the platform grows.",
+      bullets: [
+        "Organiser and supporter dashboard views",
+        "Approval flows for incoming pledges",
+        "Workflow control shaped by real event needs",
+      ],
+      image: "assets/showcase/backyard-dashboard.jpg",
+      position: "center top",
+      primaryLabel: "Backyard Festival case study",
+      primaryHref: "case-studies.html#backyard-festival",
+      secondaryLabel: "View projects",
+      secondaryHref: "projects.html#developer",
     },
     {
       key: "wolfie",
       eyebrow: "Creative Tech",
       title: "Wolfie",
       subtitle:
-        "Playful robotics and creative tech experiments beyond the browser.",
+        "Playful robotics, Raspberry Pi experimentation, and hands-on technical curiosity beyond the browser.",
       bullets: [
-        "Raspberry Pi and Python tinkering",
-        "Fast debugging and hands-on experiments",
+        "Python and hardware tinkering",
+        "Fast debugging and practical experimentation",
         "Technical work with personality",
       ],
       image: "assets/showcase/wolfie-slide.jpg",
-      logo: "",
+      position: "center center",
       primaryLabel: "Back to portfolio",
       primaryHref: "index.html",
       secondaryLabel: "Contact Becky",
       secondaryHref: "contact.html",
-      showIntroArt: false,
     },
   ];
 
-  const AUTO_MS = 7000;
-  const FADE_MS = 220;
+  const AUTO_MS = 8000;
+  const FADE_MS = 240;
 
   let index = 0;
   let intervalId = null;
@@ -93,13 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtitleEl = document.getElementById("slideSubtitle");
   const eyebrowEl = document.getElementById("slideEyebrow");
   const bulletsEl = document.getElementById("slideBullets");
-  const logoEl = document.getElementById("slideLogo");
   const primaryEl = document.getElementById("slidePrimary");
   const secondaryEl = document.getElementById("slideSecondary");
-  const introVisual = document.getElementById("introVisual");
-  const introWave = document.getElementById("introWave");
-  const visualWrap = document.getElementById("slideVisualWrap");
-  const visualImage = document.getElementById("slideVisualImage");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
@@ -112,13 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
     !subtitleEl ||
     !eyebrowEl ||
     !bulletsEl ||
-    !logoEl ||
     !primaryEl ||
     !secondaryEl ||
-    !introVisual ||
-    !introWave ||
-    !visualWrap ||
-    !visualImage ||
     !prevBtn ||
     !nextBtn
   ) {
@@ -138,13 +196,14 @@ document.addEventListener("DOMContentLoaded", () => {
       bg.className =
         "showcase-carousel__bg" + (slideIndex === index ? " is-active" : "");
 
-      if (slide.key === "intro") {
+      if (slide.image) {
+        bg.style.backgroundImage = `url("${slide.image}")`;
+      } else {
         bg.style.backgroundImage =
           "linear-gradient(180deg, rgba(0,0,8,1) 0%, rgba(2,0,36,1) 14%, rgba(9,9,121,1) 34%, rgba(173,218,233,1) 92%)";
-      } else if (slide.image) {
-        bg.style.backgroundImage = `url("${slide.image}")`;
       }
 
+      bg.style.backgroundPosition = slide.position || "center center";
       bgStack.appendChild(bg);
     });
   }
@@ -158,7 +217,10 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.className =
         "showcase-carousel__dot" + (slideIndex === index ? " is-active" : "");
       btn.setAttribute("aria-label", `Go to slide ${slideIndex + 1}`);
-      btn.addEventListener("click", () => goTo(slideIndex));
+      btn.addEventListener("click", () => {
+        goTo(slideIndex);
+        restartAuto();
+      });
       dotsWrap.appendChild(btn);
     });
   }
@@ -173,21 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function renderSlideVisual(slide) {
-    if (slide.showIntroArt || !slide.image) {
-      visualWrap.hidden = true;
-      visualWrap.classList.remove("is-missing");
-      visualImage.removeAttribute("src");
-      visualImage.alt = "";
-      return;
-    }
-
-    visualWrap.hidden = false;
-    visualWrap.classList.remove("is-missing");
-    visualImage.src = slide.image;
-    visualImage.alt = `${slide.key} showcase visual`;
-  }
-
   function renderSlide() {
     const slide = slides[index];
 
@@ -197,27 +244,11 @@ document.addEventListener("DOMContentLoaded", () => {
     subtitleEl.textContent = slide.subtitle || "";
 
     renderBullets(slide.bullets || []);
-
-    if (slide.logo) {
-      logoEl.hidden = false;
-      logoEl.src = slide.logo;
-      logoEl.alt = `${slide.key} logo`;
-    } else {
-      logoEl.hidden = true;
-      logoEl.removeAttribute("src");
-      logoEl.alt = "";
-    }
-
     primaryEl.textContent = slide.primaryLabel || "View work";
     primaryEl.href = slide.primaryHref || "index.html";
-
     secondaryEl.textContent = slide.secondaryLabel || "Learn more";
     secondaryEl.href = slide.secondaryHref || "about.html";
 
-    introVisual.hidden = !slide.showIntroArt;
-    introWave.hidden = !slide.showIntroArt;
-
-    renderSlideVisual(slide);
     renderBackgrounds();
     renderDots();
   }
@@ -261,18 +292,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }, AUTO_MS);
   }
 
-  visualImage.addEventListener("error", () => {
-    visualWrap.classList.add("is-missing");
+  function restartAuto() {
+    startAuto();
+  }
+
+  prevBtn.addEventListener("click", () => {
+    goPrev();
+    restartAuto();
   });
 
-  logoEl.addEventListener("error", () => {
-    logoEl.hidden = true;
-    logoEl.removeAttribute("src");
-    logoEl.alt = "";
+  nextBtn.addEventListener("click", () => {
+    goNext();
+    restartAuto();
   });
-
-  prevBtn.addEventListener("click", goPrev);
-  nextBtn.addEventListener("click", goNext);
 
   carousel.addEventListener("mouseenter", stopAuto);
   carousel.addEventListener("mouseleave", startAuto);
@@ -286,8 +318,10 @@ document.addEventListener("DOMContentLoaded", () => {
   carousel.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
       goPrev();
+      restartAuto();
     } else if (event.key === "ArrowRight") {
       goNext();
+      restartAuto();
     }
   });
 
