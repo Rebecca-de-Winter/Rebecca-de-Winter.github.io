@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Becky Cole Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="showcase.css" />
+  </head>
+  <body>
+    <main class="showcase">
+      <div class="stars" aria-hidden="true"></div>
+
+      <div class="showcase__shell">
+        <header class="showcase__topbar">
+          <div class="showcase__brand">
+            <img src="assets/BeckyUnicorn.png" alt="Becky logo" />
+            <div class="showcase__brand-copy">
+              <h1>Becky Cole</h1>
+              <p>Developer • Educator • Media Creator</p>
+            </div>
+          </div>
+
+          <div class="showcase__chips" aria-label="Skills">
+            <span class="chip chip--dev">React</span>
+            <span class="chip chip--stack">Django REST</span>
+            <span class="chip chip--media">Python</span>
+            <span class="chip chip--edu">UI / UX</span>
+          </div>
+        </header>
+
+        <section class="showcase__main">
+          <section
+            class="carousel"
+            aria-label="Rebecca Cole showcase carousel"
+            tabindex="0"
+            id="showcaseCarousel"
+          >
+            <div class="carousel__bg-stack" id="carouselBg"></div>
+            <div class="carousel__overlay" aria-hidden="true"></div>
+            <div class="carousel__tone" aria-hidden="true"></div>
+            <div class="carousel__fade" id="carouselFade" aria-hidden="true"></div>
+
+            <div class="carousel__inner">
+              <div class="carousel__content">
+                <p class="carousel__eyebrow" id="slideEyebrow"></p>
+                <img id="slideLogo" class="carousel__logo" alt="" hidden />
+                <h2 class="carousel__title" id="slideTitle"></h2>
+                <p class="carousel__subtitle" id="slideSubtitle"></p>
+                <ul class="carousel__bullets" id="slideBullets"></ul>
+
+                <div class="carousel__actions">
+                  <a
+                    class="btn btn--primary"
+                    id="slidePrimary"
+                    href="case-studies.html"
+                  >
+                    View case studies
+                  </a>
+                  <a class="btn btn--secondary" id="slideSecondary" href="projects.html">
+                    See projects
+                  </a>
+                </div>
+
+                <div class="carousel__nav">
+                  <div class="carousel__arrow-group">
+                    <button
+                      type="button"
+                      class="carousel__arrow"
+                      id="prevBtn"
+                      aria-label="Previous slide"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      type="button"
+                      class="carousel__arrow"
+                      id="nextBtn"
+                      aria-label="Next slide"
+                    >
+                      ›
+                    </button>
+                  </div>
+                  <div class="carousel__dots" id="carouselDots" aria-label="Select slide"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="intro-wave" id="introWave" aria-hidden="true" hidden>
+              <img src="assets/ocean-blue.png" alt="" />
+            </div>
+
+            <div class="intro-visual" id="introVisual" aria-hidden="true" hidden>
+              <img src="assets/BeckyUnicornTransparent.png" alt="" />
+            </div>
+          </section>
+
+          <aside class="qr-panel">
+            <div class="qr-panel__copy">
+              <h2>Scan to explore my work</h2>
+              <p>
+                Portfolio, case studies, product demos, and the rest of the
+                glittery evidence that I really do build this stuff.
+              </p>
+            </div>
+
+            <div class="qr-panel__tags">
+              <span class="qr-tag">PodFlow</span>
+              <span class="qr-tag">Backyard Festival</span>
+              <span class="qr-tag">Creative tech</span>
+            </div>
+
+            <div class="qr-panel__code">
+              <img
+                src="assets/showcase/portfolio-qr.png"
+                alt="QR code linking to Rebecca Cole's portfolio"
+              />
+            </div>
+
+            <div class="qr-panel__url">rebecca-de-winter.github.io</div>
+
+            <div class="qr-panel__foot">
+              Best on a full-screen display at the showcase. Press <strong>F11</strong>,
+              let it auto-rotate, and let the little carousel peacock do its thing.
+            </div>
+          </aside>
+        </section>
+
+        <footer class="showcase__footer">
+          <div><strong>Featured:</strong> PodFlow • Backyard Festival • creative tech experiments</div>
+          <div>Full Stack Developer • React • Django REST • workflow design • UI / UX</div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="showcase.js"></script>
+  </body>
+</html>
