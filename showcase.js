@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelectorAll("#navbar .nav-link");
+
+  if (navbar && menuToggle) {
+    const closeMenu = () => {
+      navbar.classList.remove("responsive");
+      menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navbar.classList.toggle("responsive");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!navbar.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 600) {
+        closeMenu();
+      }
+    });
+  }
+
   const slides = [
     {
       key: "intro",
@@ -83,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let index = 0;
   let intervalId = null;
+  let isTransitioning = false;
 
   const carousel = document.getElementById("showcaseCarousel");
   const bgStack = document.getElementById("carouselBg");
@@ -116,6 +149,8 @@ document.addEventListener("DOMContentLoaded", () => {
     !secondaryEl ||
     !introVisual ||
     !introWave ||
+    !visualWrap ||
+    !visualImage ||
     !prevBtn ||
     !nextBtn
   ) {
@@ -138,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bg.style.backgroundImage =
           "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 22%, rgba(173,218,233,1) 82%)";
       } else {
-        bg.style.backgroundImage = 'url("' + slide.image + '")';
+        bg.style.backgroundImage = `url("${slide.image}")`;
       }
 
       bgStack.appendChild(bg);
@@ -152,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "carousel__dot" + (slideIndex === index ? " is-active" : "");
-      btn.setAttribute("aria-label", "Go to slide " + (slideIndex + 1));
+      btn.setAttribute("aria-label", `Go to slide ${slideIndex + 1}`);
       btn.addEventListener("click", () => goTo(slideIndex));
       dotsWrap.appendChild(btn);
     });
@@ -169,8 +204,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderSlideVisual(slide) {
-    if (!visualWrap || !visualImage) return;
-
     if (slide.showIntroArt) {
       visualWrap.style.display = "none";
       visualImage.removeAttribute("src");
@@ -180,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     visualWrap.style.display = "flex";
     visualImage.src = slide.image;
-    visualImage.alt = slide.key + " showcase visual";
+    visualImage.alt = `${slide.key} showcase visual`;
   }
 
   function renderSlide() {
@@ -196,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (slide.logo) {
       logoEl.hidden = false;
       logoEl.src = slide.logo;
-      logoEl.alt = slide.key + " logo";
+      logoEl.alt = `${slide.key} logo`;
     } else {
       logoEl.hidden = true;
       logoEl.removeAttribute("src");
@@ -218,6 +251,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function goTo(nextIndex) {
+    if (isTransitioning) return;
+
+    isTransitioning = true;
     index = clampIndex(nextIndex);
     fadeLayer.classList.add("is-on");
 
@@ -226,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       window.setTimeout(() => {
         fadeLayer.classList.remove("is-on");
+        isTransitioning = false;
       }, FADE_MS);
     }, FADE_MS);
   }
@@ -258,13 +295,25 @@ document.addEventListener("DOMContentLoaded", () => {
   carousel.addEventListener("mouseenter", stopAuto);
   carousel.addEventListener("mouseleave", startAuto);
   carousel.addEventListener("focusin", stopAuto);
-  carousel.addEventListener("focusout", startAuto);
+  carousel.addEventListener("focusout", (event) => {
+    if (!carousel.contains(event.relatedTarget)) {
+      startAuto();
+    }
+  });
 
   carousel.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
       goPrev();
     } else if (event.key === "ArrowRight") {
       goNext();
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAuto();
+    } else {
+      startAuto();
     }
   });
 

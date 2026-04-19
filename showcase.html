@@ -3,40 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Becky Cole Showcase</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="showcase.css" />
+    <link rel="stylesheet" href="styles/main.css?v=1" />
+    <link rel="stylesheet" href="showcase.css?v=2" />
+    <title>Showcase | Becky Cole Portfolio</title>
   </head>
-  <body>
-    <main class="showcase">
-      <div class="stars" aria-hidden="true"></div>
 
-      <div class="showcase__shell">
-        <header class="showcase__topbar">
-          <div class="showcase__brand">
-            <img src="assets/BeckyUnicorn.png" alt="Becky logo" />
-            <div class="showcase__brand-copy">
-              <h1>Becky Cole</h1>
-              <p>Developer • Educator • Media Creator</p>
-            </div>
+  <body class="showcase-page">
+    <header>
+      <nav id="navbar" class="topnav">
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="case-studies.html">Case Studies</a>
+          <a class="nav-link" href="showcase.html" aria-current="page">Showcase</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
+      </nav>
+    </header>
+
+    <main class="showcase-page-main">
+      <div class="showcase-page-stars" aria-hidden="true"></div>
+
+      <section class="showcase-page-shell">
+        <section class="showcase-page-intro">
+          <div class="showcase-page-copy">
+            <p class="showcase-page-eyebrow">Presentation showcase</p>
+            <h1 class="showcase-page-title">A polished home for the carousel, QR, and live demos.</h1>
+            <p class="showcase-page-text">
+              This version uses the same navbar and overall site language as the rest of the
+              portfolio, while still giving the carousel room to breathe on a big screen.
+            </p>
           </div>
 
-          <nav class="showcase__navlinks" aria-label="Showcase navigation">
-            <a class="showcase__navlink" href="index.html">Home</a>
-            <a class="showcase__navlink" href="about.html">About</a>
-            <a class="showcase__navlink" href="projects.html">Projects</a>
-            <a class="showcase__navlink" href="case-studies.html">Case Studies</a>
-            <a class="showcase__navlink showcase__navlink--current" href="showcase.html">Showcase</a>
-            <a class="showcase__navlink" href="contact.html">Contact</a>
-          </nav>
-        </header>
+          <div class="showcase-page-notes">
+            <span class="showcase-chip">PodFlow</span>
+            <span class="showcase-chip">Backyard Festival</span>
+            <span class="showcase-chip">Creative tech</span>
+            <p>
+              Tip for the event table: hit <strong>F11</strong>, let the carousel auto-rotate,
+              and keep the QR visible for easy scanning.
+            </p>
+          </div>
+        </section>
 
-        <section class="showcase__main">
+        <section class="showcase-layout">
           <section
             class="carousel"
             aria-label="Rebecca Cole showcase carousel"
@@ -57,18 +98,10 @@
                 <ul class="carousel__bullets" id="slideBullets"></ul>
 
                 <div class="carousel__actions">
-                  <a
-                    class="btn btn--primary"
-                    id="slidePrimary"
-                    href="case-studies.html"
-                  >
+                  <a class="btn btn--primary" id="slidePrimary" href="case-studies.html">
                     View case studies
                   </a>
-                  <a
-                    class="btn btn--secondary"
-                    id="slideSecondary"
-                    href="projects.html"
-                  >
+                  <a class="btn btn--secondary" id="slideSecondary" href="projects.html">
                     See projects
                   </a>
                 </div>
@@ -103,12 +136,7 @@
 
               <div class="carousel__visual" id="slideVisualWrap">
                 <div class="carousel__visual-frame">
-                  <img
-                    id="slideVisualImage"
-                    class="carousel__visual-image"
-                    src="assets/showcase/backyard-slide.png"
-                    alt=""
-                  />
+                  <img id="slideVisualImage" class="carousel__visual-image" src="" alt="" />
                 </div>
               </div>
             </div>
@@ -126,15 +154,15 @@
             <div class="qr-panel__copy">
               <h2>Scan to explore my work</h2>
               <p>
-                Portfolio, case studies, product demos, and the rest of the
-                glittery evidence that I really do build this stuff.
+                Portfolio, case studies, product demos, and the glittery evidence that I really do
+                build this stuff.
               </p>
             </div>
 
             <div class="qr-panel__tags">
-              <span class="qr-tag">PodFlow</span>
-              <span class="qr-tag">Backyard Festival</span>
-              <span class="qr-tag">Creative tech</span>
+              <span class="qr-tag">React</span>
+              <span class="qr-tag">Django REST</span>
+              <span class="qr-tag">UI / UX</span>
             </div>
 
             <div class="qr-panel__code">
@@ -147,23 +175,35 @@
             <div class="qr-panel__url">rebecca-de-winter.github.io</div>
 
             <div class="qr-panel__foot">
-              Best on a full-screen display at the showcase. Press <strong>F11</strong>,
-              let it auto-rotate, and let the carousel do its thing.
+              The QR panel now sits beside the carousel on desktop and drops below it on smaller
+              screens, so the layout stays tidy instead of getting squashed.
             </div>
           </aside>
         </section>
-
-        <footer class="showcase__footer">
-          <div>
-            <strong>Featured:</strong> PodFlow • Backyard Festival • creative tech experiments
-          </div>
-          <div>
-            Full Stack Developer • React • Django REST • workflow design • UI / UX
-          </div>
-        </footer>
-      </div>
+      </section>
     </main>
 
-    <script src="showcase.js"></script>
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a href="https://github.com/Rebecca-de-Winter" target="_blank" title="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+
+          <a
+            href="https://www.linkedin.com/in/rebecca-c-52141625/"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:beckylouise81@gmail.com" title="Email me"
+            ><i class="fa-solid fa-at"></i
+          ></a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="showcase.js?v=2" defer></script>
   </body>
 </html>
