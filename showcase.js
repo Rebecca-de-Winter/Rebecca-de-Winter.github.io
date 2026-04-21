@@ -188,10 +188,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const AUTO_MS = 8000;
   const FADE_MS = 240;
+  const SWIPE_THRESHOLD = 50;
 
   let index = 0;
   let intervalId = null;
   let isTransitioning = false;
+  let touchStartX = 0;
 
   const stage = document.getElementById("showcaseCarousel");
   const fadeLayer = document.getElementById("carouselFade");
@@ -230,8 +232,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return (i + slides.length) % slides.length;
   }
 
+  function setAction(linkEl, label, href, fallbackLabel, fallbackHref) {
+    const hasLabel = typeof label === "string" && label.trim() !== "";
+    const hasHref = typeof href === "string" && href.trim() !== "";
+
+    if (!hasLabel && !hasHref) {
+      linkEl.hidden = true;
+      return;
+    }
+
+    linkEl.hidden = false;
+    linkEl.textContent = hasLabel ? label : fallbackLabel;
+    linkEl.href = hasHref ? href : fallbackHref;
+  }
+
   function renderBullets(items) {
     bulletsEl.innerHTML = "";
+
+    if (!Array.isArray(items) || items.length === 0) {
+      bulletsEl.hidden = true;
+      return;
+    }
+
+    bulletsEl.hidden = false;
 
     items.forEach((item) => {
       const li = document.createElement("li");
@@ -245,14 +268,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, slideIndex) => {
       const btn = document.createElement("button");
+      const labelTitle = (slide.title || `Slide ${slideIndex + 1}`).replace(/\n/g, " ");
+
       btn.type = "button";
       btn.className =
         "showcase-copy__dot" + (slideIndex === index ? " is-active" : "");
-      btn.setAttribute("aria-label", `Go to slide ${slideIndex + 1}`);
+      btn.setAttribute("aria-label", `Go to ${labelTitle}`);
+      btn.setAttribute("aria-current", slideIndex === index ? "true" : "false");
+
       btn.addEventListener("click", () => {
         goTo(slideIndex);
         restartAuto();
       });
+
       dotsWrap.appendChild(btn);
     });
   }
@@ -280,15 +308,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderSlide() {
     const slide = slides[index];
+    const titleForAria = (slide.title || "").replace(/\n/g, " ");
 
     stage.dataset.slide = slide.key;
+    stage.setAttribute(
+      "aria-label",
+      `Rebecca Cole showcase carousel. Current slide: ${slide.eyebrow || ""} ${titleForAria}`.trim()
+    );
+
     eyebrowEl.textContent = slide.eyebrow || "";
     titleEl.textContent = slide.title || "";
     subtitleEl.textContent = slide.subtitle || "";
-    primaryEl.textContent = slide.primaryLabel || "View work";
-    primaryEl.href = slide.primaryHref || "index.html";
-    secondaryEl.textContent = slide.secondaryLabel || "Learn more";
-    secondaryEl.href = slide.secondaryHref || "about.html";
+
+    setAction(
+      primaryEl,
+      slide.primaryLabel,
+      slide.primaryHref,
+      "View work",
+      "index.html"
+    );
+
+    setAction(
+      secondaryEl,
+      slide.secondaryLabel,
+      slide.secondaryHref,
+      "Learn more",
+      "about.html"
+    );
 
     applyTheme(slide);
     renderBullets(slide.bullets || []);
@@ -355,6 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   stage.addEventListener("mouseenter", stopAuto);
   stage.addEventListener("mouseleave", startAuto);
+
   stage.addEventListener("focusin", stopAuto);
   stage.addEventListener("focusout", (event) => {
     if (!stage.contains(event.relatedTarget)) {
@@ -371,6 +418,33 @@ document.addEventListener("DOMContentLoaded", () => {
       restartAuto();
     }
   });
+
+  stage.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  stage.addEventListener(
+    "touchend",
+    (event) => {
+      const touchEndX = event.changedTouches[0].clientX;
+      const deltaX = touchEndX - touchStartX;
+
+      if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+
+      if (deltaX > 0) {
+        goPrev();
+      } else {
+        goNext();
+      }
+
+      restartAuto();
+    },
+    { passive: true }
+  );
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {

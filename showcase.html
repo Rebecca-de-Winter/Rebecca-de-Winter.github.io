@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css?v=1" />
-    <link rel="stylesheet" href="showcase.css?v=6" />
+    <link rel="stylesheet" href="showcase.css?v=7" />
     <title>Becky Cole | Showcase</title>
   </head>
 
@@ -58,60 +58,13 @@
         tabindex="0"
       >
         <div class="showcase-stage__wash" aria-hidden="true"></div>
-        <div class="showcase-stage__fade" id="carouselFade" aria-hidden="true"></div>
+        <div
+          class="showcase-stage__fade"
+          id="carouselFade"
+          aria-hidden="true"
+        ></div>
 
-        <div class="showcase-stage__grid">
-          <article class="showcase-copy">
-            <p class="showcase-copy__eyebrow" id="slideEyebrow"></p>
-            <h1 class="showcase-copy__title" id="slideTitle"></h1>
-            <p class="showcase-copy__subtitle" id="slideSubtitle"></p>
-            <ul class="showcase-copy__bullets" id="slideBullets"></ul>
-
-            <div class="showcase-copy__actions">
-              <a
-                class="showcase-btn showcase-btn--primary"
-                id="slidePrimary"
-                href="case-studies.html"
-              >
-                Case studies
-              </a>
-              <a
-                class="showcase-btn showcase-btn--secondary"
-                id="slideSecondary"
-                href="projects.html"
-              >
-                Projects
-              </a>
-            </div>
-
-            <div class="showcase-copy__controls">
-              <div class="showcase-copy__arrows">
-                <button
-                  type="button"
-                  class="showcase-copy__arrow"
-                  id="prevBtn"
-                  aria-label="Previous slide"
-                >
-                  ‹
-                </button>
-                <button
-                  type="button"
-                  class="showcase-copy__arrow"
-                  id="nextBtn"
-                  aria-label="Next slide"
-                >
-                  ›
-                </button>
-              </div>
-
-              <div
-                class="showcase-copy__dots"
-                id="carouselDots"
-                aria-label="Select slide"
-              ></div>
-            </div>
-          </article>
-
+        <div class="showcase-shell">
           <div class="showcase-media" id="slideMediaWrap">
             <div class="showcase-media__frame">
               <img
@@ -123,20 +76,79 @@
             </div>
           </div>
 
-          <aside class="showcase-qr" aria-label="Portfolio QR code">
-            <div class="showcase-qr__code">
-              <img
-                src="assets/showcase/portfolio-qr.png"
-                alt="QR code linking to Rebecca Cole portfolio"
-              />
+          <article class="showcase-copy">
+            <div class="showcase-copy__main">
+              <p class="showcase-copy__eyebrow" id="slideEyebrow"></p>
+              <h1 class="showcase-copy__title" id="slideTitle"></h1>
+              <p class="showcase-copy__subtitle" id="slideSubtitle"></p>
+              <ul class="showcase-copy__bullets" id="slideBullets"></ul>
+
+              <div class="showcase-copy__actions">
+                <a
+                  class="showcase-btn showcase-btn--primary"
+                  id="slidePrimary"
+                  href="case-studies.html"
+                >
+                  Case studies
+                </a>
+                <a
+                  class="showcase-btn showcase-btn--secondary"
+                  id="slideSecondary"
+                  href="projects.html"
+                >
+                  Projects
+                </a>
+              </div>
             </div>
-            <div class="showcase-qr__url">rebecca-de-winter.github.io</div>
-          </aside>
+
+            <div class="showcase-copy__footer">
+              <div class="showcase-copy__controls">
+                <div class="showcase-copy__arrows">
+                  <button
+                    type="button"
+                    class="showcase-copy__arrow"
+                    id="prevBtn"
+                    aria-label="Previous slide"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    class="showcase-copy__arrow"
+                    id="nextBtn"
+                    aria-label="Next slide"
+                  >
+                    ›
+                  </button>
+                </div>
+
+                <div
+                  class="showcase-copy__dots"
+                  id="carouselDots"
+                  aria-label="Select slide"
+                ></div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
+
+      <aside class="showcase-qr-band" aria-label="Portfolio QR code">
+        <div class="showcase-qr-band__code">
+          <img
+            src="assets/showcase/portfolio-qr.png"
+            alt="QR code linking to Rebecca Cole portfolio"
+          />
+        </div>
+
+        <div class="showcase-qr-band__text">
+          <p class="showcase-qr-band__label">Scan to view my portfolio</p>
+          <p class="showcase-qr-band__url">rebecca-de-winter.github.io</p>
+        </div>
+      </aside>
     </main>
 
     <script src="script.js" defer></script>
-    <script src="showcase.js?v=6" defer></script>
+    <script src="showcase.js?v=7" defer></script>
   </body>
 </html>
