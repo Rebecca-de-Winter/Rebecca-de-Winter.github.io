@@ -547,3 +547,32 @@
     transition: none;
   }
 }
+
+/* ==========================================
+   FORCE OVERRIDES FOR SPECIFIC SHOWCASE SLIDES
+   Put this at the VERY BOTTOM of showcase.css
+   ========================================== */
+
+/* Flexible support: pull back a bit so top section shows */
+.showcase-stage[data-slide="backyard-support"] .showcase-media__image {
+  object-fit: cover !important;
+  object-position: 50% 40% !important;
+  transform: scale(1) !important;
+  transform-origin: center center !important;
+}
+
+/* Organiser control: fill frame better and sit higher */
+.showcase-stage[data-slide="backyard-dashboard"] .showcase-media__image {
+  object-fit: cover !important;
+  object-position: 50% 34% !important;
+  transform: scale(1.01) !important;
+  transform-origin: center center !important;
+}
+
+/* Final Becky photo: centre it, shrink a little, lift it up */
+.showcase-stage[data-slide="outro"] .showcase-media__image {
+  object-fit: cover !important;
+  object-position: 50% 30% !important;
+  transform: scale(0.92) !important;
+  transform-origin: center center !important;
+}

@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Donation and loan tracking for items",
     "Built for real community organisers",
   ],
-  image: "assets/showcase/backyard-support.jpg",
+  image: "assets/showcase/backyard-support.png",
   alt: "Backyard Festival flexible support screen",
   imageFit: "cover",
   imagePosition: "50% 40%",
