@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "podflow-notifications",
       eyebrow: "PodFlow",
-      title: "Workflow visibility\nthrough notifications",
+      title: "Workflow visibility through notifications",
       subtitle:
         "Action-based notifications help guide users through invites, approvals, verification requests, and other important next steps.",
       bullets: [
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "podflow-goals",
       eyebrow: "PodFlow",
-      title: "Adaptive goals\nand naming logic",
+      title: "Adaptive goals and naming logic",
       subtitle:
         "The interface adapts across different tracking types while keeping labels, progress language, and history consistent.",
       bullets: [
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "podflow-pods",
       eyebrow: "PodFlow",
-      title: "Trust-first pods\nand layered permissions",
+      title: "Trust-first pods and layered permissions",
       subtitle:
         "Private pods, verification, and role-based permissions make accountability feel more intentional and more meaningful.",
       bullets: [
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "backyard-support",
       eyebrow: "Backyard Festival",
-      title: "Flexible support\nfor real events",
+      title: "Flexible support for real events",
       subtitle:
         "Backyard Festival supports money, volunteer time, and physical items, making the platform more practical for grassroots event planning.",
       bullets: [
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "backyard-live",
       eyebrow: "Backyard Festival",
-      title: "Live pledge feedback\nand progress tracking",
+      title: "Live pledge feedback and progress tracking",
       subtitle:
         "As support comes in, organisers and supporters can immediately see needs update, spots change, and fundraiser progress move.",
       bullets: [
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "backyard-dashboard",
       eyebrow: "Backyard Festival",
-      title: "Organiser control,\napprovals, and dashboards",
+      title: "Organiser control, approvals, and dashboards",
       subtitle:
         "Dedicated organiser and supporter views make it easier to manage fundraisers, review pledges, and handle more complex workflows cleanly.",
       bullets: [
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "outro",
       eyebrow: "Built by Becky",
-      title: "Real builder.\nReal products.\nReal curiosity.",
+      title: "Real builder. Real products. Real curiosity.",
       subtitle:
         "Full stack development, thoughtful UX, and playful technical exploration, including creative tech experiments with Wolfie.",
       bullets: [
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, slideIndex) => {
       const btn = document.createElement("button");
-      const labelTitle = (slide.title || `Slide ${slideIndex + 1}`).replace(/\n/g, " ");
+      const labelTitle = slide.title || `Slide ${slideIndex + 1}`;
 
       btn.type = "button";
       btn.className =
@@ -308,12 +308,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderSlide() {
     const slide = slides[index];
-    const titleForAria = (slide.title || "").replace(/\n/g, " ");
 
     stage.dataset.slide = slide.key;
     stage.setAttribute(
       "aria-label",
-      `Rebecca Cole showcase carousel. Current slide: ${slide.eyebrow || ""} ${titleForAria}`.trim()
+      `Rebecca Cole showcase carousel. Current slide: ${slide.eyebrow || ""} ${slide.title || ""}`.trim()
     );
 
     eyebrowEl.textContent = slide.eyebrow || "";
