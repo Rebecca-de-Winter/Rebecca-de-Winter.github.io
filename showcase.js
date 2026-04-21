@@ -93,28 +93,29 @@ document.addEventListener("DOMContentLoaded", () => {
       secondaryHref: "projects.html#developer",
     },
     {
-      key: "backyard-support",
-      eyebrow: "Backyard Festival",
-      title: "Flexible support for real events",
-      subtitle:
-        "Backyard Festival supports money, volunteer time, and physical items, making the platform more practical for grassroots event planning.",
-      bullets: [
-        "Money, time, and item pledges",
-        "Donation and loan tracking for items",
-        "Built for real community organisers",
-      ],
-      image: "assets/showcase/backyard-support.png",
-      alt: "Backyard Festival flexible support screen",
-      imageFit: "contain",
-      imagePosition: "center center",
-      accent: "#7adfdb",
-      washA: "rgba(122, 223, 219, 0.24)",
-      washB: "rgba(101, 224, 165, 0.16)",
-      primaryLabel: "Backyard Festival case study",
-      primaryHref: "case-studies.html#backyard-festival",
-      secondaryLabel: "View projects",
-      secondaryHref: "projects.html#developer",
-    },
+  key: "backyard-support",
+  eyebrow: "Backyard Festival",
+  title: "Flexible support for real events",
+  subtitle:
+    "Backyard Festival supports money, volunteer time, and physical items, making the platform more practical for grassroots event planning.",
+  bullets: [
+    "Money, time, and item pledges",
+    "Donation and loan tracking for items",
+    "Built for real community organisers",
+  ],
+  image: "assets/showcase/backyard-support.png",
+  alt: "Backyard Festival flexible support screen",
+  imageFit: "cover",
+  imagePosition: "46% 52%",
+  imageScale: 1.03,
+  accent: "#7adfdb",
+  washA: "rgba(122, 223, 219, 0.24)",
+  washB: "rgba(101, 224, 165, 0.16)",
+  primaryLabel: "Backyard Festival case study",
+  primaryHref: "case-studies.html#backyard-festival",
+  secondaryLabel: "View projects",
+  secondaryHref: "projects.html#developer",
+},
     {
       key: "backyard-live",
       eyebrow: "Backyard Festival",
@@ -139,28 +140,29 @@ document.addEventListener("DOMContentLoaded", () => {
       secondaryHref: "projects.html#developer",
     },
     {
-      key: "backyard-dashboard",
-      eyebrow: "Backyard Festival",
-      title: "Organiser control, approvals, and dashboards",
-      subtitle:
-        "Dedicated organiser and supporter views make it easier to manage fundraisers, review pledges, and handle more complex workflows cleanly.",
-      bullets: [
-        "Organiser and supporter dashboard views",
-        "Approval flows for incoming pledges",
-        "Workflow design shaped by real event needs",
-      ],
-      image: "assets/showcase/backyard-dashboard.jpg",
-      alt: "Backyard Festival organiser dashboard screen",
-      imageFit: "cover",
-      imagePosition: "50% center",
-      accent: "#fdaf69",
-      washA: "rgba(101, 224, 165, 0.2)",
-      washB: "rgba(253, 175, 105, 0.16)",
-      primaryLabel: "Backyard Festival case study",
-      primaryHref: "case-studies.html#backyard-festival",
-      secondaryLabel: "View projects",
-      secondaryHref: "projects.html#developer",
-    },
+  key: "backyard-dashboard",
+  eyebrow: "Backyard Festival",
+  title: "Organiser control, approvals, and dashboards",
+  subtitle:
+    "Dedicated organiser and supporter views make it easier to manage fundraisers, review pledges, and handle more complex workflows cleanly.",
+  bullets: [
+    "Organiser and supporter dashboard views",
+    "Approval flows for incoming pledges",
+    "Workflow design shaped by real event needs",
+  ],
+  image: "assets/showcase/backyard-dashboard.jpg",
+  alt: "Backyard Festival organiser dashboard screen",
+  imageFit: "contain",
+  imagePosition: "center 58%",
+  imageScale: 0.96,
+  accent: "#fdaf69",
+  washA: "rgba(101, 224, 165, 0.2)",
+  washB: "rgba(253, 175, 105, 0.16)",
+  primaryLabel: "Backyard Festival case study",
+  primaryHref: "case-studies.html#backyard-festival",
+  secondaryLabel: "View projects",
+  secondaryHref: "projects.html#developer",
+},
     {
       key: "outro",
       eyebrow: "Built by Becky",
@@ -292,19 +294,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderMedia(slide) {
-    if (!slide.image) {
-      mediaWrap.classList.add("is-hidden");
-      imageEl.removeAttribute("src");
-      imageEl.alt = "";
-      return;
-    }
-
-    mediaWrap.classList.remove("is-hidden");
-    imageEl.src = slide.image;
-    imageEl.alt = slide.alt || `${slide.key} showcase image`;
-    imageEl.style.objectFit = slide.imageFit || "contain";
-    imageEl.style.objectPosition = slide.imagePosition || "center center";
+  if (!slide.image) {
+    mediaWrap.classList.add("is-hidden");
+    imageEl.removeAttribute("src");
+    imageEl.alt = "";
+    imageEl.style.transform = "scale(1)";
+    return;
   }
+
+  mediaWrap.classList.remove("is-hidden");
+  imageEl.src = slide.image;
+  imageEl.alt = slide.alt || `${slide.key} showcase image`;
+  imageEl.style.objectFit = slide.imageFit || "contain";
+  imageEl.style.objectPosition = slide.imagePosition || "center center";
+  imageEl.style.transform = `scale(${slide.imageScale || 1})`;
+}
 
   function renderSlide() {
     const slide = slides[index];

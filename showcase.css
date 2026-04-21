@@ -99,7 +99,7 @@
 
 .showcase-toprow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-columns: minmax(0, 1fr) 180px;
   gap: 16px;
   align-items: stretch;
 }
@@ -139,8 +139,30 @@
   height: 100%;
   object-fit: contain;
   object-position: center center;
+  transform: scale(1);
+  transform-origin: center center;
   border-radius: 18px;
   background: rgba(3, 6, 20, 0.92);
+}
+
+/* Per-slide image tweaks */
+.showcase-stage[data-slide="backyard-support"] .showcase-media__image {
+  object-fit: cover;
+  object-position: 46% 52%;
+  transform: scale(1.03);
+}
+
+.showcase-stage[data-slide="backyard-dashboard"] .showcase-media__image {
+  object-fit: contain;
+  object-position: center 58%;
+  transform: scale(0.96);
+}
+
+.showcase-stage[data-slide="outro"] .showcase-media__image {
+  object-fit: cover;
+  object-position: center 8%;
+  transform: scale(0.88);
+  transform-origin: center top;
 }
 
 .showcase-qr-rail {
@@ -148,8 +170,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 16px 12px;
+  gap: 16px;
+  padding: 18px 14px;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: linear-gradient(
@@ -162,9 +184,9 @@
 
 .showcase-qr-rail__code {
   width: 100%;
-  max-width: 108px;
+  max-width: 128px;
   aspect-ratio: 1 / 1;
-  border-radius: 18px;
+  border-radius: 20px;
   background: #ffffff;
   display: grid;
   place-items: center;
@@ -185,16 +207,16 @@
 }
 
 .showcase-qr-rail__label {
-  margin: 0 0 6px;
-  font-size: 0.82rem;
-  line-height: 1.35;
-  font-weight: 800;
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 900;
   color: #faf7f3;
 }
 
 .showcase-qr-rail__url {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.35;
   font-weight: 900;
   color: #ffe6c0;
@@ -400,7 +422,7 @@
   }
 
   .showcase-toprow {
-    grid-template-columns: minmax(0, 1fr) 138px;
+    grid-template-columns: minmax(0, 1fr) 164px;
   }
 }
 
@@ -418,7 +440,7 @@
   }
 
   .showcase-qr-rail__code {
-    max-width: 96px;
+    max-width: 106px;
   }
 
   .showcase-qr-rail__text {
