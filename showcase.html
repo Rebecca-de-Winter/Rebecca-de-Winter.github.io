@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css?v=1" />
-    <link rel="stylesheet" href="showcase.css?v=3" />
+    <link rel="stylesheet" href="showcase.css?v=6" />
     <title>Becky Cole | Showcase</title>
   </head>
 
@@ -51,89 +51,92 @@
     <main class="showcase-screen">
       <div class="showcase-stars" aria-hidden="true"></div>
 
-      <section class="showcase-layout">
-        <section
-          class="showcase-carousel"
-          id="showcaseCarousel"
-          aria-label="Rebecca Cole showcase carousel"
-          tabindex="0"
-        >
-          <div class="showcase-carousel__bg-stack" id="carouselBg"></div>
-          <div class="showcase-carousel__overlay" aria-hidden="true"></div>
-          <div class="showcase-carousel__tone" aria-hidden="true"></div>
-          <div
-            class="showcase-carousel__fade"
-            id="carouselFade"
-            aria-hidden="true"
-          ></div>
+      <section
+        class="showcase-stage"
+        id="showcaseCarousel"
+        aria-label="Rebecca Cole showcase carousel"
+        tabindex="0"
+      >
+        <div class="showcase-stage__wash" aria-hidden="true"></div>
+        <div class="showcase-stage__fade" id="carouselFade" aria-hidden="true"></div>
 
-          <div class="showcase-carousel__inner">
-            <div class="showcase-carousel__content">
-              <p class="showcase-carousel__eyebrow" id="slideEyebrow"></p>
-              <h1 class="showcase-carousel__title" id="slideTitle"></h1>
-              <p class="showcase-carousel__subtitle" id="slideSubtitle"></p>
-              <ul class="showcase-carousel__bullets" id="slideBullets"></ul>
+        <div class="showcase-stage__grid">
+          <article class="showcase-copy">
+            <p class="showcase-copy__eyebrow" id="slideEyebrow"></p>
+            <h1 class="showcase-copy__title" id="slideTitle"></h1>
+            <p class="showcase-copy__subtitle" id="slideSubtitle"></p>
+            <ul class="showcase-copy__bullets" id="slideBullets"></ul>
 
-              <div class="showcase-carousel__actions">
-                <a
-                  class="showcase-btn showcase-btn--primary"
-                  id="slidePrimary"
-                  href="case-studies.html"
+            <div class="showcase-copy__actions">
+              <a
+                class="showcase-btn showcase-btn--primary"
+                id="slidePrimary"
+                href="case-studies.html"
+              >
+                Case studies
+              </a>
+              <a
+                class="showcase-btn showcase-btn--secondary"
+                id="slideSecondary"
+                href="projects.html"
+              >
+                Projects
+              </a>
+            </div>
+
+            <div class="showcase-copy__controls">
+              <div class="showcase-copy__arrows">
+                <button
+                  type="button"
+                  class="showcase-copy__arrow"
+                  id="prevBtn"
+                  aria-label="Previous slide"
                 >
-                  Case studies
-                </a>
-                <a
-                  class="showcase-btn showcase-btn--secondary"
-                  id="slideSecondary"
-                  href="projects.html"
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  class="showcase-copy__arrow"
+                  id="nextBtn"
+                  aria-label="Next slide"
                 >
-                  Projects
-                </a>
+                  ›
+                </button>
               </div>
 
-              <div class="showcase-carousel__nav">
-                <div class="showcase-carousel__arrow-group">
-                  <button
-                    type="button"
-                    class="showcase-carousel__arrow"
-                    id="prevBtn"
-                    aria-label="Previous slide"
-                  >
-                    ‹
-                  </button>
-                  <button
-                    type="button"
-                    class="showcase-carousel__arrow"
-                    id="nextBtn"
-                    aria-label="Next slide"
-                  >
-                    ›
-                  </button>
-                </div>
+              <div
+                class="showcase-copy__dots"
+                id="carouselDots"
+                aria-label="Select slide"
+              ></div>
+            </div>
+          </article>
 
-                <div
-                  class="showcase-carousel__dots"
-                  id="carouselDots"
-                  aria-label="Select slide"
-                ></div>
-              </div>
+          <div class="showcase-media" id="slideMediaWrap">
+            <div class="showcase-media__frame">
+              <img
+                id="slideImage"
+                class="showcase-media__image"
+                src=""
+                alt=""
+              />
             </div>
           </div>
-        </section>
 
-        <aside class="showcase-qr" aria-label="Portfolio QR code">
-          <div class="showcase-qr__code">
-            <img
-              src="assets/showcase/portfolio-qr.png"
-              alt="QR code linking to Rebecca Cole portfolio"
-            />
-          </div>
-          <div class="showcase-qr__url">rebecca-de-winter.github.io</div>
-        </aside>
+          <aside class="showcase-qr" aria-label="Portfolio QR code">
+            <div class="showcase-qr__code">
+              <img
+                src="assets/showcase/portfolio-qr.png"
+                alt="QR code linking to Rebecca Cole portfolio"
+              />
+            </div>
+            <div class="showcase-qr__url">rebecca-de-winter.github.io</div>
+          </aside>
+        </div>
       </section>
     </main>
 
     <script src="script.js" defer></script>
-    <script src="showcase.js?v=3" defer></script>
+    <script src="showcase.js?v=6" defer></script>
   </body>
 </html>
