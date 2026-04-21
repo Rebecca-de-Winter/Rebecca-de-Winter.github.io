@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secondaryLabel: "View projects",
       secondaryHref: "projects.html#developer",
     },
-    {
+{
   key: "backyard-support",
   eyebrow: "Backyard Festival",
   title: "Flexible support for real events",
@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
   image: "assets/showcase/backyard-support.png",
   alt: "Backyard Festival flexible support screen",
   imageFit: "cover",
-  imagePosition: "50% 40%",
-  imageScale: 1,
+  imagePosition: "50% 34%",
+  imageScale: 0.9,
   accent: "#7adfdb",
   washA: "rgba(122, 223, 219, 0.24)",
   washB: "rgba(101, 224, 165, 0.16)",
