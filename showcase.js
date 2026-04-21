@@ -103,11 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "Donation and loan tracking for items",
     "Built for real community organisers",
   ],
-  image: "assets/showcase/backyard-support.png",
+  image: "assets/showcase/backyard-support.jpg",
   alt: "Backyard Festival flexible support screen",
   imageFit: "cover",
-  imagePosition: "46% 52%",
-  imageScale: 1.03,
+  imagePosition: "50% 40%",
+  imageScale: 1,
   accent: "#7adfdb",
   washA: "rgba(122, 223, 219, 0.24)",
   washB: "rgba(101, 224, 165, 0.16)",
@@ -152,9 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ],
   image: "assets/showcase/backyard-dashboard.jpg",
   alt: "Backyard Festival organiser dashboard screen",
-  imageFit: "contain",
-  imagePosition: "center 58%",
-  imageScale: 0.96,
+  imageFit: "cover",
+  imagePosition: "50% 34%",
+  imageScale: 1.01,
   accent: "#fdaf69",
   washA: "rgba(101, 224, 165, 0.2)",
   washB: "rgba(253, 175, 105, 0.16)",
@@ -164,28 +164,29 @@ document.addEventListener("DOMContentLoaded", () => {
   secondaryHref: "projects.html#developer",
 },
     {
-      key: "outro",
-      eyebrow: "Built by Becky",
-      title: "Real builder. Real products. Real curiosity.",
-      subtitle:
-        "Full stack development, thoughtful UX, and playful technical exploration, including creative tech experiments with Wolfie.",
-      bullets: [
-        "React, Django REST, and workflow-heavy product builds",
-        "Strong UI thinking and practical problem-solving",
-        "Creative tech curiosity with Wolfie in the mix",
-      ],
-      image: "assets/showcase/becky-real.jpg",
-      alt: "Photo of Becky",
-      imageFit: "cover",
-      imagePosition: "center top",
-      accent: "#ff9fbb",
-      washA: "rgba(255, 159, 187, 0.2)",
-      washB: "rgba(253, 175, 105, 0.14)",
-      primaryLabel: "Visit portfolio",
-      primaryHref: "index.html",
-      secondaryLabel: "Contact Becky",
-      secondaryHref: "contact.html",
-    },
+  key: "outro",
+  eyebrow: "Built by Becky",
+  title: "Passion for building. Inventive and curious.",
+  subtitle:
+    "Full stack development, thoughtful UX, and playful technical exploration, including creative tech experiments with Wolfie.",
+  bullets: [
+    "React, Django REST, and workflow-heavy product builds",
+    "Strong UI thinking and practical problem-solving",
+    "Creative tech curiosity with Wolfie in the mix",
+  ],
+  image: "assets/showcase/becky-real.jpg",
+  alt: "Photo of Becky",
+  imageFit: "cover",
+  imagePosition: "50% 34%",
+  imageScale: 0.92,
+  accent: "#ff9fbb",
+  washA: "rgba(255, 159, 187, 0.2)",
+  washB: "rgba(253, 175, 105, 0.14)",
+  primaryLabel: "Visit portfolio",
+  primaryHref: "index.html",
+  secondaryLabel: "Contact Becky",
+  secondaryHref: "contact.html",
+},
   ];
 
   const AUTO_MS = 8000;
@@ -293,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stage.style.setProperty("--wash-b", slide.washB || "rgba(122, 223, 219, 0.14)");
   }
 
-  function renderMedia(slide) {
+function renderMedia(slide) {
   if (!slide.image) {
     mediaWrap.classList.add("is-hidden");
     imageEl.removeAttribute("src");
