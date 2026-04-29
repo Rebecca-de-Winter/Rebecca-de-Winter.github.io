@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playpen+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/main.css?v=3" />
+
+    <title>Speaking | Laracon AU 2026 Proposals | Becky Cole Portfolio</title>
+  </head>
+
+  <body>
+    <!----------------------------------------------NAV_BAR--------------------------------------------->
+    <header>
+      <nav id="navbar" class="topnav">
+        <img
+          src="assets/BeckyUnicorn.png"
+          class="nav-logo"
+          alt="girl in bubble logo"
+        />
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="case-studies.html">Case Studies</a>
+          <a class="nav-link" href="showcase.html">Showcase</a>
+          <a class="nav-link" href="laracon.html">Speaking</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+
+        <button
+          class="hamburger-btn"
+          id="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/hamburger.svg"
+            class="hamburger-icon"
+            alt="three horizontal lines stacked on top of each other"
+          />
+        </button>
+      </nav>
+    </header>
+
+    <!-------------------------------------------LARACON PAGE------------------------------------------------>
+    <main class="page-shell laracon-page-shell">
+      <section class="laracon-hero-panel">
+        <div class="laracon-hero-copy">
+          <p class="laracon-kicker">Laracon AU 2026</p>
+          <h1 class="laracon-title">Speaking Proposals</h1>
+
+          <p class="laracon-intro">
+            Two beginner-friendly technical talks about building clearer, kinder,
+            more maintainable interfaces: one through a teaching mindset, and one
+            through choosing the right layer between HTML, CSS, JavaScript, and
+            backend logic.
+          </p>
+
+          <div class="laracon-hero-buttons">
+            <a href="#proposal-videos" class="btn-primary btn-edu">
+              Watch Proposal Videos
+            </a>
+            <a href="case-studies.html" class="btn-primary btn-dev">
+              View Case Studies
+            </a>
+          </div>
+        </div>
+
+        <div class="laracon-speaker-card">
+          <img
+            src="assets/Becky_Profile_Pic2-removebg-preview.png"
+            alt="Portrait of Becky Cole"
+            class="laracon-speaker-img"
+          />
+
+          <div>
+            <p class="laracon-card-label">Speaker</p>
+            <h2>Rebecca Cole</h2>
+            <p>
+              Full stack software developer with a background in education,
+              digital learning, community programs, media, and user-centred
+              product design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="laracon-overview-panel">
+        <h2 class="about-section-title">The Talks</h2>
+
+        <div class="laracon-talk-summary-grid">
+          <article class="laracon-summary-card laracon-summary-card--edu">
+            <p class="laracon-card-label">Talk One</p>
+            <h3>How Thinking Like a Teacher Can Help You Build Better Software</h3>
+            <p>
+              A practical talk about how teaching principles can improve
+              onboarding, empty states, form design, status messages, dashboards,
+              permissions, and workflow guidance.
+            </p>
+          </article>
+
+          <article class="laracon-summary-card laracon-summary-card--dev">
+            <p class="laracon-card-label">Talk Two</p>
+            <h3>Don’t Fear the CSS: How to Build Better Interfaces with Less JavaScript</h3>
+            <p>
+              A practical frontend talk about choosing the right layer for
+              interface behaviour and letting HTML and CSS handle more of the
+              work they already know how to do.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="laracon-videos-panel" id="proposal-videos">
+        <div class="laracon-section-heading">
+          <p class="laracon-kicker">Video pitches</p>
+          <h2 class="about-section-title">Proposal Videos</h2>
+          <p>
+            Each video gives a short overview of the talk, who it is for, and
+            what attendees would take away.
+          </p>
+        </div>
+
+        <article class="laracon-video-card">
+          <div class="laracon-video-copy">
+            <p class="laracon-card-label">Proposal 01</p>
+            <h3>How Thinking Like a Teacher Can Help You Build Better Software</h3>
+            <p>
+              This talk connects my education background with practical software
+              design decisions, especially around clarity, guidance, confidence,
+              and reducing cognitive load for users.
+            </p>
+
+            <details class="laracon-transcript">
+              <summary>Read transcript</summary>
+
+              <p>
+                Hi, I’m Rebecca Cole. I’m an early-career software developer,
+                but before moving into tech I spent years working in education,
+                digital learning, mentoring, and community programs.
+              </p>
+
+              <p>
+                My proposed talk is called “How Thinking Like a Teacher Can Help
+                You Build Better Software.”
+              </p>
+
+              <p>
+                The idea is simple: good software does more than function. It
+                helps people understand what to do next.
+              </p>
+
+              <p>
+                When I started building full-stack projects, I realised that a
+                lot of the skills I had used as an educator still mattered in
+                software. Things like sequencing information, reducing cognitive
+                load, giving people clear first steps, designing forgiving forms,
+                using consistent language, and helping users recover when they
+                feel unsure.
+              </p>
+
+              <p>
+                In this talk, I’ll use examples from real projects I’ve built,
+                including PodFlow and Backyard Festival, to show how a teaching
+                mindset can improve onboarding, empty states, form design, status
+                messages, dashboards, permissions, and workflow design.
+              </p>
+
+              <p>
+                This is not a theory talk. It’s a practical talk for developers
+                who want their interfaces to feel clearer, kinder, and easier to
+                use.
+              </p>
+
+              <p>
+                I want attendees to walk away with a simple question they can
+                apply immediately: if this interface were teaching the user, what
+                would it explain first?
+              </p>
+            </details>
+          </div>
+
+          <div class="laracon-video-frame">
+            <video controls preload="metadata">
+              <source src="assets/laracon/teaching-talk.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+
+        <article class="laracon-video-card">
+          <div class="laracon-video-copy">
+            <p class="laracon-card-label">Proposal 02</p>
+            <h3>Don’t Fear the CSS: How to Build Better Interfaces with Less JavaScript</h3>
+            <p>
+              This talk is about keeping frontend code easier to understand by
+              giving layout, visual state, responsiveness, and small interactions
+              to the right layer.
+            </p>
+
+            <details class="laracon-transcript">
+              <summary>Read transcript</summary>
+
+              <p>
+                Hi, I’m Rebecca Cole, and my proposed talk is called “Don’t Fear
+                the CSS: How to Build Better Interfaces with Less JavaScript.”
+              </p>
+
+              <p>
+                When I started building full-stack React projects, I often reached
+                for JavaScript whenever an interface needed to do something. If
+                something opened, changed, responded, moved, adapted, or looked
+                different in a new state, my instinct was often to put that
+                behaviour into a component.
+              </p>
+
+              <p>
+                But over time, I started noticing that some of my components were
+                becoming harder to understand because layout, styling, animation,
+                visual state, and application logic were all piling into the same
+                place.
+              </p>
+
+              <p>
+                This talk is about choosing the right layer for the job.
+              </p>
+
+              <p>
+                JavaScript and frameworks are absolutely essential for things like
+                data fetching, routing, authentication, permissions, and complex
+                state. But many interface behaviours can be handled more clearly
+                with HTML and CSS.
+              </p>
+
+              <p>
+                Using examples from real frontend projects, I’ll show practical
+                ways developers can use CSS for layout, responsiveness, visual
+                states, transitions, progressive enhancement, and small
+                interaction patterns without overloading their JavaScript.
+              </p>
+
+              <p>
+                The goal is not to avoid JavaScript. The goal is to use it where
+                it belongs, and let the browser do the work it already knows how
+                to do.
+              </p>
+            </details>
+          </div>
+
+          <div class="laracon-video-frame">
+            <video controls preload="metadata">
+              <source src="assets/laracon/css-talk.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-------------------------------------------------------FOOTER------------------------------------------------->
+    <footer>
+      <section>
+        <div class="social-icons" id="contact">
+          <a
+            href="https://github.com/Rebecca-de-Winter"
+            target="_blank"
+            title="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+
+          <a
+            href="https://www.linkedin.com/in/rebecca-c-52141625/"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:beckylouise81@gmail.com" title="Email me"
+            ><i class="fa-solid fa-at"></i
+          ></a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

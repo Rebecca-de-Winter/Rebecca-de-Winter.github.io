@@ -1,0 +1,311 @@
+/* ----------------------------------
+   Laracon Speaking Page
+---------------------------------- */
+
+.laracon-page-shell {
+  padding-top: 92px;
+  padding-bottom: 3rem;
+}
+
+.laracon-hero-panel,
+.laracon-overview-panel,
+.laracon-videos-panel {
+  max-width: var(--content-max-width);
+  margin: 2rem auto;
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+}
+
+.laracon-hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: stretch;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1.5px solid rgba(61, 165, 167, 0.35);
+  background:
+    radial-gradient(circle at top left, rgba(180, 243, 236, 0.85), transparent 24rem),
+    radial-gradient(circle at bottom right, rgba(255, 208, 216, 0.9), transparent 26rem),
+    linear-gradient(180deg, rgba(245, 255, 253, 0.96) 0%, rgba(250, 247, 243, 0.98) 100%);
+}
+
+.laracon-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.laracon-kicker,
+.laracon-card-label {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.laracon-kicker {
+  color: var(--educator-text);
+}
+
+.laracon-card-label {
+  color: #3da5a7;
+}
+
+.laracon-title {
+  max-width: 8ch;
+  margin: 0 0 1rem;
+  color: var(--socialbar);
+  font-family: var(--font-ui);
+  font-size: clamp(3.1rem, 8vw, 6.25rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.laracon-intro {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--black);
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  line-height: 1.75;
+}
+
+.laracon-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.65rem;
+}
+
+.laracon-speaker-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  min-height: 100%;
+  padding: clamp(1.15rem, 2.4vw, 1.75rem);
+  overflow: hidden;
+  border: 2px solid rgba(255, 135, 155, 0.55);
+  border-radius: var(--card-radius);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 245, 245, 0.96) 0%, rgba(255, 208, 216, 0.92) 100%);
+}
+
+.laracon-speaker-img {
+  display: block;
+  width: min(100%, 260px);
+  align-self: center;
+  filter: drop-shadow(0 16px 18px rgba(0, 0, 0, 0.12));
+}
+
+.laracon-speaker-card h2 {
+  margin: 0 0 0.55rem;
+  color: var(--educator-text);
+  font-family: var(--font-ui);
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.laracon-speaker-card p {
+  margin: 0;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.laracon-overview-panel,
+.laracon-videos-panel {
+  padding: clamp(1.35rem, 3vw, 2rem);
+}
+
+.laracon-overview-panel {
+  border: 1.5px solid rgba(227, 123, 162, 0.35);
+  background: rgba(250, 247, 243, 0.92);
+}
+
+.laracon-talk-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.35rem;
+}
+
+.laracon-summary-card {
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  border-radius: var(--card-radius);
+}
+
+.laracon-summary-card--edu {
+  border: 2px solid var(--educator-border);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 1) 0%,
+    rgba(255, 208, 216, 1) 100%
+  );
+}
+
+.laracon-summary-card--dev {
+  border: 2px solid var(--developer-border);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 255, 253, 1) 0%,
+    rgba(180, 243, 236, 1) 100%
+  );
+}
+
+.laracon-summary-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--socialbar);
+  font-family: var(--font-ui);
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.laracon-summary-card p {
+  margin: 0;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.laracon-videos-panel {
+  border: 1.5px solid rgba(61, 165, 167, 0.28);
+  background:
+    radial-gradient(circle at top right, rgba(180, 243, 236, 0.7), transparent 22rem),
+    rgba(250, 247, 243, 0.94);
+}
+
+.laracon-section-heading {
+  max-width: 760px;
+  margin-bottom: 1.6rem;
+}
+
+.laracon-section-heading p:last-child {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.laracon-video-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+  margin-top: 1.4rem;
+  padding: clamp(1.1rem, 2.6vw, 1.75rem);
+  border: 2px solid rgba(255, 135, 155, 0.35);
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.laracon-video-copy h3 {
+  margin: 0 0 0.75rem;
+  color: var(--socialbar);
+  font-family: var(--font-ui);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.laracon-video-copy p {
+  margin: 0 0 1rem;
+  color: var(--black);
+  line-height: 1.65;
+}
+
+.laracon-video-frame {
+  overflow: hidden;
+  border: 2px solid rgba(61, 165, 167, 0.45);
+  border-radius: 22px;
+  background: var(--black);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+.laracon-video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.laracon-transcript {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid rgba(224, 123, 162, 0.35);
+  border-radius: 18px;
+  background: rgba(255, 245, 245, 0.75);
+}
+
+.laracon-transcript summary {
+  cursor: pointer;
+  color: var(--educator-text);
+  font-weight: 900;
+}
+
+.laracon-transcript p:first-of-type {
+  margin-top: 1rem;
+}
+
+.laracon-transcript p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  .laracon-hero-panel,
+  .laracon-video-card,
+  .laracon-talk-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laracon-title {
+    max-width: 100%;
+  }
+
+  .laracon-speaker-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .laracon-speaker-img {
+    width: min(34vw, 180px);
+  }
+}
+
+@media (max-width: 599.98px) {
+  .laracon-page-shell {
+    padding-top: 78px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .laracon-hero-panel,
+  .laracon-overview-panel,
+  .laracon-videos-panel {
+    margin: 1.2rem auto;
+  }
+
+  .laracon-hero-buttons {
+    flex-direction: column;
+  }
+
+  .laracon-hero-buttons .btn-primary {
+    width: 100%;
+  }
+
+  .laracon-speaker-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .laracon-speaker-img {
+    width: min(100%, 220px);
+  }
+}
