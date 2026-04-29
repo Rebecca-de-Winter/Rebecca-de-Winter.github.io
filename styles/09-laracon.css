@@ -66,22 +66,42 @@
   text-transform: uppercase;
 }
 
-.laracon-kicker {
-  color: #e07ba2;
-}
-
+.laracon-kicker,
 .laracon-card-label {
   color: #3da5a7;
 }
 
 .laracon-title {
-  margin: 0 0 0.7rem;
+  max-width: 11ch;
+  margin: 0 0 1rem;
   font-family: var(--font-ui);
-  font-size: clamp(2.7rem, 5.6vw, 4.6rem);
-  line-height: 0.95;
+  font-size: clamp(2.7rem, 5.6vw, 4.65rem);
+  line-height: 0.96;
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
+  color: var(--socialbar);
+}
+
+.laracon-title-pink,
+.laracon-title-teal {
+  display: inline;
+}
+
+.laracon-title-pink {
   color: #e07ba2;
+}
+
+.laracon-title-teal {
+  color: #3da5a7;
+}
+
+.laracon-hero-tagline {
+  max-width: 58ch;
+  margin: 0 0 0.85rem;
+  color: var(--socialbar);
+  font-size: clamp(1.13rem, 2vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.5;
 }
 
 .laracon-intro,
@@ -96,13 +116,13 @@
 }
 
 .laracon-intro {
-  max-width: 62ch;
+  max-width: 64ch;
   margin: 0;
 }
 
 .laracon-section-heading {
-  max-width: 68ch;
-  margin: 0 auto 1.5rem;
+  max-width: 72ch;
+  margin: 0 auto 1.6rem;
   text-align: center;
 }
 
@@ -165,6 +185,31 @@
   color: #3da5a7;
 }
 
+.laracon-proof-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.laracon-proof-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--black);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.laracon-proof-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e07ba2;
+  font-weight: 900;
+}
+
 /* ----------------------------------
    Talk summary cards
 ---------------------------------- */
@@ -177,9 +222,12 @@
 }
 
 .laracon-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   min-width: 0;
   height: 100%;
-  padding: 1.3rem 1.2rem;
+  padding: 1.35rem 1.25rem 1.45rem;
   border-radius: 22px;
   box-sizing: border-box;
 }
@@ -202,14 +250,68 @@
   );
 }
 
+.laracon-official-title {
+  margin: 0;
+  color: #e07ba2;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.laracon-summary-card--dev .laracon-official-title {
+  color: #3da5a7;
+}
+
 .laracon-summary-card h3 {
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-family: var(--font-ui);
-  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
-  line-height: 1.08;
+  font-size: clamp(1.55rem, 2.8vw, 2.18rem);
+  line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.025em;
   color: var(--socialbar);
+}
+
+.laracon-summary-card h3 span {
+  display: block;
+  color: #e07ba2;
+}
+
+.laracon-summary-card--dev h3 span {
+  color: #3da5a7;
+}
+
+.laracon-summary-card p {
+  margin: 0;
+}
+
+.laracon-takeaway-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.laracon-takeaway-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.laracon-takeaway-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e07ba2;
+  font-weight: 900;
+}
+
+.laracon-summary-card--dev .laracon-takeaway-list li::before {
+  color: #3da5a7;
 }
 
 /* ----------------------------------
@@ -218,7 +320,7 @@
 
 .laracon-video-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+  grid-template-columns: minmax(260px, 0.92fr) minmax(320px, 1.08fr);
   gap: 1.5rem;
   align-items: start;
   width: 100%;
@@ -226,7 +328,7 @@
   padding: 1.4rem;
   border-radius: 22px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.76);
   border: 1.5px solid rgba(224, 123, 162, 0.22);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
 }
@@ -354,12 +456,14 @@
 
   .laracon-title,
   .laracon-kicker,
-  .laracon-intro {
+  .laracon-intro,
+  .laracon-hero-tagline {
     text-align: center;
   }
 
   .laracon-title {
-    font-size: clamp(2.6rem, 12vw, 3.35rem);
+    max-width: 100%;
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
   }
 
   .laracon-hero-buttons {
@@ -377,6 +481,10 @@
 
   .laracon-speaker-img {
     width: min(100%, 220px);
+  }
+
+  .laracon-proof-list {
+    text-align: left;
   }
 
   .laracon-video-card {

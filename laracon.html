@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles/main.css?v=12" />
+    <link rel="stylesheet" href="styles/main.css?v=17" />
 
     <title>Speaking | Laracon AU 2026 Proposals | Becky Cole Portfolio</title>
   </head>
@@ -60,14 +60,26 @@
     <main class="laracon-case-page">
       <section class="laracon-hero-panel">
         <div class="laracon-hero-copy">
-          <p class="laracon-kicker">Laracon AU 2026</p>
-          <h1 class="laracon-title">Speaking Proposals</h1>
+          <p class="laracon-kicker">Laracon AU 2026 Speaker Proposals</p>
+
+          <h1 class="laracon-title">
+            Practical talks for
+            <span class="laracon-title-pink">clearer users</span>
+            and
+            <span class="laracon-title-teal">calmer code.</span>
+          </h1>
+
+          <p class="laracon-hero-tagline">
+            Two beginner-friendly technical talks about building interfaces that
+            are easier to understand, easier to use, and easier to maintain.
+          </p>
 
           <p class="laracon-intro">
-            Two beginner-friendly technical talks about building clearer, kinder,
-            more maintainable interfaces: one through a teaching mindset, and one
-            through choosing the right layer between HTML, CSS, JavaScript, and
-            backend logic.
+            These sessions bring together my background in teaching, digital
+            learning, product thinking, and full stack development. They are
+            about one shared goal: building interfaces that help people
+            understand what to do next, while helping developers keep the
+            underlying code easier to manage, maintain, and safely change.
           </p>
 
           <div class="laracon-hero-buttons">
@@ -75,7 +87,7 @@
               Watch Proposal Videos
             </a>
             <a href="case-studies.html" class="btn-primary btn-dev">
-              View Case Studies
+              View Related Projects
             </a>
           </div>
         </div>
@@ -90,106 +102,181 @@
           <div>
             <p class="laracon-card-label">Speaker</p>
             <h2>Rebecca Cole</h2>
+
             <p>
               Full stack software developer with a background in education,
-              digital learning, community programs, media, and user-centred
-              product design.
+              digital learning, media, and community programs.
             </p>
+
+            <ul class="laracon-proof-list">
+              <li>Built full stack projects with React and Django REST Framework</li>
+              <li>Experienced in teaching, mentoring, and explaining complex ideas</li>
+              <li>Focused on practical, human-centred software design</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section class="laracon-overview-panel">
-        <h2 class="about-section-title">The Talks</h2>
+        <div class="laracon-section-heading">
+          <p class="laracon-kicker">Two practical sessions</p>
+          <h2 class="about-section-title">What attendees will take away</h2>
+          <p>
+            These talks are for developers who want their interfaces to feel
+            clearer for users and calmer to maintain in the codebase. Both
+            sessions are built around practical decision-making: how do we guide
+            people through a product, and how do we choose the right layer for
+            the job?
+          </p>
+        </div>
 
         <div class="laracon-talk-summary-grid">
           <article class="laracon-summary-card laracon-summary-card--edu">
             <p class="laracon-card-label">Talk One</p>
-            <h3>How Thinking Like a Teacher Can Help You Build Better Software</h3>
-            <p>
-              A practical talk about how teaching principles can improve
-              onboarding, empty states, form design, status messages, dashboards,
-              permissions, and workflow guidance.
+
+            <h3 class="laracon-talk-title">
+              How Thinking Like a Teacher Helps You Build Better Software
+            </h3>
+
+            <p class="laracon-talk-promise">
+              Stop making users guess the rules.
             </p>
+
+            <p>
+              Every product teaches people how to use it, whether we plan for
+              that or not. A confusing form, vague error, empty dashboard,
+              hidden permission rule, or unclear workflow can make users feel
+              like they have failed, when the product simply has not taught them
+              what it expects.
+            </p>
+
+            <p>
+              This talk shows developers how to design software that explains
+              itself: clearer expectations, better feedback, fewer avoidable
+              errors, and more supportive pathways through complex features.
+            </p>
+
+            <ul class="laracon-takeaway-list">
+              <li>Design forms that guide instead of punish</li>
+              <li>Write feedback that helps users recover, not just fail</li>
+              <li>Turn dashboards into clear next-action spaces</li>
+              <li>
+                Make frontend and backend rules teach the same version of the
+                product
+              </li>
+            </ul>
           </article>
 
           <article class="laracon-summary-card laracon-summary-card--dev">
             <p class="laracon-card-label">Talk Two</p>
-            <h3>Don’t Fear the CSS: How to Build Better Interfaces with Less JavaScript</h3>
-            <p>
-              A practical frontend talk about choosing the right layer for
-              interface behaviour and letting HTML and CSS handle more of the
-              work they already know how to do.
+
+            <h3 class="laracon-talk-title">
+              Don’t Fear the CSS: How to Build Better Interfaces with Less JavaScript
+            </h3>
+
+            <p class="laracon-talk-promise">
+              Untangle your frontend before it turns into spaghetti.
             </p>
+
+            <p>
+              Modern interfaces do a lot: they resize, reveal, respond, animate,
+              validate, display status, and guide people through workflows. It
+              is easy for all of that behaviour to pile into components until
+              layout, styling, visual state, and application logic are all
+              fighting for space.
+            </p>
+
+            <p>
+              This talk helps developers choose the right layer for each kind of
+              behaviour, using HTML and CSS more deliberately so JavaScript can
+              stay focused on the work that genuinely needs logic, data,
+              coordination, or backend truth.
+            </p>
+
+            <ul class="laracon-takeaway-list">
+              <li>Spot when components are doing work the browser can already handle</li>
+              <li>Use CSS for layout, visual state, responsiveness, and motion</li>
+              <li>Keep JavaScript focused on data, permissions, APIs, and business rules</li>
+              <li>Build interfaces that are easier to read, debug, and safely change</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <section class="laracon-videos-panel" id="proposal-videos">
         <div class="laracon-section-heading">
-          <p class="laracon-kicker">Video pitches</p>
-          <h2 class="about-section-title">Proposal Videos</h2>
+          <p class="laracon-kicker">Proposal videos</p>
+          <h2 class="about-section-title">The 90-second pitch</h2>
           <p>
-            Each video gives a short overview of the talk, who it is for, and
-            what attendees would take away.
+            Each video introduces the problem behind the talk, the practical
+            idea attendees can use, and why the session matters for developers
+            building real interfaces under real constraints.
           </p>
         </div>
 
         <article class="laracon-video-card">
           <div class="laracon-video-copy">
             <p class="laracon-card-label">Proposal 01</p>
-            <h3>How Thinking Like a Teacher Can Help You Build Better Software</h3>
-            <p>
-              This talk connects my education background with practical software
-              design decisions, especially around clarity, guidance, confidence,
-              and reducing cognitive load for users.
-            </p>
 
+            <h3>How Thinking Like a Teacher Helps You Build Better Software</h3>
+
+            <p>
+  Software teaches users how a product works. The question is whether it guides
+  them clearly or leaves them guessing the rules.
+</p>
+
+<p>
+  This talk gives developers a practical way to build and review features that
+  guide instead of frustrate: clearer forms, more useful errors, dashboards built
+  around next actions, permissions that make sense, and feedback that helps users
+  recover with confidence.
+</p>
             <details class="laracon-transcript">
               <summary>Read transcript</summary>
 
               <p>
-                Hi, I’m Rebecca Cole. I’m an early-career software developer,
-                but before moving into tech I spent years working in education,
-                digital learning, mentoring, and community programs.
+                Hi, I’m Becky Cole. I’m a software developer
+                with a background in education, digital learning, mentoring, and
+                media.
               </p>
 
               <p>
-                My proposed talk is called “How Thinking Like a Teacher Can Help
+                My talk is called “How Thinking Like a Teacher Helps
                 You Build Better Software.”
               </p>
 
               <p>
-                The idea is simple: good software does more than function. It
-                helps people understand what to do next.
+                The core idea is simple: every product teaches people how to use
+                it, whether we plan for that or not.
               </p>
 
               <p>
-                When I started building full-stack projects, I realised that a
-                lot of the skills I had used as an educator still mattered in
-                software. Things like sequencing information, reducing cognitive
-                load, giving people clear first steps, designing forgiving forms,
-                using consistent language, and helping users recover when they
-                feel unsure.
+                A confusing form, vague error message, empty dashboard, hidden
+                permission rule, or unclear workflow can make users feel like
+                they have failed, when the product has not taught them
+                what it expects and how to succeed.
               </p>
 
               <p>
-                In this talk, I’ll use examples from real projects I’ve built,
-                including PodFlow and Backyard Festival, to show how a teaching
-                mindset can improve onboarding, empty states, form design, status
-                messages, dashboards, permissions, and workflow design.
+                In education, we think carefully about concepts like scaffolding, feedback,
+                sequencing, cognitive load, and clear success criteria. Those
+                same ideas are incredibly useful in software development, because users are
+                learning our systems when they use them.
               </p>
 
               <p>
-                This is not a theory talk. It’s a practical talk for developers
-                who want their interfaces to feel clearer, kinder, and easier to
-                use.
+                This talk guides developers on how to design software that takes a learner's point of view: forms that guide instead of punish, feedback that helps
+                users recover and get back to safety, dashboards built around what happens next, and frontend
+                and backend rules that teach one clear version of how the
+                product works.
               </p>
 
               <p>
-                I want attendees to walk away with a simple question they can
-                apply immediately: if this interface were teaching the user, what
-                would it explain first?
+  Attendees will leave with a practical toolkit and a new way to see their work:
+  every form, error, dashboard, permission rule, and workflow is a teaching
+  moment. When we design those moments deliberately, software can do more than
+  reduce mistakes. It can help people feel capable, confident, and clear about
+  what to do next and your website will be more successful!
               </p>
             </details>
           </div>
@@ -205,58 +292,66 @@
         <article class="laracon-video-card">
           <div class="laracon-video-copy">
             <p class="laracon-card-label">Proposal 02</p>
+
             <h3>Don’t Fear the CSS: How to Build Better Interfaces with Less JavaScript</h3>
+
             <p>
-              This talk is about keeping frontend code easier to understand by
-              giving layout, visual state, responsiveness, and small interactions
-              to the right layer.
+              This talk is for developers whose components have started
+              collecting every responsibility in the room: layout, styling,
+              animation, visual state, open-and-closed behaviour, conditional
+              classes, business rules, and API-driven logic.
+            </p>
+
+            <p>
+              It shows how to sort that tangle into clearer layers: what belongs
+              in HTML, what CSS can handle beautifully, what genuinely needs
+              JavaScript, and when a framework or library is worth reaching for.
             </p>
 
             <details class="laracon-transcript">
               <summary>Read transcript</summary>
 
               <p>
-                Hi, I’m Rebecca Cole, and my proposed talk is called “Don’t Fear
+                Hi, I’m Becky Cole, and my talk is called “Don’t Fear
                 the CSS: How to Build Better Interfaces with Less JavaScript.”
               </p>
 
               <p>
-                When I started building full-stack React projects, I often reached
-                for JavaScript whenever an interface needed to do something. If
-                something opened, changed, responded, moved, adapted, or looked
-                different in a new state, my instinct was often to put that
-                behaviour into a component.
+                When I started building full-stack React projects, I often
+                reached for JavaScript whenever an interface needed to do
+                something. If something opened, changed, moved, responded,
+                adapted, or looked different in a new state, my instinct was
+                often to put that behaviour into a component's JSX.
               </p>
 
               <p>
-                But over time, I started noticing that some of my components were
-                becoming harder to understand because layout, styling, animation,
-                visual state, and application logic were all piling into the same
-                place.
+                The thing is, the more I built, the more I noticed that some of my
+                components were becoming harder to manage because layout, styling,
+                animation, visual state, interaction behaviour, and application
+                logic were all piling into the same layer.
               </p>
 
               <p>
-                This talk is about choosing the right layer for the job.
+                Modern interfaces can now do a lot. They resize, reveal, respond,
+                animate, validate, display status, and guide people through
+                workflows. But that can get overwhelming quickly. The useful question is not “Can JavaScript do this?” The
+                better question is: which layer should own this behaviour?
               </p>
 
               <p>
-                JavaScript and frameworks are absolutely essential for things like
-                data fetching, routing, authentication, permissions, and complex
-                state. But many interface behaviours can be handled more clearly
-                with HTML and CSS.
+                JavaScript and frameworks are still essential for data fetching,
+                routing, authentication, permissions, saved choices, API calls,
+                and complex state. But many interface behaviours can live closer
+                to the browser, in HTML and CSS.
               </p>
 
               <p>
-                Using examples from real frontend projects, I’ll show practical
-                ways developers can use CSS for layout, responsiveness, visual
-                states, transitions, progressive enhancement, and small
-                interaction patterns without overloading their JavaScript.
-              </p>
-
-              <p>
-                The goal is not to avoid JavaScript. The goal is to use it where
-                it belongs, and let the browser do the work it already knows how
-                to do.
+                This talk gives developers a decision framework for separating
+                interface behaviour from application behaviour, using CSS as
+                part of frontend architecture, and keeping JavaScript for the
+                work that truly needs logic, data, coordination, or backend
+                truth. The goal is clearer interfaces and code that is easier to read,
+    debug, and change. And can save you a lot of headaches! 
               </p>
             </details>
           </div>
@@ -279,19 +374,21 @@
             href="https://github.com/Rebecca-de-Winter"
             target="_blank"
             title="GitHub"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
 
           <a
             href="https://www.linkedin.com/in/rebecca-c-52141625/"
             target="_blank"
             title="LinkedIn"
-            ><i class="fa-brands fa-linkedin-in"></i>
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
 
-          <a href="mailto:beckylouise81@gmail.com" title="Email me"
-            ><i class="fa-solid fa-at"></i
-          ></a>
+          <a href="mailto:beckylouise81@gmail.com" title="Email me">
+            <i class="fa-solid fa-at"></i>
+          </a>
         </div>
       </section>
     </footer>
