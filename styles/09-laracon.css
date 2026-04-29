@@ -1,7 +1,9 @@
 /* ----------------------------------
    Laracon Speaking Page
 ---------------------------------- */
-
+body {
+  outline: 12px solid hotpink;
+}
 .laracon-page-shell {
   padding-top: 92px;
   padding-bottom: 3rem;
