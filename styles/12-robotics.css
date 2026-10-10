@@ -1,0 +1,12 @@
+/* Robotics uses the portfolio's established type, colours and controls. */
+.robotics-page .resource-page{font-family:var(--font-ui);color:var(--black)}
+.robotics-page .resource-page h1{font-family:var(--font-ui);font-size:clamp(2.7rem,4.5vw,3.55rem);font-weight:800;letter-spacing:-.015em;line-height:1.08}
+.robotics-page .resource-page h1 span{color:var(--developer-border)}
+.robotics-page .resource-page h2{font-family:var(--font-ui);font-size:var(--section-title-size);font-weight:800;letter-spacing:-.015em;line-height:var(--section-title-line);color:var(--socialbar)}
+.robotics-page .resource-page h3{font-family:var(--font-ui);font-size:var(--card-title-home);font-weight:800;line-height:1.2;color:var(--developer-border)}
+.robotics-page .resource-page p{font-size:1.05rem;line-height:1.8}
+.robotics-page .resource-hero{background:linear-gradient(180deg,#f5fffd,#b4f3ec);border:2px solid #7adfdb}
+.robotics-page .resource-card{background:linear-gradient(180deg,#f5fffd,#b4f3ec);border:2px solid #7adfdb;border-radius:var(--card-radius)}
+.robotics-page .resource-button{background:var(--educator-text);border:2px solid #d7608e;border-radius:30px;font-family:var(--font-ui)}
+.robotics-page .resource-button:hover{background:#d7608e}
+.robotics-page .resource-link{color:#227a7c;font-family:var(--font-ui)}

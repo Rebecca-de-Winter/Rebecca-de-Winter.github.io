@@ -66,4 +66,4 @@
 @media(max-width:950px){.outbreak-hero{grid-template-columns:1fr;gap:28px}.outbreak-intro>p:not(.eyebrow){max-width:700px}.security-frame{max-width:720px;transform:none}.toolkit-main{grid-template-columns:1fr}.toolkit-downloads{max-width:420px}.individual-downloads .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.laracon-outbreak .resource-page{padding-top:100px}.outbreak-hero{padding-top:10px}.toolkit-section{padding:24px 18px}.toolkit-main{padding:20px;gap:20px}.individual-downloads .resource-grid,.story-grid{grid-template-columns:1fr}.camera-strip{font-size:.58rem;padding:12px}.survive-accordion summary{padding:14px;gap:14px}.survive-accordion details>p{padding:0 18px 18px 18px}.survive-prompt{font-size:.82rem}.laracon-outbreak .resource-connect{padding:24px}.outbreak-quote{margin:42px 0}}
 
-.outbreak-wide{max-width:860px;margin:28px auto 0}.laracon-outbreak footer{background:var(--educator-text)}
+.outbreak-wide{max-width:860px;margin:28px auto 0}.laracon-outbreak footer{background:#3d128b;border-top-color:#a46bea}

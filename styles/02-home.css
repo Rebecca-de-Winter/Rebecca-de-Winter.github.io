@@ -291,7 +291,7 @@ body .home-current h2 { color: var(--socialbar); font-size: var(--section-title-
 .current-work-talk { background: linear-gradient(180deg,#fff5f5,#ffd0d8); border-color: #ff879b; }
 .current-work-robotics { background: linear-gradient(180deg,#f5fffd,#b4f3ec); border-color: #7adfdb; }
 .home-current .current-work-label { font-size: 1rem; font-weight: 800; margin-bottom: 12px; }
-.home-current .current-work-card h3 { font-family: var(--font-ui); font-size: var(--card-title-home); font-weight: 800; line-height: 1.2; margin: 0 0 16px; }
+.home-current .current-work-card h3 { font-family: var(--font-ui); font-size: var(--card-title-home); font-weight: 800; line-height: 1.08; margin: 0 0 16px; }
 .home-current .current-work-card p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
 .current-work-card .btn-primary { margin-top: auto; }
 @media(max-width:767px) { .current-work-grid { grid-template-columns: 1fr; } .current-work-card { padding: 26px 22px; } }
@@ -532,3 +532,8 @@ body .home-current h2 { color: var(--socialbar); font-size: var(--section-title-
     font-size: clamp(2.4rem, 9vw, 2.95rem);
   }
 }
+
+/* Keep both homepage card groups in the same type system. */
+.home-projects-after-current{border-top:5px solid var(--educator-text)}
+.home-current .current-work-talk h3{color:var(--educator-text)}
+.home-current .current-work-robotics h3{color:var(--developer-border)}
