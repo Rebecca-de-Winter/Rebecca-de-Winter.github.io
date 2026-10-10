@@ -1,0 +1,67 @@
+/* The outbreak stays on the talk page. */
+.laracon-outbreak{background:#151222;color:#f8f4ff}
+.laracon-outbreak .resource-page{max-width:1220px;color:#e5dfef;padding-top:120px}
+.laracon-outbreak .resource-page h1,.laracon-outbreak .resource-page h2,.laracon-outbreak .resource-page h3{color:#fff}
+.laracon-outbreak .resource-page h1{font-size:clamp(2.5rem,4.4vw,3.8rem)}
+.laracon-outbreak .resource-page h1 span{color:#d4efa7}
+.laracon-outbreak .eyebrow{color:#d4efa7;font-size:.76rem}
+.outbreak-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:38px;align-items:center;padding:22px 0 40px}
+.outbreak-intro>p:not(.eyebrow){max-width:530px}
+.laracon-outbreak .resource-button{background:#d4efa7;color:#20232a;border:1px solid #d4efa7;gap:16px;border-radius:9px}
+.laracon-outbreak .resource-button:hover{background:#e7ffc5}
+.laracon-outbreak .resource-link,.laracon-outbreak .qr-card a{color:#e1cafa}
+.laracon-outbreak .resource-page a:focus-visible,.laracon-outbreak summary:focus-visible{outline:3px solid #d4efa7;outline-offset:5px}
+.security-frame,.story-card{margin:0;background:#211c31;border:1px solid #544863;border-radius:14px;overflow:hidden}
+.security-frame{transform:rotate(1.5deg);box-shadow:0 24px 70px #0006}
+.camera-strip{display:flex;justify-content:space-between;gap:12px;padding:13px 16px;font-family:ui-monospace,monospace;font-size:.64rem;font-weight:700;letter-spacing:.03em;color:#d4efa7;background:#211c31}
+.camera-strip i{display:inline-block;width:7px;height:7px;background:#d4efa7;border-radius:50%;margin-right:5px}
+.security-frame img,.story-card img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.security-frame figcaption{padding:16px 20px;font-weight:800;color:#fff;font-size:1.08rem}
+.toolkit-section{background:#f5f0fa;color:#42384f;border-radius:22px;padding:36px}
+.laracon-outbreak .toolkit-section h2,.laracon-outbreak .toolkit-section h3{color:#30243d}
+.laracon-outbreak .toolkit-section .eyebrow{color:#554095}
+.section-heading>p:last-child{max-width:730px}
+.toolkit-main{display:grid;grid-template-columns:1fr 310px;gap:34px;padding:26px;background:#fff;border:1px solid #d8cee4;border-radius:15px;margin-top:26px;align-items:center}
+.toolkit-main h3{font-size:1.7rem}
+.toolkit-main p:last-child{margin-bottom:0}
+.toolkit-note{font-size:.9rem;color:#62566d}
+.toolkit-downloads{display:flex;flex-direction:column;gap:12px}
+.toolkit-downloads .resource-button{background:#554095;border-color:#554095;color:#fff}
+.toolkit-downloads .resource-button:hover{background:#3e2c77}
+.toolkit-downloads .secondary-download{background:#fff;color:#554095}
+.toolkit-downloads .secondary-download:hover{background:#eee7f8}
+.toolkit-downloads>span{text-align:center;font-size:.8rem;color:#62566d}
+.individual-downloads{margin-top:24px}
+.individual-downloads summary{font-weight:800;cursor:pointer;color:#554095;padding:8px 0}
+.laracon-outbreak .toolkit-section .resource-link{color:#554095}
+.individual-downloads .resource-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.individual-downloads .resource-card{padding:20px;box-shadow:none}
+.individual-downloads .resource-card h3{font-size:1.15rem}
+.individual-downloads .resource-card p{font-size:.92rem}
+.individual-downloads .resource-link{margin-top:auto}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.outbreak-story>p:last-of-type{max-width:850px}
+.story-card figcaption{padding:22px}
+.story-card figcaption h3{margin-top:0;font-size:1.35rem}
+.story-card figcaption p{margin:0}
+.outbreak-quote{text-align:center;margin:60px 0;padding:24px;border-block:1px solid #494052}
+.outbreak-quote blockquote{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:900;color:#d4efa7;line-height:1.3;margin:12px 0 18px}
+.outbreak-quote p{color:#d5c8e5;font-size:.9rem}
+.survive-accordion{display:grid;gap:12px;margin-top:26px}
+.survive-accordion details{background:#211c31;border:1px solid #544863;border-radius:12px}
+.survive-accordion summary{display:flex;gap:18px;align-items:center;cursor:pointer;padding:16px 22px;list-style:none}
+.survive-accordion summary::-webkit-details-marker{display:none}
+.survive-accordion summary:after{content:'+';margin-left:auto;color:#d4efa7;font-size:1.8rem;font-weight:400}
+.survive-accordion details[open] summary:after{content:'−'}
+.survive-accordion .survive-letter{background:#3e3155;color:#d4efa7;flex-shrink:0}
+.survive-accordion strong{font-size:1.12rem;color:#fff;display:block}
+.survive-prompt{display:block;font-size:.9rem;color:#d9cce8}
+.survive-accordion details>p{padding:0 22px 20px 94px;margin:0;max-width:950px}
+.next-drop{border-left:3px solid #a68dbf;padding:6px 24px}
+.next-drop p{max-width:800px}
+.laracon-outbreak .resource-connect{background:#2b233b;border:1px solid #544863;margin-top:60px}
+.laracon-outbreak .qr-card p{margin-top:12px;font-weight:800}
+.laracon-outbreak footer{background:#151222}
+.laracon-outbreak .resource-footer a{color:#e1cafa}
+@media(max-width:950px){.outbreak-hero{grid-template-columns:1fr;gap:28px}.outbreak-intro>p:not(.eyebrow){max-width:700px}.security-frame{max-width:720px;transform:none}.toolkit-main{grid-template-columns:1fr}.toolkit-downloads{max-width:420px}.individual-downloads .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.laracon-outbreak .resource-page{padding-top:100px}.outbreak-hero{padding-top:10px}.toolkit-section{padding:24px 18px}.toolkit-main{padding:20px;gap:20px}.individual-downloads .resource-grid,.story-grid{grid-template-columns:1fr}.camera-strip{font-size:.58rem;padding:12px}.survive-accordion summary{padding:14px;gap:14px}.survive-accordion details>p{padding:0 18px 18px 18px}.survive-prompt{font-size:.82rem}.laracon-outbreak .resource-connect{padding:24px}.outbreak-quote{margin:42px 0}}

@@ -1,0 +1,6 @@
+level,use_when,route,message_should_include,response
+History,Routine change; no immediate action,Record the change in the item timeline,"What changed, when, who/what changed it",No acknowledgement required
+Notification,A user has something to review or do,Show a targeted in-app notification,"What changed, why it matters, action link",Track completion of the task
+Direct message,A named person must coordinate or respond,Contact the responsible person through an agreed channel,"Context, owner, request, response expected",Require a reply where needed
+Urgent alert,Immediate danger or time-critical action,Use the agreed urgent alert channel,"Risk, immediate action, location, owner",Request explicit acknowledgement
+Escalation,Response is overdue or cannot proceed,Route to the next responsible role,"Original issue, elapsed time, prior attempts, action needed",Track acceptance by the new owner

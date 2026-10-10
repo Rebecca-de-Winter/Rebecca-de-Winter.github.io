@@ -1,0 +1,20 @@
+{
+  "example_only": true,
+  "report": {
+    "reference": "2026-0847",
+    "state": "submitted"
+  },
+  "responses": {
+    "first_aid": {
+      "delivery": "delivered",
+      "acknowledgement": "pending"
+    }
+  },
+  "containment_doors": {
+    "state": "failed"
+  },
+  "next_action": {
+    "instruction": "Evacuate using the west stairwell",
+    "actor": "reporter"
+  }
+}
