@@ -541,3 +541,7 @@ body .home-current h2 { color: var(--socialbar); font-size: var(--section-title-
 /* The talk card carries the Laracon palette back to the homepage. */
 .current-work-talk{background:linear-gradient(135deg,#6428be,#3d128b);border-color:#a46bea;color:#fff}
 .home-current .current-work-talk h3{color:#d1ff62}
+
+/* The current-work buttons share the homepage's lift and soft shadow. */
+:is(.home-current,.about-me-container,.my-projects-container) .btn-primary:hover{transform:translate(-1px,-1px);box-shadow:0 10px 12px rgba(48,36,61,.18),inset 0 -2px 0 rgba(0,0,0,.12),inset 0 2px 0 rgba(255,255,255,.28)}
+@media(prefers-reduced-motion:reduce){:is(.home-current,.about-me-container,.my-projects-container) .btn-primary{transition:none}:is(.home-current,.about-me-container,.my-projects-container) .btn-primary:hover{transform:none}}
