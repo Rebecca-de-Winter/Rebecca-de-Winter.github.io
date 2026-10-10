@@ -69,3 +69,8 @@
 .outbreak-wide{max-width:860px;margin:28px auto 0}.laracon-outbreak footer{background:#3d128b;border-top-color:#a46bea}
 
 @media(min-width:1100px){.outbreak-story h2{text-wrap:wrap;font-size:2.35rem}.outbreak-story>p:last-of-type{max-width:none}.next-drop p{max-width:none}}
+
+/* Group the talk into clear panels without adding decorative labels. */
+.laracon-outbreak .outbreak-story,.laracon-outbreak #survive,.laracon-outbreak .next-drop{padding:clamp(22px,3vw,32px);background:rgba(55,16,120,.48);border:1px solid #a46bea;border-radius:22px}
+.laracon-outbreak .outbreak-quote{background:rgba(55,16,120,.48);border:1px solid #a46bea;border-radius:22px}
+@media(min-width:1100px){.outbreak-story h2{font-size:2.15rem}}
