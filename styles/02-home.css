@@ -270,6 +270,7 @@
 }
 
 .about-me-container {
+  height: 100%;
   padding: 2rem 1.5rem 2.25rem;
   background: linear-gradient(
     180deg,
@@ -277,6 +278,23 @@
     rgba(255, 208, 216, 1) 100%
   );
 }
+
+.about-text-panel { display: flex; background: #ffd0d8; }
+.about-copy-card { display: flex; width: 100%; }
+.about-copy-card .about-me-container { width: 100%; }
+
+/* Current work shares the homepage's typography, cards and buttons. */
+.home-current { max-width: var(--content-max-width); margin: var(--section-spacing) auto; padding: 24px; font-family: var(--font-ui); color: var(--black); }
+body .home-current h2 { color: var(--socialbar); font-size: var(--section-title-size); font-weight: 800; line-height: var(--section-title-line); letter-spacing: -.015em; text-align: center; margin: 0 0 1.6rem; }
+.current-work-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px; }
+.current-work-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 30px; border: 2px solid; border-radius: var(--card-radius); }
+.current-work-talk { background: linear-gradient(180deg,#fff5f5,#ffd0d8); border-color: #ff879b; }
+.current-work-robotics { background: linear-gradient(180deg,#f5fffd,#b4f3ec); border-color: #7adfdb; }
+.home-current .current-work-label { font-size: 1rem; font-weight: 800; margin-bottom: 12px; }
+.home-current .current-work-card h3 { font-family: var(--font-ui); font-size: var(--card-title-home); font-weight: 800; line-height: 1.2; margin: 0 0 16px; }
+.home-current .current-work-card p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+.current-work-card .btn-primary { margin-top: auto; }
+@media(max-width:767px) { .current-work-grid { grid-template-columns: 1fr; } .current-work-card { padding: 26px 22px; } }
 
 .about-me-container h2 {
   margin-bottom: 1rem;

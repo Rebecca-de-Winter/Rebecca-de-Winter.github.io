@@ -161,6 +161,12 @@
   gap: 1.2rem;
 }
 
+.about-highlights-panel .about-cta-block { height: auto; align-self: center; display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem,3vw,2.4rem); text-align: left; }
+.about-highlights-panel .about-cta-block h3 { text-align: left; font-size: clamp(1.9rem,3vw,2.5rem); line-height: 1.2; margin-bottom: 20px; }
+.about-highlights-panel .about-cta-block p { text-align: left; margin: 0 0 24px; }
+.about-highlights-panel .about-cta-buttons { justify-content: flex-start; gap: 14px; }
+.about-highlights-panel .about-section-title { text-align: left; }
+
 .about-highlights-copy,
 .about-cta-block {
   padding: 1.55rem 1.35rem;
