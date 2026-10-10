@@ -46,7 +46,7 @@ header .mobile-header {
   justify-content: space-between;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1150px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@ header .mobile-header {
   }
 }
 
-@media (max-width: 599.98px) {
+@media (max-width: 1149.98px) {
   #navbar {
     gap: 12px;
     padding: 0 14px;

@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = [
     {
       key: "intro",
-      eyebrow: "Full Stack Developer",
+      eyebrow: "Software Engineer · Educator · Media Creator",
       title: "Becky Cole",
       subtitle:
         "Thoughtful software, polished interfaces, and real workflow design with a playful creative edge.",
       bullets: [
-        "React and Django REST product work",
+        "Software engineer at Westpac",
         "UX shaped by a teacher's eye for clarity",
-        "Portfolio highlights",
+        "Laracon AU 2026 speaker",
       ],
       image: "assets/showcase/becky-cartoon.jpg",
       alt: "Cartoon Becky showcase illustration",
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
   bullets: [
     "React, Django REST, and workflow-heavy product builds",
     "Strong UI thinking and practical problem-solving",
-    "Creative tech curiosity with Wolfie in the mix",
+    "Expressive robotics and animatronics with Wolfie",
   ],
   image: "assets/showcase/becky-real.jpg",
   alt: "Photo of Becky",
