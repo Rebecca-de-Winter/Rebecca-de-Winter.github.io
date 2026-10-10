@@ -537,3 +537,7 @@ body .home-current h2 { color: var(--socialbar); font-size: var(--section-title-
 .home-projects-after-current{border-top:5px solid var(--educator-text)}
 .home-current .current-work-talk h3{color:var(--educator-text)}
 .home-current .current-work-robotics h3{color:var(--developer-border)}
+
+/* The talk card carries the Laracon palette back to the homepage. */
+.current-work-talk{background:linear-gradient(135deg,#6428be,#3d128b);border-color:#a46bea;color:#fff}
+.home-current .current-work-talk h3{color:#d1ff62}
